@@ -1,0 +1,43 @@
+# Dependencies and build output
+node_modules/
+.pnpm-store/
+dist/
+
+# Large videos are reconstructed losslessly from deployment chunks before build
+public/projects/masterworks/User.mp4
+public/assets/pinsight/video/pinsight-xr-demo.m4v
+
+# Platform state and local credentials
+.vercel/
+.env
+.env.*
+!.env.example
+
+# Local QA, generated artifacts and backups
+.agents/
+.codex/
+.impeccable/
+.impeccable-baseline-*.png
+.deployment-backups/
+artifacts/
+tmp/
+scripts/
+docs/
+focuspin-review/
+masterworks-review/
+output/
+*.command
+*.before-*
+*.py
+qa-*.png
+PinSight-full-page-*.png
+pinsight-full-page-*.png
+masterworks-*.png
+design-qa-*.png
+design-qa.md
+pinsight-02-problem-*.png
+standalone.js
+standalone.css
+AGENTS.md
+skills-lock.json
+.DS_Store

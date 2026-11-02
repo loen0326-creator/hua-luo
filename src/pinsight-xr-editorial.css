@@ -1,0 +1,66 @@
+/* Section 06 only: one outer grid, original screenshots without cropping. */
+#case-pinsight #pinsight-web {
+  --xr-width:1200px; --xr-gap:24px; --xr-module-gap:104px; --xr-group-gap:40px;
+  --xr-ink:#f4f2fa; --xr-muted:#c7c3ce; --xr-accent:#c99bf1;
+  width:min(var(--xr-width),calc(100vw - 64px))!important; max-width:none!important;
+  position:relative; left:50%; transform:translateX(-50%)!important; margin-inline:0!important;
+}
+body #case-pinsight #pinsight-web > .ps-section-head { max-width:800px!important; margin-left:0!important; }
+#case-pinsight #pinsight-web .ps-xre { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); column-gap:var(--xr-gap); width:100%; color:var(--xr-ink); }
+#case-pinsight #pinsight-web .ps-xre > * { grid-column:1 / -1; min-width:0; }
+#case-pinsight #pinsight-web .ps-xre-module { margin-top:var(--xr-module-gap); }
+#case-pinsight #pinsight-web .ps-xre-shot { margin:0; min-width:0; }
+#case-pinsight #pinsight-web .ps-xre-shot a { display:block; cursor:zoom-in; }
+#case-pinsight #pinsight-web .ps-xre-shot a:focus-visible { outline:2px solid var(--xr-accent); outline-offset:6px; }
+#case-pinsight #pinsight-web .ps-xre-shot a:hover { opacity:.94; }
+#case-pinsight #pinsight-web .ps-xre-shot a:active { opacity:.85; }
+#case-pinsight #pinsight-web .ps-xre-shot img { display:block; width:100%; max-width:100%; height:auto; object-fit:contain; border-radius:0; box-shadow:none; }
+#case-pinsight #pinsight-web .ps-xre-shot figcaption { margin:12px 0 0; color:var(--xr-muted); font-size:15px; line-height:1.6; text-align:left; }
+#case-pinsight #pinsight-web .ps-xre-heading { margin-bottom:var(--xr-group-gap); max-width:800px; }
+#case-pinsight #pinsight-web .ps-xre-heading h3 { display:flex; align-items:baseline; gap:16px; margin:0; color:var(--xr-ink); font-size:32px; line-height:1.4; font-weight:600; }
+#case-pinsight #pinsight-web .ps-xre-heading h3 span { font-size:14px; line-height:1.6; color:var(--xr-accent); font-weight:500; }
+#case-pinsight #pinsight-web .ps-xre p { color:var(--xr-muted); font-size:16px; line-height:1.8; margin:12px 0 0; }
+#case-pinsight #pinsight-web .ps-xre h4 { color:var(--xr-ink); font-size:24px; line-height:1.5; font-weight:500; margin:0 0 12px; }
+#case-pinsight #pinsight-web :is(.ps-xre-setup,.ps-xre-tags) { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:var(--xr-gap); align-items:start; }
+#case-pinsight #pinsight-web .ps-xre-entry { grid-column:span 6; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--xr-gap); }
+#case-pinsight #pinsight-web .ps-xre-session { grid-column:span 6; }
+#case-pinsight #pinsight-web .ps-xre-tags { margin-top:var(--xr-group-gap); container-type:inline-size; }
+#case-pinsight #pinsight-web .ps-xre-tags > div { grid-column:span 4; padding-top:12cqw; }
+#case-pinsight #pinsight-web .ps-xre-tags > figure { grid-column:span 8; }
+#case-pinsight #pinsight-web :is(.ps-xre-pair,.ps-xre-review-grid,.ps-xre-support) { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:var(--xr-group-gap) var(--xr-gap); align-items:start; }
+#case-pinsight #pinsight-web :is(.ps-xre-pair,.ps-xre-review-grid) > figure { grid-column:span 6; }
+#case-pinsight #pinsight-web .ps-xre-support > figure { grid-column:span 4; }
+/* Equal image stages align captions; any ratio difference becomes whitespace. */
+#case-pinsight #pinsight-web :is(.ps-xre-entry,.ps-xre-support) .ps-xre-shot a { aspect-ratio:1.248; }
+#case-pinsight #pinsight-web .ps-xre-pair .ps-xre-shot a { aspect-ratio:1.248; }
+#case-pinsight #pinsight-web .ps-xre-review-grid .ps-xre-shot a { aspect-ratio:1.2236; }
+#case-pinsight #pinsight-web :is(.ps-xre-support,.ps-xre-spatial-states) { margin-top:var(--xr-group-gap); }
+#case-pinsight #pinsight-web .ps-xre-spatial-states > .ps-xre-pair { margin-top:var(--xr-group-gap); }
+#case-pinsight #pinsight-web .ps-xre-spatial-lead h4 { margin-bottom:24px; }
+#case-pinsight #pinsight-web .ps-xre-pen { margin-top:var(--xr-group-gap); }
+#case-pinsight #pinsight-web .ps-xre-pen > p { margin:12px 0 32px; }
+#case-pinsight #pinsight-web .ps-xre-shot figcaption { font-weight:400; }
+#case-pinsight #pinsight-web .ps-xre-pen .ps-xre-shot a { aspect-ratio:1.25; }
+#case-pinsight #pinsight-web .ps-xre-saved { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:var(--xr-gap); align-items:center; }
+#case-pinsight #pinsight-web .ps-xre-saved > figure { grid-column:span 8; }
+#case-pinsight #pinsight-web .ps-xre-saved > div { grid-column:span 4; display:flex; flex-direction:column; gap:12px; }
+#case-pinsight #pinsight-web .ps-xre-saved h4 { font-size:24px; line-height:1.5; margin:0; }
+#case-pinsight #pinsight-web .ps-xre-saved p { max-width:22em; margin:0; line-height:1.8; }
+@media(max-width:900px) {
+  #case-pinsight #pinsight-web { --xr-module-gap:88px; }
+  #case-pinsight #pinsight-web .ps-xre-heading h3 { font-size:28px; }
+  #case-pinsight #pinsight-web .ps-xre-support > figure { grid-column:1 / -1; }
+  #case-pinsight #pinsight-web .ps-xre-support .ps-xre-shot a { aspect-ratio:auto; }
+}
+@media(max-width:700px) {
+  #case-pinsight #pinsight-web { width:100%!important; left:auto; transform:none!important; --xr-module-gap:72px; --xr-group-gap:32px; }
+  #case-pinsight #pinsight-web .ps-xre-heading { margin-bottom:32px; }
+  #case-pinsight #pinsight-web .ps-xre-heading h3 { font-size:24px; gap:12px; }
+  #case-pinsight #pinsight-web :is(.ps-xre-setup,.ps-xre-entry,.ps-xre-tags,.ps-xre-pair,.ps-xre-support,.ps-xre-review-grid) { grid-template-columns:minmax(0,1fr); gap:32px; }
+  #case-pinsight #pinsight-web :is(.ps-xre-setup,.ps-xre-entry,.ps-xre-tags,.ps-xre-pair,.ps-xre-support,.ps-xre-review-grid) > * { grid-column:1; }
+  #case-pinsight #pinsight-web :is(.ps-xre-entry,.ps-xre-support,.ps-xre-pair,.ps-xre-review-grid) .ps-xre-shot a { aspect-ratio:auto; }
+  #case-pinsight #pinsight-web .ps-xre-tags > div { padding-top:0; }
+  #case-pinsight #pinsight-web .ps-xre-saved { grid-template-columns:minmax(0,1fr); gap:24px; }
+  #case-pinsight #pinsight-web .ps-xre-saved > * { grid-column:1; }
+  #case-pinsight #pinsight-web .ps-xre-pen .ps-xre-shot a { aspect-ratio:auto; }
+}

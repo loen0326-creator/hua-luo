@@ -1,0 +1,40 @@
+/* Final cascade for the confirmed Layout System Cleanup. */
+@media (min-width:1100px) {
+  body #case-pinsight #pinsight-research > .ps-section-head,
+  body #case-pinsight #pinsight-problem > .ps-problem-statement,
+  body #case-pinsight #pinsight-system > .ps-section-head,
+  body #case-pinsight #pinsight-xr > .ps-section-head,
+  body #case-pinsight #pinsight-lifecycle > .ps-section-head,
+  body #case-pinsight #pinsight-web > .ps-section-head,
+  body #case-pinsight #pinsight-final > .ps-section-head,
+  body #case-pinsight #pinsight-reflection > .ps-reflection-lead {
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    transform:none!important;
+  }
+
+  #case-pinsight .ps-shell>.ps-section>:is(.ps-section-head,.ps-problem-statement,.ps-reflection-lead),
+  #case-pinsight :is(.ps-chapter-research,.ps-chapter-system,.ps-chapter-xr,.ps-chapter-lifecycle,.ps-chapter-web,.ps-chapter-final)>.ps-section-head {
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0 0 var(--ps-space-subsection)!important;
+    transform:none!important;
+  }
+  #case-pinsight .ps-section-head :is(.ps-section-rail,.ps-section-intro),
+  #case-pinsight :is(.ps-problem-statement,.ps-reflection-lead)>* {
+    width:100%!important;
+    max-width:none!important;
+    margin-left:0!important;
+    grid-column:auto!important;
+  }
+  #case-pinsight .ps-section-head .ps-section-rail,
+  #case-pinsight :is(.ps-problem-statement,.ps-reflection-lead)>small { margin-bottom:18px!important; }
+  #case-pinsight .ps-section-head .ps-section-intro h2,
+  #case-pinsight :is(.ps-problem-statement,.ps-reflection-lead)>h2 { max-width:900px!important; }
+  #case-pinsight .ps-section-head .ps-section-intro>p { max-width:720px!important; }
+  #case-pinsight .ps-chapter-system>.ps-system-architecture { width:100%!important; }
+}

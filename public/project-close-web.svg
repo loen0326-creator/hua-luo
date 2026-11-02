@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070b13"/><stop offset=".6" stop-color="#18223b"/><stop offset="1" stop-color="#253c45"/></linearGradient><radialGradient id="s"><stop stop-color="#f1ee78"/><stop offset=".2" stop-color="#c8ff36"/><stop offset="1" stop-color="#1b2734"/></radialGradient></defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g transform="translate(1050 460)"><path d="M-250-220h500v440h-500z" fill="#0b101b" stroke="#a9bdd6" stroke-opacity=".35" stroke-width="3"/><path d="M-210-180h420v360h-420z" fill="none" stroke="#a9bdd6" stroke-opacity=".2" stroke-width="2"/><circle r="110" fill="url(#s)" opacity=".75"/><path d="M-340 250C-190 100-20 330 130 160S390 40 470-120" fill="none" stroke="#c8ff36" stroke-width="5" stroke-dasharray="14 14" opacity=".65"/></g>
+  <g fill="#fff"><text x="100" y="150" font-family="Arial,sans-serif" font-size="28" letter-spacing="7">增强现实 · 空间导航</text><text x="100" y="742" font-family="Arial,sans-serif" font-size="76" font-weight="700">如此接近，如此遥远</text><text x="100" y="815" font-family="Arial,sans-serif" font-size="32" opacity=".7">连接数字导航与真实城市空间</text></g>
+  <circle cx="100" cy="100" r="9" fill="#c8ff36"/>
+</svg>

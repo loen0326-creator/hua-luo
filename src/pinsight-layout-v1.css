@@ -1,0 +1,2679 @@
+/* PinSight layout refinement v1 — final override */
+.project-page.pinsight-page{
+  --ps-v1-gap:clamp(24px,3vw,44px);
+  --ps-v1-radius:22px;
+}
+
+/* v28 — compact grouped galleries, not one image per section. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair,
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair.is-asymmetric{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important
+  }
+
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:104px 32px!important
+  }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n),
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article.is-wide,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article.is-pair{
+    grid-column:auto!important;display:block!important;padding-top:24px!important
+  }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story .ps-life-copy{display:block!important;margin-bottom:24px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>span{font-size:34px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>h3{margin:16px 0 8px!important;font-size:25px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story figure,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n) figure{
+    width:100%!important;height:auto!important;aspect-ratio:16/10!important
+  }
+
+  .project-page.pinsight-page #pinsight-review .ps-review-stage{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important
+  }
+  .project-page.pinsight-page #pinsight-review .ps-review-stage>.ps-evidence{grid-column:auto!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage+.ps-evidence{width:calc(50% - 16px)!important;margin:104px 0 0!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-review .ps-review-stage+.ps-evidence .ps-evidence-media{aspect-ratio:16/10!important}
+
+  .project-page.pinsight-page #pinsight-continuity .ps-web-experience{
+    display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part,
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part.is-reverse{display:block!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header,
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part.is-reverse header{
+    display:block!important;min-height:190px!important;margin-bottom:28px!important
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part .ps-evidence-media{aspect-ratio:16/10!important}
+
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:144px 32px;width:100%
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web{display:block!important;width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>header,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>header{
+    display:block!important;min-height:210px!important;padding:24px 0 28px!important
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header h3{margin:18px 0 14px!important;font-size:32px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header p{text-align:left!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group .ps-evidence{width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group .ps-evidence-media{width:100%!important;height:auto!important;aspect-ratio:16/10!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-states{margin-top:24px!important;gap:10px!important;flex-wrap:wrap!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-states span{font-size:10px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary),
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes,
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{margin-top:40px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{grid-template-columns:1fr!important;gap:40px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes{gap:16px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes article{padding-top:16px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption{display:block!important;margin-top:16px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption strong{display:block!important;margin-top:8px!important;font-size:17px!important}
+}
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery{display:block}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery>.ps-final-group+.ps-final-group{margin-top:96px!important}
+}
+
+/* v29 final authority — flat gallery repair. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-review .ps-review-stage{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:32px!important;margin-top:104px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage>.ps-evidence{grid-column:auto!important;width:100%!important;max-width:none!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence-media{width:100%!important;height:auto!important;aspect-ratio:4/3!important;border-radius:16px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence figcaption{display:block!important;margin-top:18px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence figcaption small{display:block!important;margin-bottom:10px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence figcaption strong{display:block!important;font-size:18px!important;line-height:1.35!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence figcaption p{margin-top:10px!important;font-size:12px!important;line-height:1.65!important}
+
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:96px 32px!important;width:100%!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid>.ps-evidence{width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid .ps-evidence-media{width:100%!important;height:auto!important;aspect-ratio:16/10!important;border-radius:16px!important;background:#090a0b!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid .ps-evidence-media img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid figcaption{display:block!important;margin-top:18px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid figcaption small{display:block!important;margin-bottom:9px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid figcaption strong{display:block!important;font-size:18px!important;line-height:1.35!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:32px!important;width:100%!important;margin-top:120px!important;padding-top:28px!important;border-top:1px solid rgba(255,255,255,.10)!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes small{display:block;color:#a970ff;font-size:10px;letter-spacing:.08em}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes strong{display:block;margin-top:14px;color:rgba(255,255,255,.70);font-size:13px;line-height:1.55;overflow-wrap:anywhere}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes p{margin-top:10px;color:rgba(255,255,255,.42);font-size:11px;line-height:1.65}
+}
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-review .ps-review-stage,
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid,
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes{display:grid!important;grid-template-columns:1fr!important;gap:64px!important}
+}
+
+/* v29 — repair: flat, equal UI gallery and stable three-up review grid. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-review .ps-review-stage{
+    display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:32px!important;margin-top:104px!important
+  }
+  .project-page.pinsight-page #pinsight-review .ps-review-stage>.ps-evidence{
+    grid-column:auto!important;width:100%!important;max-width:none!important;margin:0!important
+  }
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence-media{
+    width:100%!important;height:auto!important;aspect-ratio:4/3!important;border-radius:16px!important
+  }
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence figcaption{
+    display:block!important;margin-top:18px!important
+  }
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence figcaption small{display:block!important;margin-bottom:10px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence figcaption strong{display:block!important;font-size:18px!important;line-height:1.35!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence figcaption p{margin-top:10px!important;font-size:12px!important;line-height:1.65!important}
+
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:96px 32px;width:100%;margin-top:0
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid>.ps-evidence{width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid .ps-evidence-media{
+    width:100%!important;height:auto!important;aspect-ratio:16/10!important;border-radius:16px!important;background:#090a0b!important
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid .ps-evidence-media img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid figcaption{display:block!important;margin-top:18px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid figcaption small{display:block!important;margin-bottom:9px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid figcaption strong{display:block!important;font-size:18px!important;line-height:1.35!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes{
+    display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;width:100%;margin-top:120px;padding-top:28px;border-top:1px solid rgba(255,255,255,.10)
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes article{min-width:0}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes small{display:block;color:#a970ff;font-size:10px;letter-spacing:.08em}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes strong{display:block;margin-top:14px;color:rgba(255,255,255,.70);font-size:13px;line-height:1.55;overflow-wrap:anywhere}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes p{margin-top:10px;color:rgba(255,255,255,.42);font-size:11px;line-height:1.65}
+}
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-review .ps-review-stage,
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid,
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes{display:grid;grid-template-columns:1fr;gap:64px}
+}
+
+/* v25 final authority — editorial section rhythm and ordered UI gallery */
+@media(min-width:981px){
+  .project-page.pinsight-page .ps-section,
+  .project-page.pinsight-page .ps-section-major,
+  .project-page.pinsight-page .ps-section-large,
+  .project-page.pinsight-page .ps-section.ps-lifecycle-section{padding-block:190px}
+  .project-page.pinsight-page .ps-section-head,
+  .project-page.pinsight-page .ps-section-head.is-statement{margin-bottom:120px}
+  .project-page.pinsight-page .ps-section-rail{grid-column:1/3}
+  .project-page.pinsight-page .ps-section-intro,
+  .project-page.pinsight-page .ps-section-head.is-statement .ps-section-intro{grid-column:3/11;max-width:860px}
+
+  .project-page.pinsight-page #pinsight-ui .ps-language-section{margin-bottom:180px}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web{
+    display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:42px 32px!important;width:100%!important
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group+.ps-final-group{margin-top:220px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>header,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>header{
+    position:static!important;grid-column:1/13!important;grid-row:auto!important;display:grid!important;
+    grid-template-columns:3fr 6fr 3fr!important;gap:32px!important;align-items:end!important;
+    max-width:none!important;margin:0!important;padding:0 0 30px!important;border-bottom:1px solid rgba(255,255,255,.12)
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header span{grid-column:1!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header h3{grid-column:2!important;margin:0!important;font-size:46px!important;line-height:1.08}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header p{grid-column:3!important;margin:0!important;text-align:right}
+  .project-page.pinsight-page #pinsight-ui .ps-final-primary,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence.is-primary,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>.ps-evidence.is-primary,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web>.ps-evidence:first-of-type{
+    grid-column:1/13!important;grid-row:auto!important;width:100%!important;margin:0!important
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-primary .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence.is-primary .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>.ps-evidence.is-primary .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web>.ps-evidence:first-of-type .ps-evidence-media{
+    width:100%!important;height:auto!important;aspect-ratio:16/9!important;border-radius:16px!important
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-states,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary),
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes,
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{
+    grid-column:1/13!important;grid-row:auto!important;width:100%!important;max-width:none!important;margin:0!important
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary) .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-web-support .ps-evidence-media{height:auto!important;aspect-ratio:16/9!important;border-radius:16px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:32px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption{display:grid!important;grid-template-columns:3fr 9fr!important;gap:32px!important;margin-top:20px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption small{grid-column:1!important}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption strong,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption p{grid-column:2!important}
+}
+
+/* Experience Journey v19 — four aligned information layers. */
+.project-page.pinsight-page #pinsight-overview .ps-experience-overview{
+  --p1:10%;--p2:32.5%;--p3:50%;--p4:68.5%;--p5:90%;
+}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases{
+  display:grid;grid-template-columns:3fr 2fr;gap:32px;margin:48px 10% 0;
+}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases>span{
+  display:grid;gap:7px;padding-top:14px;border-top:1px solid rgba(255,255,255,.10)
+}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases>span:first-child{border-color:rgba(169,112,255,.28)}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases small{color:rgba(169,112,255,.55);font-size:10px;letter-spacing:.1em}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases strong{color:rgba(255,255,255,.48);font-size:12px;font-weight:500;letter-spacing:.04em}
+
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11{min-height:500px;margin-top:22px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 svg{height:500px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-active{stroke-width:2;opacity:.86}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-base{stroke-width:1;opacity:.22}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article{top:318px;width:190px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-1{left:var(--p1);top:318px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-2{left:var(--p2);top:300px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3{left:var(--p3);top:0;width:310px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-4{left:var(--p4);top:300px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5{left:var(--p5);top:318px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article strong{margin-top:13px;font-size:21px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article em{margin-top:7px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article p{margin-top:13px;font-size:13px;line-height:1.7}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3 strong{font-size:30px}
+  .project-page.pinsight-page #pinsight-overview .journey-feedback{left:18%;top:264px;transform:none}
+  .project-page.pinsight-page #pinsight-overview .journey-transition{position:absolute;left:59%;top:318px;color:rgba(169,112,255,.48);font-size:10px;letter-spacing:.08em;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .journey-transition::before{content:'';display:inline-block;width:18px;height:1px;margin-right:8px;background:rgba(169,112,255,.28);vertical-align:3px}
+}
+
+/* v25 — visible editorial rhythm + disciplined Final UI sequence */
+@media(min-width:981px){
+  .project-page.pinsight-page .ps-shell{
+    --ps-section-space:clamp(176px,13vw,220px);
+  }
+  .project-page.pinsight-page .ps-section,
+  .project-page.pinsight-page .ps-section-major,
+  .project-page.pinsight-page .ps-section-large,
+  .project-page.pinsight-page .ps-section.ps-lifecycle-section{
+    padding-block:var(--ps-section-space);
+  }
+  .project-page.pinsight-page .ps-section-head,
+  .project-page.pinsight-page .ps-section-head.is-statement{
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:32px;
+    align-items:start;
+    margin-bottom:clamp(104px,8vw,132px);
+  }
+  .project-page.pinsight-page .ps-section-rail{grid-column:1/3}
+  .project-page.pinsight-page .ps-section-intro,
+  .project-page.pinsight-page .ps-section-head.is-statement .ps-section-intro{
+    grid-column:3/11;
+    max-width:860px;
+  }
+  .project-page.pinsight-page .ps-section-intro h2,
+  .project-page.pinsight-page .ps-section-head.is-statement h2{
+    max-width:820px;
+    font-size:clamp(48px,4.6vw,68px);
+    line-height:1.04;
+  }
+  .project-page.pinsight-page .ps-section-intro>p{
+    max-width:680px;
+    margin-top:26px;
+    font-size:16px;
+    line-height:1.85;
+  }
+
+  .project-page.pinsight-page #pinsight-ui{padding-top:196px}
+  .project-page.pinsight-page #pinsight-ui .ps-language-section{margin-bottom:180px}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web{
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:32px;
+    row-gap:42px;
+    align-items:start;
+    width:100%;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group+.ps-final-group{
+    margin-top:clamp(188px,14vw,232px);
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>header,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>header{
+    grid-column:1/13!important;
+    grid-row:auto!important;
+    display:grid;
+    grid-template-columns:3fr 6fr 3fr;
+    gap:32px;
+    align-items:end;
+    max-width:none;
+    padding:0 0 30px;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header span{grid-column:1;font-size:11px}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header h3{
+    grid-column:2;
+    margin:0;
+    max-width:620px;
+    font-size:clamp(36px,3.2vw,48px);
+    line-height:1.08;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header p{
+    grid-column:3;
+    margin:0;
+    text-align:right;
+    font-size:11px;
+    line-height:1.6;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-primary,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence.is-primary,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>.ps-evidence.is-primary,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web>.ps-evidence:first-of-type{
+    grid-column:1/13!important;
+    grid-row:auto!important;
+    width:100%;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-primary .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence.is-primary .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>.ps-evidence.is-primary .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web>.ps-evidence:first-of-type .ps-evidence-media{
+    aspect-ratio:16/9;
+    min-height:0;
+    border-radius:16px;
+    background:#0b0d12;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-states,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary),
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes,
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{
+    grid-column:1/13!important;
+    grid-row:auto!important;
+    width:100%;
+    margin-top:2px;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary) .ps-evidence-media{
+    aspect-ratio:16/9;
+    border-radius:16px;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-states{
+    justify-content:flex-start;
+    gap:20px;
+    padding:18px 0 0;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:32px;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes article{
+    min-height:0;
+    padding:24px 0 0;
+    border-top:1px solid rgba(255,255,255,.10);
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:32px;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-web-support .ps-evidence-media{
+    aspect-ratio:16/9;
+    border-radius:16px;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption{
+    display:grid;
+    grid-template-columns:3fr 9fr;
+    gap:32px;
+    align-items:start;
+    margin-top:20px;
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption small{grid-column:1}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption strong,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption p{grid-column:2}
+}
+
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header{display:block;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header h3{margin:14px 0 10px}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header p{text-align:left}
+}
+
+/* Product Design repair v22 — clear three-zone composition, no image collisions. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas{
+    grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(7,105px);column-gap:24px;min-height:780px
+  }
+  .project-page.pinsight-page #pinsight-overview .image-step-1{grid-column:1/4;grid-row:1/4}
+  .project-page.pinsight-page #pinsight-overview .image-step-2{grid-column:1/4;grid-row:5/8}
+  .project-page.pinsight-page #pinsight-overview .image-step-3{grid-column:4/10;grid-row:2/7;align-self:center}
+  .project-page.pinsight-page #pinsight-overview .image-step-4{grid-column:10/13;grid-row:1/4}
+  .project-page.pinsight-page #pinsight-overview .image-step-5{grid-column:10/13;grid-row:5/8}
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg{z-index:1}
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg path{stroke:rgba(169,112,255,.34);stroke-width:1.25}
+  .project-page.pinsight-page #pinsight-overview .image-step{z-index:2}
+  .project-page.pinsight-page #pinsight-overview .image-step-3{z-index:3}
+  .project-page.pinsight-page #pinsight-overview .image-step-1 .image-step-media,.project-page.pinsight-page #pinsight-overview .image-step-4 .image-step-media{aspect-ratio:4/3}
+  .project-page.pinsight-page #pinsight-overview .image-step-2 .image-step-media,.project-page.pinsight-page #pinsight-overview .image-step-5 .image-step-media{aspect-ratio:16/10}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 .image-step-media{aspect-ratio:4/3}
+  .project-page.pinsight-page #pinsight-overview .ps-image-feedback{left:7.2%;top:47%;z-index:4}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption{grid-template-columns:24px 1fr;gap:3px 8px;margin-top:11px}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption strong{font-size:15px}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 figcaption{margin-top:15px}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 figcaption strong{font-size:22px}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption p{margin-top:2px}
+}
+
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states{
+  position:relative;height:132px;margin-top:42px;border-top:1px solid rgba(255,255,255,.08)
+}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-identity{
+  position:absolute;left:var(--p1);top:-25px;color:rgba(201,184,255,.58);font-size:10px;letter-spacing:.08em;transform:translateX(-50%)
+}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-identity i{display:inline-block;width:5px;height:5px;margin-right:7px;border-radius:50%;background:#a970ff;vertical-align:1px}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states article{
+  position:absolute;top:29px;width:180px;display:grid;gap:6px;text-align:left;transform:translateX(-50%)
+}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states article::before{content:'';position:absolute;left:50%;top:-30px;width:1px;height:16px;background:rgba(169,112,255,.26)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-1{left:var(--p1)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-2{left:var(--p2)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-3{left:var(--p3)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-4{left:var(--p4)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-5{left:var(--p5)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states small{color:rgba(169,112,255,.46);font-size:9px;letter-spacing:.08em}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states strong{color:rgba(255,255,255,.64);font-size:13px;font-weight:550}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states span{color:rgba(255,255,255,.34);font-size:11px;line-height:1.45}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-3 strong{color:rgba(213,197,255,.86)}
+
+.project-page.pinsight-page #pinsight-overview .ps-experience-devices{margin:22px 10% 0;grid-template-columns:3fr 2fr}
+.project-page.pinsight-page #pinsight-overview .ps-experience-devices span{padding-top:15px}
+
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-overview .ps-journey-phases{margin-inline:0;grid-template-columns:3fr 2fr;gap:18px}
+  .project-page.pinsight-page #pinsight-overview .ps-feedback-states{height:auto;margin-top:36px;padding-top:24px;display:grid;gap:18px}
+  .project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-identity{position:static;transform:none}
+  .project-page.pinsight-page #pinsight-overview .ps-feedback-states article{position:relative;left:auto!important;top:auto;width:auto;padding-left:22px;transform:none}
+  .project-page.pinsight-page #pinsight-overview .ps-feedback-states article::before{left:0;top:2px;height:28px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices{margin-inline:0}
+}
+
+/* v24 — whole-case rhythm and a regular final-UI presentation system. */
+.project-page.pinsight-page .ps-shell{width:min(1200px,calc(100% - 64px))}
+.project-page.pinsight-page .ps-section,
+.project-page.pinsight-page .ps-section-major,
+.project-page.pinsight-page .ps-section-large,
+.project-page.pinsight-page .ps-section.ps-lifecycle-section{
+  width:100%;margin-inline:auto;padding-block:clamp(132px,11vw,176px);border-top:1px solid rgba(255,255,255,.075)
+}
+.project-page.pinsight-page .ps-section-head,
+.project-page.pinsight-page .ps-section-head.is-statement{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--ps-v1-gap);width:100%;max-width:none;margin:0 0 clamp(72px,7vw,104px)
+}
+.project-page.pinsight-page .ps-section-rail{grid-column:1/3;padding-top:8px}
+.project-page.pinsight-page .ps-section-intro,
+.project-page.pinsight-page .ps-section-head.is-statement .ps-section-intro{grid-column:3/11;max-width:none}
+.project-page.pinsight-page .ps-section-intro h2,
+.project-page.pinsight-page .ps-section-head.is-statement h2{max-width:15ch;font-size:clamp(48px,4.7vw,68px);line-height:1.08;letter-spacing:-.045em}
+.project-page.pinsight-page .ps-section-intro>p,
+.project-page.pinsight-page .ps-section-head.is-statement .ps-section-intro>p{max-width:680px;margin-top:26px;font-size:16px;line-height:1.75}
+.project-page.pinsight-page #pinsight-insight,
+.project-page.pinsight-page #pinsight-strategy{padding-top:clamp(148px,12vw,188px);padding-bottom:clamp(148px,12vw,188px)}
+.project-page.pinsight-page #pinsight-insight>.ps-figure-block,
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-mapping{margin-top:clamp(120px,10vw,152px)}
+.project-page.pinsight-page #pinsight-strategy>.ps-section-head{margin-bottom:clamp(96px,8vw,128px)}
+
+.project-page.pinsight-page #pinsight-ui{padding-top:clamp(148px,12vw,188px)}
+.project-page.pinsight-page #pinsight-ui .ps-language-section{width:100%;margin:0 0 clamp(128px,10vw,160px)}
+.project-page.pinsight-page #pinsight-ui .ps-final-group,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-web{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--ps-v1-gap);row-gap:34px;width:100%;max-width:none;margin:0;align-items:start
+}
+.project-page.pinsight-page #pinsight-ui .ps-final-group+.ps-final-group{margin-top:clamp(132px,11vw,176px)}
+.project-page.pinsight-page #pinsight-ui .ps-final-group>header,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>header,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>header{
+  position:static;grid-column:1/4;grid-row:1;max-width:260px;margin:0;padding-top:4px
+}
+.project-page.pinsight-page #pinsight-ui .ps-final-group>header h3{margin:16px 0 12px;font-size:clamp(28px,2.5vw,36px);line-height:1.16;letter-spacing:-.025em}
+.project-page.pinsight-page #pinsight-ui .ps-final-group>header p{font-size:12px;line-height:1.6}
+.project-page.pinsight-page #pinsight-ui .ps-final-primary,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence.is-primary,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>.ps-evidence.is-primary,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-web>.ps-evidence:first-of-type{
+  grid-column:4/13;grid-row:1;width:100%;margin:0
+}
+.project-page.pinsight-page #pinsight-ui .ps-final-primary .ps-evidence-media,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence.is-primary .ps-evidence-media,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>.ps-evidence.is-primary .ps-evidence-media,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-web>.ps-evidence:first-of-type .ps-evidence-media{
+  width:100%;height:auto!important;aspect-ratio:16/10;border-radius:20px
+}
+.project-page.pinsight-page #pinsight-ui .ps-final-group .ps-evidence-media img{object-fit:contain}
+.project-page.pinsight-page #pinsight-ui .ps-final-states,
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary),
+.project-page.pinsight-page #pinsight-ui .ps-final-notes,
+.project-page.pinsight-page #pinsight-ui .ps-web-support{
+  grid-column:4/13;grid-row:auto;width:100%;max-width:none;margin:0
+}
+.project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary) .ps-evidence-media{height:auto!important;aspect-ratio:16/10;border-radius:20px}
+.project-page.pinsight-page #pinsight-ui .ps-final-states{justify-content:flex-start;padding-top:4px}
+.project-page.pinsight-page #pinsight-ui .ps-final-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--ps-v1-gap)}
+.project-page.pinsight-page #pinsight-ui .ps-final-notes article{min-height:150px;padding:24px 0;border:0;border-top:1px solid rgba(255,255,255,.10)}
+.project-page.pinsight-page #pinsight-ui .ps-web-support{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--ps-v1-gap)}
+.project-page.pinsight-page #pinsight-ui .ps-web-support .ps-evidence-media{height:auto!important;aspect-ratio:16/10;border-radius:18px}
+.project-page.pinsight-page #pinsight-ui .ps-evidence figcaption{margin-top:18px}
+
+@media(max-width:980px){
+  .project-page.pinsight-page .ps-shell{width:calc(100% - 48px)}
+  .project-page.pinsight-page .ps-section-head,.project-page.pinsight-page .ps-section-head.is-statement{display:block}
+  .project-page.pinsight-page .ps-section-rail{margin-bottom:28px}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web{display:block}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header{max-width:520px;margin-bottom:32px}
+  .project-page.pinsight-page #pinsight-ui .ps-final-states,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary),
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes,
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{margin-top:28px}
+}
+@media(max-width:620px){
+  .project-page.pinsight-page .ps-shell{width:calc(100% - 32px)}
+  .project-page.pinsight-page .ps-section,.project-page.pinsight-page .ps-section-major,.project-page.pinsight-page .ps-section-large{padding-block:92px}
+  .project-page.pinsight-page .ps-section-intro h2,.project-page.pinsight-page .ps-section-head.is-statement h2{font-size:36px}
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes,.project-page.pinsight-page #pinsight-ui .ps-web-support{grid-template-columns:1fr}
+}
+
+/* v23 — research-first overview. Final-product imagery belongs later in the case study. */
+.project-page.pinsight-page #pinsight-overview .ps-research-journey>header{margin-bottom:48px}
+.project-page.pinsight-page #pinsight-overview .ps-research-journey-stage{
+  position:relative;min-height:620px;padding:38px 0 0;border-top:1px solid rgba(255,255,255,.08)
+}
+.project-page.pinsight-page #pinsight-overview .journey-phase{position:absolute;top:18px;display:grid;gap:6px}
+.project-page.pinsight-page #pinsight-overview .journey-phase small{color:#a970ff;font-size:10px;letter-spacing:.12em}
+.project-page.pinsight-page #pinsight-overview .journey-phase strong{color:rgba(255,255,255,.38);font-size:12px;font-weight:450}
+.project-page.pinsight-page #pinsight-overview .phase-live{left:0}
+.project-page.pinsight-page #pinsight-overview .phase-after{left:72%}
+.project-page.pinsight-page #pinsight-overview .journey-focus{
+  position:absolute;left:4%;top:130px;width:42%;padding:34px 38px 38px;border-left:2px solid rgba(169,112,255,.72);
+  background:linear-gradient(90deg,rgba(169,112,255,.10),rgba(169,112,255,.018) 68%,transparent)
+}
+.project-page.pinsight-page #pinsight-overview .journey-focus span,.project-page.pinsight-page #pinsight-overview .journey-note small{display:block;color:#a970ff;font-size:11px;letter-spacing:.1em}
+.project-page.pinsight-page #pinsight-overview .journey-focus strong{display:block;max-width:16ch;margin-top:20px;color:#f4f1f8;font-size:clamp(28px,3vw,42px);line-height:1.24;font-weight:600}
+.project-page.pinsight-page #pinsight-overview .journey-focus small{display:block;margin-top:28px;color:rgba(255,255,255,.38);font-size:12px;letter-spacing:.03em}
+.project-page.pinsight-page #pinsight-overview .journey-transition-copy{position:absolute;left:51%;top:205px;width:18%;display:grid;gap:10px;text-align:center}
+.project-page.pinsight-page #pinsight-overview .journey-transition-copy span{color:rgba(169,112,255,.55);font-size:10px;letter-spacing:.12em}
+.project-page.pinsight-page #pinsight-overview .journey-transition-copy strong{color:rgba(255,255,255,.44);font-size:13px;font-weight:500}
+.project-page.pinsight-page #pinsight-overview .journey-note{position:absolute;right:3%;top:142px;width:24%;padding:28px 0 32px}
+.project-page.pinsight-page #pinsight-overview .journey-note strong{display:block;margin-top:20px;color:rgba(255,255,255,.82);font-size:24px;line-height:1.3}
+.project-page.pinsight-page #pinsight-overview .journey-note span{display:block;margin-top:28px;color:rgba(255,255,255,.28);font-size:12px;line-height:2}
+.project-page.pinsight-page #pinsight-overview .journey-thread{position:absolute;left:7%;right:7%;top:355px;height:2px;background:linear-gradient(90deg,rgba(169,112,255,.78) 0 45%,rgba(169,112,255,.35) 58%,rgba(169,112,255,.12) 76%,rgba(169,112,255,.03));}
+.project-page.pinsight-page #pinsight-overview .journey-thread::after{content:'';position:absolute;left:46%;right:13%;top:-1px;border-top:2px dashed rgba(169,112,255,.24)}
+.project-page.pinsight-page #pinsight-overview .journey-thread i{position:absolute;top:50%;width:7px;height:7px;border-radius:50%;background:#090a0b;border:1.5px solid #a970ff;transform:translate(-50%,-50%)}
+.project-page.pinsight-page #pinsight-overview .journey-thread i:nth-child(1){left:0}.project-page.pinsight-page #pinsight-overview .journey-thread i:nth-child(2){left:24%}.project-page.pinsight-page #pinsight-overview .journey-thread i:nth-child(3){left:50%}.project-page.pinsight-page #pinsight-overview .journey-thread i:nth-child(4){left:75%}.project-page.pinsight-page #pinsight-overview .journey-thread i:nth-child(5){left:100%;border-color:rgba(169,112,255,.28)}
+.project-page.pinsight-page #pinsight-overview .journey-steps{position:absolute;left:0;right:0;top:392px;display:grid;grid-template-columns:repeat(5,1fr);gap:28px}
+.project-page.pinsight-page #pinsight-overview .research-step{min-width:0}
+.project-page.pinsight-page #pinsight-overview .research-step small{color:#a970ff;font-size:10px;letter-spacing:.1em}
+.project-page.pinsight-page #pinsight-overview .research-step strong{display:block;margin-top:12px;color:rgba(255,255,255,.82);font-size:18px;font-weight:560}
+.project-page.pinsight-page #pinsight-overview .research-step p{max-width:18ch;margin:14px 0 0;color:rgba(255,255,255,.4);font-size:12px;line-height:1.72}
+.project-page.pinsight-page #pinsight-overview .research-step.step-4 strong,.project-page.pinsight-page #pinsight-overview .research-step.step-5 strong{color:rgba(255,255,255,.62)}
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-overview .ps-research-journey-stage{min-height:0;padding-top:28px}
+  .project-page.pinsight-page #pinsight-overview .journey-phase{position:static;margin-bottom:24px}
+  .project-page.pinsight-page #pinsight-overview .phase-after{margin-top:42px}
+  .project-page.pinsight-page #pinsight-overview .journey-focus,.project-page.pinsight-page #pinsight-overview .journey-transition-copy,.project-page.pinsight-page #pinsight-overview .journey-note{position:static;width:auto;margin-bottom:32px}
+  .project-page.pinsight-page #pinsight-overview .journey-transition-copy{text-align:left}
+  .project-page.pinsight-page #pinsight-overview .journey-thread{display:none}
+  .project-page.pinsight-page #pinsight-overview .journey-steps{position:static;grid-template-columns:1fr;gap:28px}
+}
+
+/* v22 final cascade — Product Design repair for 01 Journey only. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas{grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(7,105px);column-gap:24px;min-height:780px}
+  .project-page.pinsight-page #pinsight-overview .image-step-1{grid-column:1/4;grid-row:1/4}
+  .project-page.pinsight-page #pinsight-overview .image-step-2{grid-column:1/4;grid-row:5/8}
+  .project-page.pinsight-page #pinsight-overview .image-step-3{grid-column:4/10;grid-row:2/7;align-self:center;z-index:3}
+  .project-page.pinsight-page #pinsight-overview .image-step-4{grid-column:10/13;grid-row:1/4}
+  .project-page.pinsight-page #pinsight-overview .image-step-5{grid-column:10/13;grid-row:5/8}
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg{z-index:1}
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg path{stroke:rgba(169,112,255,.34);stroke-width:1.25}
+  .project-page.pinsight-page #pinsight-overview .image-step{z-index:2}
+  .project-page.pinsight-page #pinsight-overview .image-step-1 .image-step-media,.project-page.pinsight-page #pinsight-overview .image-step-4 .image-step-media{aspect-ratio:4/3}
+  .project-page.pinsight-page #pinsight-overview .image-step-2 .image-step-media,.project-page.pinsight-page #pinsight-overview .image-step-5 .image-step-media{aspect-ratio:16/10}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 .image-step-media{aspect-ratio:4/3}
+  .project-page.pinsight-page #pinsight-overview .ps-image-feedback{left:7.2%;top:47%;z-index:4}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption{grid-template-columns:24px 1fr;gap:3px 8px;margin-top:11px}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption strong{font-size:15px}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 figcaption{margin-top:15px}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 figcaption strong{font-size:22px}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption p{margin-top:2px}
+}
+
+/* Image-led Experience Journey v20 — only PinSight 01. */
+.project-page.pinsight-page #pinsight-overview .ps-image-journey>header{margin-bottom:36px}
+.project-page.pinsight-page #pinsight-overview .ps-image-journey-phases{
+  display:grid;grid-template-columns:7fr 5fr;gap:var(--ps-v1-gap);margin-bottom:28px
+}
+.project-page.pinsight-page #pinsight-overview .ps-image-journey-phases span{display:flex;align-items:baseline;gap:12px}
+.project-page.pinsight-page #pinsight-overview .ps-image-journey-phases b{color:rgba(255,255,255,.48);font-size:12px;font-weight:500}
+.project-page.pinsight-page #pinsight-overview .ps-image-journey-phases small{color:rgba(169,112,255,.42);font-size:10px;letter-spacing:.06em}
+.project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas{
+  position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(9,86px);column-gap:22px;min-height:774px;isolation:isolate
+}
+.project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg{position:absolute;z-index:4;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg path{fill:none;stroke:rgba(169,112,255,.62);stroke-width:1.6;vector-effect:non-scaling-stroke}
+.project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg circle{fill:#090a0b;stroke:rgba(185,139,255,.8);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg circle.is-key{fill:#a970ff;stroke:#d4c1ff;stroke-width:2}
+.project-page.pinsight-page #pinsight-overview .image-step{z-index:2;min-width:0;margin:0;align-self:start}
+.project-page.pinsight-page #pinsight-overview .image-step-1{grid-column:1/5;grid-row:2/5}
+.project-page.pinsight-page #pinsight-overview .image-step-2{grid-column:2/5;grid-row:6/9;z-index:3}
+.project-page.pinsight-page #pinsight-overview .image-step-3{grid-column:5/10;grid-row:1/6;z-index:3}
+.project-page.pinsight-page #pinsight-overview .image-step-4{grid-column:9/13;grid-row:3/6}
+.project-page.pinsight-page #pinsight-overview .image-step-5{grid-column:10/13;grid-row:7/10}
+.project-page.pinsight-page #pinsight-overview .image-step-media{position:relative;overflow:hidden;background:#0b0d12}
+.project-page.pinsight-page #pinsight-overview .image-step-media::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);pointer-events:none}
+.project-page.pinsight-page #pinsight-overview .image-step-1 .image-step-media{aspect-ratio:4/3;border-radius:16px}
+.project-page.pinsight-page #pinsight-overview .image-step-2 .image-step-media{aspect-ratio:1/1;border-radius:14px}
+.project-page.pinsight-page #pinsight-overview .image-step-3 .image-step-media{aspect-ratio:4/3;border-radius:18px}
+.project-page.pinsight-page #pinsight-overview .image-step-4 .image-step-media{aspect-ratio:16/10;border-radius:14px}
+.project-page.pinsight-page #pinsight-overview .image-step-5 .image-step-media{aspect-ratio:16/10;border-radius:14px}
+.project-page.pinsight-page #pinsight-overview .image-step img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.88) brightness(.88)}
+.project-page.pinsight-page #pinsight-overview .image-step-1 img{object-position:50% 48%}
+.project-page.pinsight-page #pinsight-overview .image-step-2 img{object-position:52% 50%;transform:scale(1.08)}
+.project-page.pinsight-page #pinsight-overview .image-step-3 img{object-position:50% 48%}
+.project-page.pinsight-page #pinsight-overview .image-step-4 img{object-position:50% 46%}
+.project-page.pinsight-page #pinsight-overview .image-step-5 img{object-position:53% 48%}
+.project-page.pinsight-page #pinsight-overview .image-step figcaption{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin-top:13px;align-items:baseline}
+.project-page.pinsight-page #pinsight-overview .image-step figcaption small{grid-row:1/3;color:#a970ff;font-size:10px;letter-spacing:.08em}
+.project-page.pinsight-page #pinsight-overview .image-step figcaption strong{color:rgba(255,255,255,.84);font-size:17px;line-height:1.2}
+.project-page.pinsight-page #pinsight-overview .image-step figcaption em{color:rgba(169,112,255,.42);font-size:9px;font-style:normal;letter-spacing:.08em;text-transform:uppercase}
+.project-page.pinsight-page #pinsight-overview .image-step figcaption p{grid-column:2;margin:4px 0 0;color:rgba(255,255,255,.44);font-size:12px;line-height:1.45}
+.project-page.pinsight-page #pinsight-overview .image-step-3 figcaption strong{font-size:21px;color:#fff}
+.project-page.pinsight-page #pinsight-overview .image-spatial-anchor{position:absolute;z-index:3;left:51%;top:68%;width:32px;height:32px;border:1px solid rgba(195,163,255,.82);border-radius:50%;transform:translate(-50%,-50%)}
+.project-page.pinsight-page #pinsight-overview .image-spatial-anchor::before{content:'';position:absolute;inset:7px;border:1px solid rgba(169,112,255,.62);border-radius:50%}
+.project-page.pinsight-page #pinsight-overview .image-spatial-anchor i{position:absolute;left:50%;top:50%;width:5px;height:5px;border-radius:50%;background:#b783ff;transform:translate(-50%,-50%)}
+.project-page.pinsight-page #pinsight-overview .ps-image-feedback{position:absolute;z-index:5;left:5.5%;top:36%;color:rgba(220,205,255,.72);font-size:10px;letter-spacing:.08em}
+.project-page.pinsight-page #pinsight-overview .ps-image-feedback i{display:inline-block;width:5px;height:5px;margin-right:8px;border-radius:50%;background:#a970ff;vertical-align:1px}
+
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-phases{grid-template-columns:1fr 1fr}
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:42px 18px;min-height:0}
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg,.project-page.pinsight-page #pinsight-overview .ps-image-feedback{display:none}
+  .project-page.pinsight-page #pinsight-overview .image-step{grid-column:auto;grid-row:auto}
+  .project-page.pinsight-page #pinsight-overview .image-step-3{grid-column:1/-1;grid-row:1}
+}
+@media(max-width:620px){
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas{grid-template-columns:1fr}
+  .project-page.pinsight-page #pinsight-overview .image-step-3{grid-column:auto}
+}
+
+/* Product Design polish v21 — visual hierarchy only, scoped to 01 Journey. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas{
+    grid-template-rows:repeat(9,90px);min-height:810px;column-gap:24px
+  }
+  .project-page.pinsight-page #pinsight-overview .image-step-1{grid-column:1/5;grid-row:2/5}
+  .project-page.pinsight-page #pinsight-overview .image-step-2{grid-column:2/5;grid-row:6/9}
+  .project-page.pinsight-page #pinsight-overview .image-step-3{grid-column:4/10;grid-row:1/6}
+  .project-page.pinsight-page #pinsight-overview .image-step-4{grid-column:9/13;grid-row:3/6}
+  .project-page.pinsight-page #pinsight-overview .image-step-5{grid-column:10/13;grid-row:7/10}
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg path{stroke:rgba(169,112,255,.48);stroke-width:1.35}
+  .project-page.pinsight-page #pinsight-overview .image-step-1 img{filter:saturate(.78) brightness(.76)}
+  .project-page.pinsight-page #pinsight-overview .image-step-2 img{filter:saturate(.84) brightness(.82)}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 img{filter:saturate(.98) brightness(.96)}
+  .project-page.pinsight-page #pinsight-overview .image-step-4 img{filter:saturate(.86) brightness(.84)}
+  .project-page.pinsight-page #pinsight-overview .image-step-5 img{filter:saturate(.76) brightness(.76)}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 .image-step-media::after{box-shadow:inset 0 0 0 1px rgba(194,158,255,.25)}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption{margin-top:12px}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption strong{font-size:16px}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 figcaption strong{font-size:22px}
+  .project-page.pinsight-page #pinsight-overview .ps-image-feedback{top:37%;color:rgba(220,205,255,.62)}
+}
+
+.project-page.pinsight-page .ps-section-head{
+  margin-bottom:clamp(64px,7vw,104px);
+}
+.project-page.pinsight-page .ps-section-intro{max-width:900px}
+.project-page.pinsight-page .ps-section-intro h2{max-width:16ch}
+.project-page.pinsight-page .ps-section-intro>p{max-width:66ch}
+
+.project-page.pinsight-page .ps-evidence-media{
+  height:auto!important;
+  aspect-ratio:16/10;
+  border-radius:var(--ps-v1-radius);
+  background:linear-gradient(145deg,rgba(25,22,34,.94),rgba(8,10,16,.96));
+  box-shadow:0 30px 80px rgba(0,0,0,.24);
+}
+.project-page.pinsight-page .ps-evidence-media img{
+  display:block;
+  object-fit:contain;
+}
+.project-page.pinsight-page .ps-evidence figcaption{
+  grid-template-columns:minmax(112px,150px) minmax(0,1fr);
+  padding-top:18px;
+}
+.project-page.pinsight-page .ps-evidence figcaption strong{font-size:clamp(18px,1.7vw,24px)}
+
+.project-page.pinsight-page .ps-review-stage{
+  display:grid!important;
+  grid-template-columns:minmax(0,7fr) minmax(260px,5fr)!important;
+  gap:var(--ps-v1-gap)!important;
+  align-items:start;
+}
+.project-page.pinsight-page .ps-review-stage>.ps-evidence{grid-column:auto!important}
+.project-page.pinsight-page .ps-review-stage+.ps-evidence{margin-top:clamp(80px,8vw,120px)}
+
+.project-page.pinsight-page .ps-web-experience{margin-top:clamp(96px,9vw,132px)}
+.project-page.pinsight-page .ps-web-part,
+.project-page.pinsight-page .ps-web-part.is-reverse{
+  display:grid!important;
+  grid-template-columns:minmax(220px,3fr) minmax(0,9fr)!important;
+  gap:clamp(38px,5vw,72px)!important;
+  align-items:start;
+}
+.project-page.pinsight-page .ps-web-part.is-reverse{
+  grid-template-columns:minmax(0,9fr) minmax(220px,3fr)!important;
+}
+.project-page.pinsight-page .ps-web-part.is-reverse header{order:2}
+.project-page.pinsight-page .ps-web-part+.ps-web-part{margin-top:clamp(104px,11vw,156px)}
+
+.project-page.pinsight-page .ps-language-section{margin-bottom:clamp(96px,10vw,144px)}
+.project-page.pinsight-page .ps-final-group,
+.project-page.pinsight-page .ps-final-group.is-split,
+.project-page.pinsight-page .ps-final-group.is-split.is-reverse,
+.project-page.pinsight-page .ps-final-group.is-web{
+  display:grid!important;
+  grid-template-columns:repeat(12,minmax(0,1fr))!important;
+  gap:var(--ps-v1-gap)!important;
+  align-items:start;
+}
+.project-page.pinsight-page .ps-final-group+.ps-final-group{margin-top:clamp(112px,12vw,168px)}
+.project-page.pinsight-page .ps-final-group>header{grid-column:1/4!important;margin:0!important;padding-top:4px}
+.project-page.pinsight-page .ps-final-group>header h3{font-size:clamp(32px,3vw,42px)}
+.project-page.pinsight-page .ps-final-primary{grid-column:4/13!important}
+.project-page.pinsight-page .ps-final-states{grid-column:4/13!important;margin-top:0}
+.project-page.pinsight-page .ps-final-group.is-split>.ps-evidence.is-primary{grid-column:4/11!important}
+.project-page.pinsight-page .ps-final-group.is-split>.ps-evidence:not(.is-primary){grid-column:11/13!important}
+.project-page.pinsight-page .ps-final-group.is-split.is-reverse>header{grid-column:10/13!important}
+.project-page.pinsight-page .ps-final-group.is-split.is-reverse>.ps-evidence{grid-column:1/8!important}
+.project-page.pinsight-page .ps-final-group.is-split.is-reverse>.ps-final-notes{grid-column:8/10!important;margin-top:0}
+.project-page.pinsight-page .ps-final-group.is-web>header{grid-column:1/4!important}
+.project-page.pinsight-page .ps-final-group.is-web>.ps-evidence{grid-column:4/13!important}
+.project-page.pinsight-page .ps-final-group.is-web>.ps-web-support{grid-column:4/13!important;margin-top:28px}
+.project-page.pinsight-page .ps-web-support{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--ps-v1-gap)}
+
+@media(max-width:900px){
+  .project-page.pinsight-page .ps-review-stage,
+  .project-page.pinsight-page .ps-web-part,
+  .project-page.pinsight-page .ps-web-part.is-reverse{grid-template-columns:1fr!important}
+  .project-page.pinsight-page .ps-web-part.is-reverse header{order:0}
+  .project-page.pinsight-page .ps-final-group,
+  .project-page.pinsight-page .ps-final-group.is-split,
+  .project-page.pinsight-page .ps-final-group.is-split.is-reverse,
+  .project-page.pinsight-page .ps-final-group.is-web{display:block!important}
+  .project-page.pinsight-page .ps-final-group>header{margin-bottom:38px!important}
+  .project-page.pinsight-page .ps-final-states,
+  .project-page.pinsight-page .ps-final-notes,
+  .project-page.pinsight-page .ps-web-support{margin-top:28px!important}
+}
+
+@media(max-width:560px){
+  .project-page.pinsight-page .ps-evidence-media{border-radius:16px;aspect-ratio:4/3}
+  .project-page.pinsight-page .ps-evidence figcaption{grid-template-columns:1fr}
+  .project-page.pinsight-page .ps-evidence figcaption>*{grid-column:1!important}
+  .project-page.pinsight-page .ps-web-support{grid-template-columns:1fr}
+}
+
+/* 00 Hero only — content freeze refinement */
+.project-page.pinsight-page .ps-shell{max-width:1200px}
+.project-page.pinsight-page .ps-hero{
+  display:grid;
+  grid-template-columns:minmax(0,5fr) minmax(0,7fr);
+  column-gap:clamp(48px,4vw,64px);
+  min-height:0;
+  padding:clamp(96px,8vw,120px) 0 clamp(120px,10vw,148px);
+  align-items:center;
+  border:0;
+  border-radius:0;
+  background:none;
+  box-shadow:none;
+  position:relative;
+  isolation:isolate;
+}
+.project-page.pinsight-page .ps-hero::before{
+  content:'';
+  position:absolute;
+  z-index:-1;
+  width:min(62vw,760px);
+  aspect-ratio:1.25;
+  right:-10%;
+  top:45%;
+  transform:translateY(-50%);
+  border-radius:50%;
+  background:radial-gradient(ellipse,rgba(94,74,224,.13) 0%,rgba(107,69,190,.07) 42%,transparent 72%);
+  filter:blur(54px);
+  pointer-events:none;
+}
+.project-page.pinsight-page .ps-hero-path{
+  position:absolute;
+  z-index:2;
+  left:38.5%;
+  top:63%;
+  width:16.5%;
+  height:42px;
+  border-top:1px solid rgba(173,105,255,.24);
+  border-right:1px solid rgba(122,108,255,.18);
+  pointer-events:none;
+}
+.project-page.pinsight-page .ps-hero-path::after{
+  content:'';
+  position:absolute;
+  right:-1px;
+  bottom:0;
+  width:46px;
+  height:1px;
+  background:linear-gradient(90deg,rgba(122,108,255,.18),transparent);
+}
+.project-page.pinsight-page .ps-hero-path i{
+  position:absolute;
+  width:5px;
+  height:5px;
+  border:1px solid rgba(183,140,255,.48);
+  border-radius:50%;
+  background:#090a0b;
+}
+.project-page.pinsight-page .ps-hero-path i:nth-child(1){left:-2px;top:-3px}
+.project-page.pinsight-page .ps-hero-path i:nth-child(2){left:54%;top:-3px}
+.project-page.pinsight-page .ps-hero-path i:nth-child(3){right:-3px;bottom:-3px}
+.project-page.pinsight-page .ps-hero-copy{grid-column:1;min-width:0}
+.project-page.pinsight-page .ps-hero-copy .ps-label{
+  margin:0 0 clamp(42px,4vw,52px);
+  font-size:12px;
+}
+.project-page.pinsight-page .ps-hero-copy .ps-label span{color:var(--ps-purple)}
+.project-page.pinsight-page .ps-hero-copy .ps-label strong{color:rgba(255,255,255,.46);font-weight:500}
+.project-page.pinsight-page .ps-hero-copy h1{
+  margin:0;
+  font-size:clamp(88px,7.15vw,103px);
+  line-height:.9;
+  letter-spacing:-.065em;
+}
+.project-page.pinsight-page .ps-hero-copy h1>span:first-child{color:#f5f5f7}
+.project-page.pinsight-page .ps-hero-copy h1>span:nth-child(2){color:#c9b8ff}
+.project-page.pinsight-page .ps-hero-copy h1::after{
+  content:'';
+  display:block;
+  width:32px;
+  height:1px;
+  margin-top:28px;
+  background:rgba(173,105,255,.62);
+}
+.project-page.pinsight-page .ps-hero-copy h2{
+  max-width:480px;
+  margin:26px 0 0;
+  font-size:clamp(34px,2.7vw,39px);
+  font-weight:630;
+  line-height:1.22;
+  letter-spacing:-.035em;
+  word-break:keep-all;
+  overflow-wrap:normal;
+}
+.project-page.pinsight-page .ps-hero-copy h2 span{display:block;white-space:nowrap}
+.project-page.pinsight-page .ps-hero-copy h2 em{color:#b99cff;font-style:normal}
+.project-page.pinsight-page .ps-hero-copy>p{
+  max-width:460px;
+  margin:28px 0 0;
+  color:rgba(255,255,255,.58);
+  font-size:17px;
+  line-height:1.76;
+}
+.project-page.pinsight-page .ps-hero-tags{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  margin-top:30px;
+  color:rgba(255,255,255,.58);
+  font-size:14px;
+}
+.project-page.pinsight-page .ps-hero-tags>span{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  color:inherit;
+  font-size:inherit;
+  transition:color .28s ease;
+}
+.project-page.pinsight-page .ps-hero-tags>span+span::before{
+  content:'·';
+  position:absolute;
+  left:-17px;
+  color:rgba(173,105,255,.28);
+}
+.project-page.pinsight-page .ps-hero-tags svg{
+  width:16px;
+  height:16px;
+  overflow:visible;
+  fill:none;
+  stroke:rgba(169,112,255,.82);
+  stroke-width:1.25;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  transition:stroke .28s ease,transform .28s ease;
+}
+.project-page.pinsight-page .ps-hero-tags b{color:inherit;font-size:inherit;font-weight:450}
+.project-page.pinsight-page .ps-hero-tags>span:hover{color:rgba(255,255,255,.90)}
+.project-page.pinsight-page .ps-hero-tags>span:hover svg{stroke:#a970ff;transform:translateY(-1px)}
+.project-page.pinsight-page .ps-hero-visual{
+  grid-column:2;
+  width:100%;
+  height:auto!important;
+  aspect-ratio:4/3;
+  margin:0;
+  overflow:hidden;
+  border:1px solid rgba(183,140,255,.18);
+  border-radius:22px;
+  background:#090a0b;
+  box-shadow:none;
+  transition:border-color .4s ease,transform .4s ease;
+}
+.project-page.pinsight-page .ps-hero-visual:hover{border-color:rgba(150,90,255,.38);transform:translateY(-2px)}
+.project-page.pinsight-page .ps-hero-visual::after{display:none}
+.project-page.pinsight-page .ps-hero-visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  filter:none;
+}
+
+/* Project Index only — 6 + 5 editorial navigation */
+.project-page.pinsight-page .ps-index{
+  display:block;
+  margin:0 0 clamp(120px,11vw,160px);
+  padding:26px 0 0;
+  border:0;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+.project-page.pinsight-page .ps-index-label{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:6px;
+  margin-bottom:32px;
+}
+.project-page.pinsight-page .ps-index-label strong{
+  color:rgba(255,255,255,.70);
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:.04em;
+}
+.project-page.pinsight-page .ps-index-label small{
+  color:rgba(255,255,255,.30);
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.16em;
+}
+.project-page.pinsight-page .ps-index-grid{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  column-gap:clamp(32px,3vw,44px);
+  row-gap:34px;
+  position:relative;
+  isolation:isolate;
+}
+.project-page.pinsight-page .ps-index-grid::before{
+  content:'';
+  position:absolute;
+  z-index:-1;
+  left:5px;
+  right:8%;
+  top:58px;
+  height:1px;
+  background:linear-gradient(90deg,rgba(173,105,255,.14),rgba(119,110,226,.08));
+}
+.project-page.pinsight-page .ps-index-grid::after{
+  content:'';
+  position:absolute;
+  z-index:-1;
+  right:8%;
+  top:58px;
+  width:1px;
+  height:30px;
+  background:linear-gradient(rgba(119,110,226,.10),transparent);
+}
+.project-page.pinsight-page .ps-index a{
+  position:relative;
+  min-width:0;
+  padding:0 0 7px;
+  border:0;
+  color:rgba(255,255,255,.68);
+  font-size:15px;
+  text-decoration:none;
+}
+.project-page.pinsight-page .ps-index a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:1px;
+  background:rgba(173,105,255,.85);
+  transition:width .3s ease;
+}
+.project-page.pinsight-page .ps-index a:hover::after{width:22px}
+.project-page.pinsight-page .ps-index a span{
+  display:block;
+  margin:0 0 11px;
+  color:rgba(183,140,255,.82);
+  font-size:13px;
+  font-weight:600;
+  transition:color .3s ease;
+  position:relative;
+  padding-left:13px;
+}
+.project-page.pinsight-page .ps-index a span::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:50%;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:rgba(183,140,255,.62);
+  transform:translateY(-50%);
+  transition:transform .3s ease,background-color .3s ease;
+}
+.project-page.pinsight-page .ps-index a strong{
+  display:block;
+  overflow:hidden;
+  color:inherit;
+  font-size:15px;
+  font-weight:450;
+  line-height:1.3;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  transition:color .3s ease;
+}
+.project-page.pinsight-page .ps-index a:hover span{color:#c8a4ff}
+.project-page.pinsight-page .ps-index a:hover span::before{background:#c8a4ff;transform:translateY(-50%) scale(1.25)}
+.project-page.pinsight-page .ps-index a:hover strong{color:#fff}
+
+@media(max-width:900px){
+  .project-page.pinsight-page .ps-hero{grid-template-columns:1fr;row-gap:56px;padding:80px 0 120px}
+  .project-page.pinsight-page .ps-hero-copy,.project-page.pinsight-page .ps-hero-visual{grid-column:1}
+  .project-page.pinsight-page .ps-hero-copy h2 span{white-space:normal}
+  .project-page.pinsight-page .ps-hero-path{display:none}
+  .project-page.pinsight-page .ps-index-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .project-page.pinsight-page .ps-index-grid::before,.project-page.pinsight-page .ps-index-grid::after{display:none}
+}
+
+@media(max-width:560px){
+  .project-page.pinsight-page .ps-hero{padding:64px 0 96px;row-gap:44px}
+  .project-page.pinsight-page .ps-hero-copy h1{font-size:68px}
+  .project-page.pinsight-page .ps-hero-copy h2{font-size:31px}
+  .project-page.pinsight-page .ps-hero-copy>p{font-size:15px}
+  .project-page.pinsight-page .ps-hero-tags{font-size:12px;flex-wrap:wrap;row-gap:8px}
+  .project-page.pinsight-page .ps-hero-tags{gap:18px}
+  .project-page.pinsight-page .ps-hero-tags>span+span::before{left:-11px}
+  .project-page.pinsight-page .ps-hero-visual{border-radius:20px}
+  .project-page.pinsight-page .ps-index-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+}
+
+/* 01–02 only — overview and research visual refinement */
+.project-page.pinsight-page #pinsight-overview,
+.project-page.pinsight-page #pinsight-insight{
+  border-top:0;
+}
+.project-page.pinsight-page #pinsight-overview{padding-block:clamp(120px,10vw,156px)}
+.project-page.pinsight-page #pinsight-insight{padding:clamp(148px,12vw,184px) 0 clamp(166px,13vw,192px)}
+.project-page.pinsight-page #pinsight-overview>.ps-section-head,
+.project-page.pinsight-page #pinsight-insight>.ps-section-head{
+  max-width:960px;
+  margin-bottom:clamp(68px,6vw,84px);
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-overview{
+  width:100%;
+  margin:0;
+  padding:0;
+  border:0;
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-overview>header{
+  display:grid;
+  grid-template-columns:2fr 7fr;
+  gap:var(--ps-v1-gap);
+  align-items:end;
+  margin:0 0 64px;
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-overview>header small{
+  color:rgba(183,140,255,.76);
+  font-size:11px;
+  letter-spacing:.12em;
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-overview>header h3{
+  margin:0;
+  font-size:clamp(27px,2.5vw,36px);
+  line-height:1.18;
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:clamp(26px,3vw,42px);
+  align-items:start;
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track::before{
+  content:'';
+  position:absolute;
+  left:5px;
+  right:5px;
+  top:13px;
+  height:1px;
+  background:linear-gradient(90deg,rgba(130,119,153,.34),rgba(169,112,255,.64) 52%,rgba(112,122,230,.38));
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track>svg{display:none}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article{
+  position:relative;
+  min-height:0;
+  padding:45px 8px 0 0;
+  border:0;
+  background:none;
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article::before{
+  position:absolute;
+  top:8px;
+  left:0;
+  width:10px;
+  height:10px;
+  margin:0;
+  border:1px solid rgba(183,140,255,.72);
+  background:#090a0b;
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article:nth-of-type(3)::before{
+  top:5px;
+  left:-3px;
+  width:16px;
+  height:16px;
+  border-color:#a970ff;
+  box-shadow:0 0 0 5px rgba(169,112,255,.08);
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article>small{font-size:12px;color:rgba(183,140,255,.76)}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article>strong{margin:12px 0 0;font-size:clamp(17px,1.5vw,20px)}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article>p{max-width:19ch;margin:10px 0 0;font-size:13px;line-height:1.65}
+.project-page.pinsight-page #pinsight-overview .ps-experience-devices{
+  display:flex;
+  justify-content:flex-start;
+  gap:30px;
+  margin-top:42px;
+  color:rgba(255,255,255,.42);
+  font-size:12px;
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-devices span{
+  padding:0;
+  border:0;
+  border-radius:0;
+  color:inherit;
+  font-size:inherit;
+}
+
+.project-page.pinsight-page #pinsight-insight .ps-scene-analysis{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(54px,5vw,76px);
+  margin:0;
+}
+.project-page.pinsight-page #pinsight-insight .ps-scene-analysis article,
+.project-page.pinsight-page #pinsight-insight .ps-scene-analysis article:nth-child(n){
+  display:block;
+  width:100%;
+  margin:0;
+  padding:0;
+  border:0;
+  background:none;
+}
+.project-page.pinsight-page #pinsight-insight .ps-scene-analysis article>header{
+  min-height:112px;
+  margin:0 0 32px;
+  padding:0;
+  border:0;
+}
+.project-page.pinsight-page #pinsight-insight .ps-scene-analysis article>header small{
+  color:rgba(183,140,255,.72);
+  font-size:11px;
+  letter-spacing:.10em;
+}
+.project-page.pinsight-page #pinsight-insight .ps-scene-analysis article>header h3{
+  max-width:18ch;
+  margin:14px 0 0;
+  font-size:clamp(25px,2.15vw,32px);
+  line-height:1.2;
+}
+.project-page.pinsight-page #pinsight-insight .ps-source-orbit,
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit{
+  width:100%;
+  height:clamp(430px,38vw,510px);
+  margin:0;
+  border:0;
+  background:radial-gradient(circle at 50% 50%,rgba(169,112,255,.075),transparent 55%);
+}
+.project-page.pinsight-page #pinsight-insight .ps-source-orbit>span,
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit>span{
+  padding:0 0 0 14px;
+  border:0;
+  border-radius:0;
+  background:none;
+  color:rgba(255,255,255,.68);
+  font-size:14px;
+}
+.project-page.pinsight-page #pinsight-insight .ps-source-orbit>span::before,
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit>span::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:50%;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:rgba(183,140,255,.72);
+  transform:translateY(-50%);
+}
+.project-page.pinsight-page #pinsight-insight .ps-source-work,
+.project-page.pinsight-page #pinsight-insight .ps-task-student{
+  width:156px;
+  height:156px;
+  border:1px solid rgba(169,112,255,.72);
+  background:rgba(14,12,23,.72);
+  box-shadow:0 0 0 12px rgba(169,112,255,.035);
+}
+.project-page.pinsight-page #pinsight-insight .ps-source-orbit path{stroke:rgba(169,112,255,.30);stroke-width:1.2}
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit::before,
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:50%;
+  border:1px dashed rgba(169,112,255,.13);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+}
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit::before{width:72%;aspect-ratio:1.25}
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit::after{width:48%;aspect-ratio:1}
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit>*{z-index:1}
+.project-page.pinsight-page #pinsight-insight .ps-task-figure>p{margin:18px 0 0;color:rgba(255,255,255,.38);font-size:11px}
+.project-page.pinsight-page #pinsight-insight .ps-scene-summary{
+  max-width:760px;
+  margin:54px 0 0;
+  color:rgba(255,255,255,.62);
+  font-size:16px;
+  line-height:1.7;
+}
+
+.project-page.pinsight-page #pinsight-insight>.ps-figure-block{
+  width:100%;
+  margin:clamp(120px,10vw,144px) 0 0;
+}
+.project-page.pinsight-page #pinsight-insight>.ps-figure-block>header{
+  display:grid;
+  grid-template-columns:2fr 5fr 4fr;
+  gap:var(--ps-v1-gap);
+  align-items:end;
+  margin:0 0 64px;
+}
+.project-page.pinsight-page #pinsight-insight>.ps-figure-block>header small{font-size:11px;letter-spacing:.12em}
+.project-page.pinsight-page #pinsight-insight>.ps-figure-block>header h3{font-size:clamp(34px,3vw,46px)}
+.project-page.pinsight-page #pinsight-insight>.ps-figure-block>header p{font-size:13px;line-height:1.65}
+.project-page.pinsight-page #pinsight-insight .ps-context-loss{
+  display:grid;
+  grid-template-columns:minmax(0,5fr) minmax(90px,1fr) minmax(0,4fr);
+  gap:clamp(30px,4vw,58px);
+  align-items:center;
+  width:100%;
+  padding:0;
+  border:0;
+  background:none;
+}
+.project-page.pinsight-page #pinsight-insight .ps-context-complete{grid-column:1;grid-row:1/3}
+.project-page.pinsight-page #pinsight-insight .ps-context-decay{grid-column:2;grid-row:1;width:100%;margin:0}
+.project-page.pinsight-page #pinsight-insight .ps-context-fragments{grid-column:3;grid-row:1}
+.project-page.pinsight-page #pinsight-insight .ps-context-loss aside{grid-column:3;grid-row:2;width:100%;margin:0}
+.project-page.pinsight-page #pinsight-insight .ps-context-complete>small,
+.project-page.pinsight-page #pinsight-insight .ps-context-fragments>small{font-size:11px;letter-spacing:.1em}
+.project-page.pinsight-page #pinsight-insight .ps-context-graph{height:390px;margin-top:30px}
+.project-page.pinsight-page #pinsight-insight .ps-context-graph span{width:112px;height:112px;background:rgba(15,15,26,.82)}
+.project-page.pinsight-page #pinsight-insight .ps-context-fragments>div{height:330px;margin-top:30px}
+.project-page.pinsight-page #pinsight-insight .ps-context-fragments span{border:0;border-bottom:1px dashed rgba(169,112,255,.24);background:none}
+.project-page.pinsight-page #pinsight-insight .ps-context-decay i{background:rgba(169,112,255,.55)}
+.project-page.pinsight-page #pinsight-insight .ps-context-decay i:nth-child(2){opacity:.34}
+.project-page.pinsight-page #pinsight-insight .ps-context-decay i:nth-child(3){background:repeating-linear-gradient(90deg,rgba(169,112,255,.2) 0 5px,transparent 5px 11px)}
+.project-page.pinsight-page #pinsight-insight .ps-context-decay span{top:24px;font-size:10px}
+.project-page.pinsight-page #pinsight-insight .ps-context-loss aside p{padding:14px 0;border-top:0;color:rgba(255,255,255,.50);font-size:14px}
+.project-page.pinsight-page #pinsight-insight .ps-context-loss blockquote{
+  grid-column:1/-1;
+  grid-row:3;
+  max-width:940px;
+  margin:52px 0 0;
+  padding:4px 0 4px 26px;
+  border-left:2px solid rgba(169,112,255,.72);
+  background:none;
+  font-size:clamp(22px,2vw,28px);
+  line-height:1.45;
+}
+
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-overview .ps-experience-overview>header{grid-template-columns:1fr}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track{grid-template-columns:1fr;gap:34px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track::before{left:5px;right:auto;top:8px;bottom:8px;width:1px;height:auto;background:linear-gradient(rgba(130,119,153,.34),rgba(169,112,255,.64),rgba(112,122,230,.38))}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article{padding:0 0 0 38px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article::before,.project-page.pinsight-page #pinsight-overview .ps-experience-track article:nth-of-type(3)::before{left:0;top:5px}
+  .project-page.pinsight-page #pinsight-insight .ps-scene-analysis{grid-template-columns:1fr;gap:96px}
+  .project-page.pinsight-page #pinsight-insight .ps-scene-analysis article>header{min-height:0}
+  .project-page.pinsight-page #pinsight-insight>.ps-figure-block>header{grid-template-columns:1fr}
+  .project-page.pinsight-page #pinsight-insight .ps-context-loss{grid-template-columns:1fr;gap:42px}
+  .project-page.pinsight-page #pinsight-insight .ps-context-complete,.project-page.pinsight-page #pinsight-insight .ps-context-decay,.project-page.pinsight-page #pinsight-insight .ps-context-fragments,.project-page.pinsight-page #pinsight-insight .ps-context-loss aside,.project-page.pinsight-page #pinsight-insight .ps-context-loss blockquote{grid-column:1;grid-row:auto}
+  .project-page.pinsight-page #pinsight-insight .ps-context-decay{margin:10px 0 28px}
+}
+
+/* Precision pass v13 — locked concepts, calibrated geometry and line hierarchy. */
+.project-page.pinsight-page{
+  --ps-line-primary:rgba(169,112,255,.82);
+  --ps-line-secondary:rgba(169,112,255,.54);
+  --ps-line-aux:rgba(169,112,255,.24);
+}
+.project-page.pinsight-page #pinsight-overview,
+.project-page.pinsight-page #pinsight-insight,
+.project-page.pinsight-page #pinsight-strategy{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+
+/* 01 — five fixed anchors, one continuous trace and a strict centre axis. */
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11{min-height:560px}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-base{stroke:rgba(255,255,255,.075);stroke-width:7}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-active{stroke:var(--ps-line-primary);stroke-width:2.15}
+.project-page.pinsight-page #pinsight-overview .journey-points circle{fill:#090a0b;stroke:var(--ps-line-primary);stroke-width:2}
+.project-page.pinsight-page #pinsight-overview .journey-points .is-key{fill:#a970ff;stroke:#d3c5ff;stroke-width:1.5}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article{width:184px}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-1{left:10%;top:336px;transform:translateX(-18px)}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-2{left:32.5%;top:282px;transform:translateX(-50%)}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3{left:50%;top:0;width:260px;transform:translateX(-50%);text-align:center}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-4{left:68.5%;top:290px;transform:translateX(-50%)}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5{right:10%;top:336px;transform:translateX(18px);text-align:right}
+.project-page.pinsight-page #pinsight-overview .journey-anchor{left:50%;top:157px;width:96px;height:96px;border-color:rgba(169,112,255,.55)}
+.project-page.pinsight-page #pinsight-overview .journey-anchor i:first-child{inset:18px;border-color:rgba(169,112,255,.25)}
+.project-page.pinsight-page #pinsight-overview .journey-anchor::after{bottom:-40px;height:40px;background:var(--ps-line-secondary)}
+.project-page.pinsight-page #pinsight-overview .journey-feedback{left:10%;top:278px}
+
+/* 02 — aligned research field with explicit source anchors and readable orbits. */
+.project-page.pinsight-page #pinsight-insight .research-head{min-height:128px;margin-bottom:32px}
+.project-page.pinsight-page #pinsight-insight .research-head.is-input{grid-column:1/7}
+.project-page.pinsight-page #pinsight-insight .research-head.is-load{grid-column:7/13}
+.project-page.pinsight-page #pinsight-insight .research-head h3{max-width:18ch}
+.project-page.pinsight-page #pinsight-insight .research-canvas{min-height:720px}
+.project-page.pinsight-page #pinsight-insight .research-canvas .input-1,
+.project-page.pinsight-page #pinsight-insight .research-canvas .input-2{stroke:var(--ps-line-primary);stroke-width:1.75}
+.project-page.pinsight-page #pinsight-insight .research-canvas .input-3,
+.project-page.pinsight-page #pinsight-insight .research-canvas .input-4,
+.project-page.pinsight-page #pinsight-insight .research-canvas .input-5{stroke:var(--ps-line-secondary);stroke-width:1.35}
+.project-page.pinsight-page #pinsight-insight .research-canvas .transfer{stroke:var(--ps-line-secondary);stroke-width:1.5;stroke-dasharray:24 10 5 10}
+.project-page.pinsight-page #pinsight-insight .research-canvas .arc-1{stroke:rgba(124,116,232,.52);stroke-width:1.5;stroke-dasharray:18 9}
+.project-page.pinsight-page #pinsight-insight .research-canvas .arc-2{stroke:rgba(124,116,232,.36);stroke-width:1.25;stroke-dasharray:12 10}
+.project-page.pinsight-page #pinsight-insight .research-canvas .arc-3{stroke:rgba(124,116,232,.25);stroke-width:1;stroke-dasharray:7 11}
+.project-page.pinsight-page #pinsight-insight .research-source::before,
+.project-page.pinsight-page #pinsight-insight .research-task::before{box-shadow:0 0 0 2px #090a0b}
+.project-page.pinsight-page #pinsight-insight .research-focus{left:35.8%;top:47%;width:176px;height:124px}
+.project-page.pinsight-page #pinsight-insight .research-student{left:73%;top:50%;width:176px;height:176px}
+.project-page.pinsight-page #pinsight-insight .research-source.source-1{left:2%;top:12%}.project-page.pinsight-page #pinsight-insight .research-source.source-2{left:3%;top:34%}.project-page.pinsight-page #pinsight-insight .research-source.source-3{left:3%;bottom:18%}.project-page.pinsight-page #pinsight-insight .research-source.source-4{left:23%;bottom:6%}.project-page.pinsight-page #pinsight-insight .research-source.source-5{left:25%;top:5%}
+.project-page.pinsight-page #pinsight-insight .research-method-note{margin-top:24px}
+
+/* Feedback Object keeps a measured 8px stepped peel instead of random rows. */
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer{width:84%;min-height:80px;border-color:rgba(169,112,255,.28)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-1{transform:translateX(32px);opacity:.38}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-2{transform:translateX(24px);opacity:.52}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-3{transform:translateX(16px);opacity:.66}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-4{transform:translateX(8px);opacity:.82}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-5{transform:none;opacity:1;border-color:rgba(169,112,255,.58)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-spine{left:50%;width:1.5px;background:linear-gradient(rgba(169,112,255,.12),rgba(169,112,255,.65),rgba(169,112,255,.16))}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>div i:first-child{height:2px;background:var(--ps-line-primary)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>div i:nth-child(2){height:1.5px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone-feedback{border-left-width:2px;border-color:rgba(169,112,255,.72)}
+
+/* 03 — one exact strategy axis and a true 5→3 convergence. */
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-old{opacity:.58}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-turn{display:grid;place-items:center}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12{gap:64px}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12::before{left:0;right:0;top:28px;height:2px;background:linear-gradient(90deg,rgba(169,112,255,.46),rgba(169,112,255,.88),rgba(113,123,230,.52))}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12 article>i{top:-57px;left:0;box-sizing:border-box}
+.project-page.pinsight-page #pinsight-strategy .strategy-1>i{border-width:1.5px}
+.project-page.pinsight-page #pinsight-strategy .strategy-2>i{top:-65px;width:24px;height:24px;border-width:2px;box-shadow:0 0 0 7px #090a0b,0 0 0 8px rgba(169,112,255,.22)}
+.project-page.pinsight-page #pinsight-strategy .strategy-3>i{border-width:1.5px}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas{min-height:600px}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas .problem-leg{stroke:var(--ps-line-secondary);stroke-width:1.5}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas .response-trunk{stroke:var(--ps-line-primary);stroke-width:2}
+.project-page.pinsight-page #pinsight-strategy .mapping-points circle{fill:#090a0b;stroke:#b78cff;stroke-width:2}
+.project-page.pinsight-page .ps-chapter-problem .ps-problem-signals,
+.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions{width:30%}
+.project-page.pinsight-page .ps-chapter-problem .ps-problem-signals article::before,
+.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions article::before{top:50%;transform:translateY(-50%)}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-label{opacity:.38}
+
+@media(min-width:1248px){
+  .project-page.pinsight-page #pinsight-overview,
+  .project-page.pinsight-page #pinsight-insight,
+  .project-page.pinsight-page #pinsight-strategy{width:1200px}
+}
+
+@media(max-width:560px){
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices{display:grid;gap:10px}
+  .project-page.pinsight-page #pinsight-insight .ps-source-orbit,.project-page.pinsight-page #pinsight-insight .ps-task-orbit{height:360px}
+  .project-page.pinsight-page #pinsight-insight .ps-context-graph{height:330px}
+}
+
+/* 01–02 v2: broaden the visual model without changing later chapters. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-experience-overview,
+  .project-page.pinsight-page #pinsight-insight .ps-scene-analysis,
+  .project-page.pinsight-page #pinsight-insight>.ps-figure-block{max-width:none}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track{gap:clamp(36px,4vw,58px)}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article{padding-top:54px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track::before{top:15px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article::before{top:10px;width:12px;height:12px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article:nth-of-type(3)::before{top:6px;width:20px;height:20px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article>strong{font-size:22px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article>p{font-size:14px}
+  .project-page.pinsight-page #pinsight-insight .ps-source-orbit,
+  .project-page.pinsight-page #pinsight-insight .ps-task-orbit{height:clamp(500px,42vw,570px)}
+  .project-page.pinsight-page #pinsight-insight .ps-source-work,
+  .project-page.pinsight-page #pinsight-insight .ps-task-student{width:174px;height:174px}
+  .project-page.pinsight-page #pinsight-insight .ps-source-orbit>span,
+  .project-page.pinsight-page #pinsight-insight .ps-task-orbit>span{font-size:15px}
+  .project-page.pinsight-page #pinsight-insight .ps-scene-summary{margin-top:62px;font-size:17px}
+  .project-page.pinsight-page #pinsight-insight>.ps-figure-block{margin-top:clamp(132px,11vw,160px)}
+  .project-page.pinsight-page #pinsight-insight>.ps-figure-block>header{margin-bottom:72px}
+  .project-page.pinsight-page #pinsight-insight .ps-context-loss{grid-template-columns:minmax(0,5fr) minmax(112px,1.25fr) minmax(0,4.25fr)}
+  .project-page.pinsight-page #pinsight-insight .ps-context-graph{height:470px}
+  .project-page.pinsight-page #pinsight-insight .ps-context-graph span{width:124px;height:124px;font-size:14px}
+  .project-page.pinsight-page #pinsight-insight .ps-context-fragments>div{height:400px}
+  .project-page.pinsight-page #pinsight-insight .ps-context-fragments span{font-size:15px}
+  .project-page.pinsight-page #pinsight-insight .ps-context-loss aside p{font-size:15px}
+  .project-page.pinsight-page #pinsight-insight .ps-context-loss blockquote{max-width:900px;margin-top:62px;font-size:30px}
+}
+
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article>em{
+  display:block;
+  margin-top:7px;
+  color:rgba(183,140,255,.42);
+  font-size:9px;
+  font-style:normal;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article>em+p{margin-top:10px}
+
+/* 01–02 v3: structural diagram rebuild. */
+.project-page.pinsight-page #pinsight-overview .ps-experience-track{
+  min-height:230px;
+  gap:clamp(44px,4.5vw,70px);
+}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article{padding-top:62px}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article>strong{font-size:clamp(20px,1.8vw,26px)}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article>p{font-size:14px;line-height:1.72}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track::before{top:18px}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article::before{top:12px;width:14px;height:14px}
+.project-page.pinsight-page #pinsight-overview .ps-experience-track article:nth-of-type(3)::before{top:6px;width:26px;height:26px;box-shadow:0 0 0 7px rgba(169,112,255,.10)}
+
+.project-page.pinsight-page #pinsight-insight .ps-source-converge,
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit-v2{
+  position:relative;
+  width:100%;
+  height:clamp(510px,40vw,590px);
+  overflow:hidden;
+}
+.project-page.pinsight-page #pinsight-insight .ps-source-converge>svg,
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit-v2>svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+.project-page.pinsight-page #pinsight-insight .ps-source-converge path{
+  fill:none;
+  stroke:rgba(169,112,255,.54);
+  stroke-width:1.25;
+}
+.project-page.pinsight-page #pinsight-insight .ps-task-orbit-v2 ellipse{
+  fill:none;
+  stroke:rgba(169,112,255,.24);
+  stroke-width:1.1;
+  stroke-dasharray:4 7;
+}
+.project-page.pinsight-page #pinsight-insight .ps-source-core,
+.project-page.pinsight-page #pinsight-insight .ps-task-core{
+  position:absolute;
+  z-index:2;
+  left:50%;
+  top:50%;
+  width:166px;
+  height:166px;
+  border:1px solid rgba(169,112,255,.75);
+  border-radius:50%;
+  background:rgba(13,12,22,.58);
+  transform:translate(-50%,-50%);
+  display:grid;
+  place-content:center;
+  text-align:center;
+  box-shadow:0 0 0 13px rgba(169,112,255,.035);
+}
+.project-page.pinsight-page #pinsight-insight .ps-source-core b,
+.project-page.pinsight-page #pinsight-insight .ps-task-core b{font-size:20px}
+.project-page.pinsight-page #pinsight-insight .ps-source-core small,
+.project-page.pinsight-page #pinsight-insight .ps-task-core small{margin-top:7px;color:rgba(255,255,255,.38);font-size:10px}
+.project-page.pinsight-page #pinsight-insight .ps-task-core svg{width:20px;height:20px;margin:0 auto 6px;color:#a970ff}
+.project-page.pinsight-page #pinsight-insight .source-point,
+.project-page.pinsight-page #pinsight-insight .task-point{
+  position:absolute;
+  z-index:2;
+  padding-left:14px;
+  color:rgba(255,255,255,.74);
+  font-size:15px;
+}
+.project-page.pinsight-page #pinsight-insight .source-point::before,
+.project-page.pinsight-page #pinsight-insight .task-point::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:50%;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:rgba(183,140,255,.82);
+  transform:translateY(-50%);
+}
+.project-page.pinsight-page #pinsight-insight .source-1{left:10%;top:11%}
+.project-page.pinsight-page #pinsight-insight .source-2{right:8%;top:12%}
+.project-page.pinsight-page #pinsight-insight .source-3{right:6%;bottom:20%}
+.project-page.pinsight-page #pinsight-insight .source-4{left:7%;bottom:17%}
+.project-page.pinsight-page #pinsight-insight .source-5{left:42%;top:3%}
+.project-page.pinsight-page #pinsight-insight .task-point{font-size:14px}
+.project-page.pinsight-page #pinsight-insight .task-point small{margin-right:7px;color:rgba(183,140,255,.64);font-size:10px}
+.project-page.pinsight-page .ps-chapter-research .task-1{left:43%;top:3%}
+.project-page.pinsight-page .ps-chapter-research .task-2{right:12%;top:20%}
+.project-page.pinsight-page .ps-chapter-research .task-3{right:9%;bottom:23%}
+.project-page.pinsight-page .ps-chapter-research .task-4{left:43%;bottom:5%}
+.project-page.pinsight-page .ps-chapter-research .task-5{left:11%;bottom:23%}
+.project-page.pinsight-page .ps-chapter-research .task-6{left:10%;top:20%}
+
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-v2{
+  display:grid;
+  grid-template-columns:3.6fr 2.15fr 3.25fr;
+  gap:clamp(28px,4vw,58px);
+  align-items:start;
+  width:100%;
+  min-height:650px;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-stage>small,
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-transition>small{
+  display:block;
+  color:rgba(183,140,255,.75);
+  font-size:11px;
+  letter-spacing:.10em;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph{
+  position:relative;
+  height:430px;
+  margin-top:28px;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph svg{position:absolute;inset:0;width:100%;height:100%}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph path{fill:none;stroke:rgba(169,112,255,.62);stroke-width:1.5}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph span{
+  position:absolute;
+  display:grid;
+  place-items:center;
+  width:104px;
+  height:104px;
+  border:1px solid rgba(169,112,255,.58);
+  border-radius:50%;
+  color:rgba(255,255,255,.78);
+  font-size:13px;
+  text-align:center;
+  background:rgba(11,11,20,.45);
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph .loss-tutor{left:50%;top:0;transform:translateX(-50%)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph .loss-feedback{left:50%;top:33%;transform:translateX(-50%);background:rgba(49,31,82,.38)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph .loss-area{left:5%;bottom:0}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph .loss-gesture{right:5%;bottom:0}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-stage.is-live>p{margin:8px 0 0;color:rgba(255,255,255,.38);font-size:12px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-transition{padding-top:132px}
+.project-page.pinsight-page #pinsight-insight .loss-feedback-flow{display:grid;gap:28px;margin-top:32px}
+.project-page.pinsight-page #pinsight-insight .loss-feedback-flow span{color:#d5c6ff;font-size:14px;font-weight:600}
+.project-page.pinsight-page #pinsight-insight .loss-feedback-flow i{display:block;height:1px}
+.project-page.pinsight-page #pinsight-insight .loss-feedback-flow .is-solid{background:rgba(169,112,255,.72)}
+.project-page.pinsight-page #pinsight-insight .loss-feedback-flow .is-break{width:74%;background:linear-gradient(90deg,rgba(169,112,255,.48) 0 42%,transparent 42% 57%,rgba(169,112,255,.34) 57% 78%,transparent 78%)}
+.project-page.pinsight-page #pinsight-insight .loss-feedback-flow .is-dashed{width:52%;background:repeating-linear-gradient(90deg,rgba(169,112,255,.34) 0 7px,transparent 7px 15px)}
+.project-page.pinsight-page #pinsight-insight .loss-feedback-flow .is-fade{width:34%;background:linear-gradient(90deg,rgba(169,112,255,.16),transparent)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-transition>p{margin-top:30px;color:rgba(255,255,255,.38);font-size:12px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-isolated{
+  margin-top:72px;
+  padding-left:22px;
+  border-left:1px solid rgba(169,112,255,.42);
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-isolated strong{color:#c9b8ff;font-size:12px;letter-spacing:.10em}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-isolated p{max-width:18ch;margin:20px 0 0;color:rgba(255,255,255,.82);font-size:26px;line-height:1.42}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-stage.is-after aside{display:grid;grid-template-columns:1fr 1fr;gap:15px 24px;margin-top:76px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-stage.is-after aside span{color:rgba(255,255,255,.42);font-size:13px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-stage.is-after aside span::before{content:'?';margin-right:8px;color:rgba(183,140,255,.62)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-v2 blockquote{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:2px minmax(0,1fr);
+  gap:24px;
+  max-width:940px;
+  margin:38px 0 0;
+  padding:0;
+  border:0;
+  background:none;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-v2 blockquote>span{display:block;min-height:42px;background:rgba(169,112,255,.75)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-v2 blockquote strong{display:block;font-size:clamp(24px,2vw,29px);font-weight:560;line-height:1.42}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-v2 blockquote small{display:block;margin-top:12px;color:rgba(255,255,255,.38);font-size:12px;letter-spacing:.09em}
+
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-insight .ps-source-converge,.project-page.pinsight-page #pinsight-insight .ps-task-orbit-v2{height:440px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-v2{grid-template-columns:1fr;min-height:0;gap:72px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-transition{padding-top:0}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-isolated{margin-top:30px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-stage.is-after aside{margin-top:42px}
+}
+@media(max-width:560px){
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track{min-height:0}
+  .project-page.pinsight-page #pinsight-insight .ps-source-converge,.project-page.pinsight-page #pinsight-insight .ps-task-orbit-v2{height:350px}
+  .project-page.pinsight-page #pinsight-insight .ps-source-core,.project-page.pinsight-page #pinsight-insight .ps-task-core{width:124px;height:124px}
+  .project-page.pinsight-page #pinsight-insight .ps-source-core b,.project-page.pinsight-page #pinsight-insight .ps-task-core b{font-size:16px}
+  .project-page.pinsight-page #pinsight-insight .source-point,.project-page.pinsight-page #pinsight-insight .task-point{font-size:12px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph{height:340px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-isolated p{font-size:22px}
+}
+
+/* 01–02 v4: large-format hierarchy and a single continuous loss canvas. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track{min-height:320px;gap:clamp(54px,5vw,82px)}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article{padding-top:84px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article>strong{font-size:28px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article>p{max-width:16ch;font-size:15px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track::before{top:22px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article::before{top:14px;width:16px;height:16px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-track article:nth-of-type(3)::before{top:5px;width:34px;height:34px;box-shadow:0 0 0 9px rgba(169,112,255,.10)}
+  .project-page.pinsight-page #pinsight-insight .ps-source-converge,.project-page.pinsight-page #pinsight-insight .ps-task-orbit-v2{height:650px}
+  .project-page.pinsight-page #pinsight-insight .ps-source-core,.project-page.pinsight-page #pinsight-insight .ps-task-core{width:190px;height:190px}
+  .project-page.pinsight-page #pinsight-insight .ps-source-core b,.project-page.pinsight-page #pinsight-insight .ps-task-core b{font-size:23px}
+  .project-page.pinsight-page #pinsight-insight .source-point,.project-page.pinsight-page #pinsight-insight .task-point{font-size:16px}
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-v2{
+  position:relative;
+  grid-template-columns:3.25fr 2.4fr 3.1fr;
+  min-height:760px;
+  padding:0 0 10px;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-threads{
+  position:absolute;
+  z-index:0;
+  left:0;
+  top:72px;
+  width:100%;
+  height:520px;
+  overflow:visible;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-threads path{fill:none;stroke-width:1.5}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-threads .is-source{stroke:rgba(169,112,255,.55)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-threads .is-position{stroke:rgba(169,112,255,.48)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-threads .is-context{stroke:rgba(169,112,255,.40)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-threads .is-solid{stroke:rgba(169,112,255,.70)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-threads .is-break{stroke:rgba(169,112,255,.48);stroke-dasharray:48 12 18 18}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-threads .is-dashed{stroke:rgba(169,112,255,.32);stroke-dasharray:8 14}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-threads .is-fade{stroke:rgba(169,112,255,.12);stroke-dasharray:3 16}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-stage,
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-transition{position:relative;z-index:1}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph{height:480px;margin-top:36px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-live-graph span{width:118px;height:118px;font-size:14px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-transition{padding-top:168px}
+.project-page.pinsight-page #pinsight-insight .loss-feedback-flow{gap:32px;margin-top:36px}
+.project-page.pinsight-page #pinsight-insight .loss-feedback-flow span{font-size:16px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-isolated{margin-top:132px;padding-left:28px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-isolated p{max-width:15ch;font-size:30px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-stage.is-after aside{margin-top:92px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-v2 blockquote{position:relative;z-index:1;margin-top:32px;max-width:1000px}
+
+@media(max-width:980px){
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-threads{display:none}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-v2{min-height:0}
+}
+
+/* Research visual v10 — Feedback Object as one dominant layered system. */
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded{
+  display:grid;
+  grid-template-columns:minmax(0,7fr) minmax(150px,2fr) minmax(260px,3fr);
+  column-gap:clamp(34px,4vw,62px);
+  align-items:start;
+  width:100%;
+  min-height:850px;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded small{
+  color:rgba(183,140,255,.72);
+  font-size:11px;
+  letter-spacing:.12em;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-object>header{
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  gap:10px 30px;
+  align-items:start;
+  margin-bottom:58px;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-object>header small{grid-row:1/3}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-object>header strong{font-size:30px;line-height:1.15}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-object>header p{max-width:520px;margin:8px 0 0;color:rgba(255,255,255,.48);font-size:14px;line-height:1.65}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layers{
+  position:relative;
+  display:grid;
+  gap:28px;
+  min-height:610px;
+  padding:12px 0 28px;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-spine{
+  position:absolute;
+  z-index:0;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:linear-gradient(rgba(169,112,255,.08),rgba(169,112,255,.42),rgba(169,112,255,.12));
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:54px minmax(150px,1fr) minmax(170px,1fr);
+  align-items:center;
+  width:82%;
+  min-height:82px;
+  margin-inline:auto;
+  padding:0 24px;
+  border-block:1px solid rgba(169,112,255,.22);
+  background:linear-gradient(90deg,rgba(169,112,255,.025),rgba(169,112,255,.105),rgba(87,104,214,.025));
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer span{color:rgba(183,140,255,.64);font-size:12px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer b{font-size:19px;font-weight:560}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer em{color:rgba(255,255,255,.46);font-size:13px;font-style:normal;text-align:right}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-1{transform:translateX(10%);opacity:.34}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-2{transform:translateX(5%);opacity:.48}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-3{transform:translateX(0);opacity:.64}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-4{transform:translateX(-5%);opacity:.80}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-5{transform:translateX(-10%);opacity:1;border-color:rgba(169,112,255,.48)}
+
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel{
+  padding-top:188px;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>strong,
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone header strong{display:block;margin-top:14px;font-size:22px;line-height:1.25}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>div{display:grid;gap:44px;margin:54px 0 20px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>div i{display:block;height:1px;background:rgba(169,112,255,.34)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>div i:nth-child(2){width:78%;background:repeating-linear-gradient(90deg,rgba(169,112,255,.30) 0 14px,transparent 14px 22px)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>div i:nth-child(3){width:54%;background:repeating-linear-gradient(90deg,rgba(169,112,255,.20) 0 6px,transparent 6px 15px)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>div i:nth-child(4){width:28%;background:linear-gradient(90deg,rgba(169,112,255,.12),transparent)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>p{margin:25px 0 0;color:rgba(255,255,255,.34);font-size:11px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>p:nth-of-type(2){opacity:.76}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>p:nth-of-type(3){opacity:.52}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-peel>p:nth-of-type(4){opacity:.30}
+
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone{padding-top:188px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone-feedback{
+  margin-top:72px;
+  padding-left:24px;
+  border-left:1px solid rgba(169,112,255,.48);
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone-feedback b{color:#c9b8ff;font-size:12px;letter-spacing:.1em}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone-feedback p{max-width:13ch;margin:20px 0 0;color:rgba(255,255,255,.88);font-size:30px;line-height:1.42}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone aside{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;margin-top:72px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone aside span{color:rgba(255,255,255,.40);font-size:13px}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone aside span::before{content:'?';margin-right:7px;color:rgba(183,140,255,.58)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded>blockquote{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:2px minmax(0,1fr);
+  gap:26px;
+  max-width:980px;
+  margin:60px 0 0;
+  padding:0;
+  border:0;
+  background:none;
+}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded>blockquote>span{min-height:46px;background:rgba(169,112,255,.76)}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded>blockquote strong{display:block;font-size:clamp(25px,2.1vw,31px);font-weight:560;line-height:1.42}
+.project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded>blockquote small{display:block;margin-top:12px;color:rgba(255,255,255,.36)}
+
+@media(max-width:980px){
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded{grid-template-columns:1fr;gap:70px;min-height:0}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-peel,.project-page.pinsight-page .ps-chapter-problem .ps-loss-alone{padding-top:0}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layer{width:90%;transform:none!important}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded>blockquote{grid-column:1;margin-top:10px}
+}
+@media(max-width:560px){
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-object>header{grid-template-columns:1fr}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-object>header small{grid-row:auto}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layer{grid-template-columns:38px 1fr;gap:4px 8px;width:100%;padding:14px 16px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layer em{grid-column:2;text-align:left}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-alone-feedback p{font-size:24px}
+}
+
+/* Research visual v11 — composition-first journey and research field. */
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11{
+  position:relative;
+  width:100%;
+  min-height:560px;
+  margin-top:10px;
+}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11>svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 path{fill:none}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-base{stroke:rgba(255,255,255,.09);stroke-width:8}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-active{stroke:rgba(169,112,255,.62);stroke-width:1.8}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article{
+  position:absolute;
+  width:190px;
+}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article small{display:block;color:rgba(183,140,255,.72);font-size:13px}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article strong{display:block;margin-top:12px;font-size:24px;line-height:1.2}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article em{display:block;margin-top:7px;color:rgba(183,140,255,.38);font-size:9px;font-style:normal;letter-spacing:.1em;text-transform:uppercase}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article p{max-width:18ch;margin:14px 0 0;color:rgba(255,255,255,.50);font-size:14px;line-height:1.68}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-1{left:0;top:350px}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-2{left:20%;top:286px}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3{left:42.5%;top:0;width:250px;text-align:center}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3 p{max-width:24ch;margin-inline:auto}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3 strong{font-size:34px;color:#f3efff}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-4{left:69%;top:286px}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5{right:0;top:350px;text-align:right}
+.project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5 p{margin-left:auto}
+.project-page.pinsight-page #pinsight-overview .journey-anchor{
+  position:absolute;
+  left:50%;
+  top:178px;
+  width:116px;
+  height:116px;
+  border:1px solid rgba(169,112,255,.60);
+  transform:translateX(-50%) rotate(45deg);
+}
+.project-page.pinsight-page #pinsight-overview .journey-anchor i:first-child{position:absolute;inset:20px;border:1px solid rgba(169,112,255,.28)}
+.project-page.pinsight-page #pinsight-overview .journey-anchor i:nth-child(2){position:absolute;left:50%;top:50%;width:10px;height:10px;border:1px solid #a970ff;background:#090a0b;transform:translate(-50%,-50%)}
+.project-page.pinsight-page #pinsight-overview .journey-anchor span{position:absolute;left:50%;top:50%;color:rgba(255,255,255,.42);font-size:9px;letter-spacing:.08em;white-space:nowrap;transform:translate(-50%,-50%) rotate(-45deg)}
+.project-page.pinsight-page #pinsight-overview .journey-feedback{position:absolute;left:8%;top:284px;color:rgba(183,140,255,.56);font-size:11px;letter-spacing:.08em}
+
+.project-page.pinsight-page #pinsight-insight .ps-research-composition-v11{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:0 var(--ps-v1-gap);
+  width:100%;
+}
+.project-page.pinsight-page #pinsight-insight .research-head{min-height:120px;margin:0 0 32px}
+.project-page.pinsight-page #pinsight-insight .research-head.is-input{grid-column:1/6}
+.project-page.pinsight-page #pinsight-insight .research-head.is-load{grid-column:7/13}
+.project-page.pinsight-page #pinsight-insight .research-head small{color:rgba(183,140,255,.68);font-size:11px;letter-spacing:.1em}
+.project-page.pinsight-page #pinsight-insight .research-head h3{max-width:17ch;margin:15px 0 0;font-size:clamp(26px,2.2vw,34px);line-height:1.18}
+.project-page.pinsight-page #pinsight-insight .research-canvas{
+  position:relative;
+  grid-column:1/13;
+  min-height:720px;
+}
+.project-page.pinsight-page #pinsight-insight .research-canvas>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.project-page.pinsight-page #pinsight-insight .research-canvas path{fill:none;stroke-width:1.25}
+.project-page.pinsight-page #pinsight-insight .research-canvas .input-1,.project-page.pinsight-page #pinsight-insight .research-canvas .input-2,.project-page.pinsight-page #pinsight-insight .research-canvas .input-3,.project-page.pinsight-page #pinsight-insight .research-canvas .input-4,.project-page.pinsight-page #pinsight-insight .research-canvas .input-5{stroke:rgba(169,112,255,.42)}
+.project-page.pinsight-page #pinsight-insight .research-canvas .transfer{stroke:rgba(169,112,255,.58);stroke-dasharray:38 10 8 12}
+.project-page.pinsight-page #pinsight-insight .research-canvas .arc{stroke:rgba(124,116,232,.20);stroke-dasharray:7 10}
+.project-page.pinsight-page #pinsight-insight .research-focus,
+.project-page.pinsight-page #pinsight-insight .research-student{
+  position:absolute;
+  z-index:2;
+  display:grid;
+  place-content:center;
+  text-align:center;
+  background:#090a0b;
+}
+.project-page.pinsight-page #pinsight-insight .research-focus{left:31%;top:40%;width:180px;height:130px;border-block:1px solid rgba(169,112,255,.62);transform:translate(-50%,-50%)}
+.project-page.pinsight-page #pinsight-insight .research-student{left:69%;top:48%;width:180px;height:180px;border:1px solid rgba(169,112,255,.55);border-radius:50%;transform:translate(-50%,-50%)}
+.project-page.pinsight-page #pinsight-insight .research-focus b,.project-page.pinsight-page #pinsight-insight .research-student b{font-size:22px}
+.project-page.pinsight-page #pinsight-insight .research-focus small,.project-page.pinsight-page #pinsight-insight .research-student small{margin-top:8px;color:rgba(255,255,255,.36);font-size:9px;letter-spacing:.08em}
+.project-page.pinsight-page #pinsight-insight .research-student svg{width:20px;height:20px;margin:0 auto 8px;color:#a970ff}
+.project-page.pinsight-page #pinsight-insight .research-source,
+.project-page.pinsight-page #pinsight-insight .research-task{position:absolute;z-index:2;color:rgba(255,255,255,.68);font-size:15px}
+.project-page.pinsight-page #pinsight-insight .research-source::before,.project-page.pinsight-page #pinsight-insight .research-task::before{content:'';display:inline-block;width:5px;height:5px;margin-right:9px;border-radius:50%;background:rgba(183,140,255,.76);vertical-align:middle}
+.project-page.pinsight-page #pinsight-insight .research-source.source-1{left:2%;top:10%}.project-page.pinsight-page #pinsight-insight .research-source.source-2{left:3%;top:31%}.project-page.pinsight-page #pinsight-insight .research-source.source-3{left:3%;bottom:18%}.project-page.pinsight-page #pinsight-insight .research-source.source-4{left:21%;bottom:7%}.project-page.pinsight-page #pinsight-insight .research-source.source-5{left:23%;top:4%}
+.project-page.pinsight-page #pinsight-insight .research-task small{margin-right:6px;color:rgba(183,140,255,.52);font-size:9px}
+.project-page.pinsight-page #pinsight-insight .research-task.task-1{left:65%;top:4%}.project-page.pinsight-page #pinsight-insight .research-task.task-2{right:8%;top:14%}.project-page.pinsight-page #pinsight-insight .research-task.task-3{right:1%;top:46%}.project-page.pinsight-page #pinsight-insight .research-task.task-4{right:11%;bottom:8%}.project-page.pinsight-page #pinsight-insight .research-task.task-5{left:63%;bottom:3%}.project-page.pinsight-page #pinsight-insight .research-task.task-6{left:53%;top:26%}
+.project-page.pinsight-page #pinsight-insight .research-pressure,.project-page.pinsight-page #pinsight-insight .research-processing{position:absolute;color:rgba(255,255,255,.28);font-size:10px;letter-spacing:.1em}.project-page.pinsight-page #pinsight-insight .research-pressure{left:38%;top:46%}.project-page.pinsight-page #pinsight-insight .research-processing{left:76%;top:64%}
+.project-page.pinsight-page #pinsight-insight .research-method-note{grid-column:7/13;margin:20px 0 0;color:rgba(255,255,255,.30);font-size:11px}
+
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11{display:grid;gap:34px;min-height:0}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11>svg,.project-page.pinsight-page #pinsight-overview .journey-anchor,.project-page.pinsight-page #pinsight-overview .journey-feedback{display:none}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article{position:static;width:auto!important;text-align:left!important}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article p{margin-inline:0!important}
+  .project-page.pinsight-page #pinsight-insight .research-head.is-input,.project-page.pinsight-page #pinsight-insight .research-head.is-load{grid-column:1/13}
+  .project-page.pinsight-page #pinsight-insight .research-head.is-load{margin-top:60px}
+  .project-page.pinsight-page #pinsight-insight .research-canvas{min-height:620px}
+}
+
+/* 01 refinement: a spatial pin, not a flowchart diamond. */
+.project-page.pinsight-page #pinsight-overview .journey-anchor{
+  width:118px;
+  height:118px;
+  border-radius:50%;
+  transform:translateX(-50%);
+}
+.project-page.pinsight-page #pinsight-overview .journey-anchor::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-34px;
+  width:1px;
+  height:34px;
+  background:rgba(169,112,255,.42);
+}
+.project-page.pinsight-page #pinsight-overview .journey-anchor i:first-child{border-radius:50%}
+.project-page.pinsight-page #pinsight-overview .journey-anchor i:nth-child(2){border-radius:50%}
+.project-page.pinsight-page #pinsight-overview .journey-anchor span{transform:translate(-50%,-50%)}
+
+/* 03 — from research insight to explicit design decisions. */
+.project-page.pinsight-page #pinsight-strategy{border-top:0;padding:clamp(156px,12vw,190px) 0 clamp(170px,13vw,204px)}
+.project-page.pinsight-page #pinsight-strategy>.ps-section-head{max-width:960px;margin-bottom:clamp(82px,7vw,108px)}
+.project-page.pinsight-page #pinsight-strategy .ps-reframing-v12{width:100%;margin:0}
+.project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>header{
+  display:grid;
+  grid-template-columns:2fr 8fr;
+  gap:var(--ps-v1-gap);
+  align-items:end;
+  margin-bottom:68px;
+}
+.project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>header small{color:rgba(183,140,255,.68);font-size:11px;letter-spacing:.12em}
+.project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>header h3{max-width:18ch;margin:0;font-size:clamp(32px,3vw,46px);line-height:1.15}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition{
+  display:grid;
+  grid-template-columns:minmax(0,4fr) minmax(90px,1fr) minmax(0,6fr);
+  gap:clamp(30px,4vw,62px);
+  align-items:center;
+  min-height:320px;
+}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition small{display:block;color:rgba(183,140,255,.48);font-size:10px;letter-spacing:.12em}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition strong{display:block;margin-top:20px;line-height:1.1}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition p{max-width:34ch;margin:22px 0 0;color:rgba(255,255,255,.42);font-size:14px;line-height:1.7}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-old{opacity:.42}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-old strong{font-size:clamp(34px,3.4vw,52px);text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:rgba(255,255,255,.25)}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-new strong{max-width:11ch;color:#f3efff;font-size:clamp(48px,5vw,72px);letter-spacing:-.045em}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-turn{position:relative;height:110px;color:rgba(183,140,255,.64);font-size:11px;text-align:center;letter-spacing:.1em}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-turn i{position:absolute;left:50%;width:1px;background:rgba(169,112,255,.42)}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-turn i:first-of-type{top:28px;height:34px}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-turn i:last-of-type{top:62px;width:34px;height:1px}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-continuity{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:var(--ps-v1-gap);
+  margin-top:82px;
+}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-continuity article{padding-top:22px;border-top:1px solid rgba(169,112,255,.22)}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-continuity small{color:rgba(183,140,255,.62);font-size:11px}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-continuity strong{display:block;margin-top:15px;font-size:20px}
+.project-page.pinsight-page #pinsight-strategy .ps-reframe-continuity p{max-width:28ch;margin:12px 0 0;color:rgba(255,255,255,.44);font-size:13px;line-height:1.65}
+.project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>blockquote{
+  width:calc(10 * (100% + var(--ps-v1-gap)) / 12 - var(--ps-v1-gap));
+  margin:clamp(130px,11vw,164px) 0 0;
+  padding:0;
+  border:0;
+  background:none;
+}
+.project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>blockquote small{display:block;margin-bottom:26px;color:rgba(183,140,255,.68);font-size:11px;letter-spacing:.12em}
+.project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>blockquote strong{font-size:clamp(40px,4.2vw,62px);font-weight:540;line-height:1.18;letter-spacing:-.035em}
+.project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>blockquote em{color:#c9b8ff;font-style:normal}
+
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(54px,6vw,92px);
+  width:100%;
+  margin:clamp(130px,11vw,168px) 0 0;
+  padding-top:74px;
+}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12::before{content:'';position:absolute;left:0;right:0;top:28px;height:1.5px;background:linear-gradient(90deg,rgba(169,112,255,.28),rgba(169,112,255,.70),rgba(113,123,230,.38))}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12 article{position:relative;min-height:220px}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12 article>small{color:rgba(183,140,255,.66);font-size:12px}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12 h3{margin:14px 0 0;font-size:clamp(30px,3vw,42px)}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12 em{display:block;margin-top:8px;color:rgba(183,140,255,.38);font-size:9px;font-style:normal;letter-spacing:.11em;text-transform:uppercase}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12 p{margin:24px 0 0;color:rgba(255,255,255,.58);font-size:17px}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12 article>i{position:absolute;top:-54px;left:0}
+.project-page.pinsight-page #pinsight-strategy .strategy-1>i{width:38px;height:24px;border-left:1px solid rgba(169,112,255,.55);border-right:1px solid rgba(169,112,255,.24)}
+.project-page.pinsight-page #pinsight-strategy .strategy-2>i{width:22px;height:22px;border:1px solid #a970ff;border-radius:50%;box-shadow:0 0 0 7px rgba(169,112,255,.09)}
+.project-page.pinsight-page #pinsight-strategy .strategy-3>i{width:48px;height:24px;border-top:1px solid rgba(113,123,230,.55);border-bottom:1px solid rgba(113,123,230,.30)}
+
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-mapping{width:100%;margin:clamp(142px,12vw,178px) 0 0}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-mapping>header{grid-template-columns:2fr 5fr 4fr;margin-bottom:70px}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-mapping>header small{font-size:11px;letter-spacing:.12em}
+.project-page.pinsight-page #pinsight-strategy .ps-strategy-mapping>header h3{font-size:clamp(34px,3vw,46px)}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-v12>header{display:grid;grid-template-columns:1fr 1fr;margin-bottom:24px;color:rgba(255,255,255,.34)}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-v12>header small:last-child{text-align:right}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas{position:relative;min-height:600px}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas path{fill:none;stroke:rgba(169,112,255,.38);stroke-width:1.35}
+.project-page.pinsight-page .ps-chapter-problem .ps-problem-signals,.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions{position:absolute;inset-block:0;width:32%}
+.project-page.pinsight-page .ps-chapter-problem .ps-problem-signals{left:0;display:grid;grid-template-rows:repeat(5,1fr)}
+.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions{right:0;display:grid;grid-template-rows:repeat(3,1fr)}
+.project-page.pinsight-page .ps-chapter-problem .ps-problem-signals article,.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions article{align-self:center;position:relative;padding-left:22px}
+.project-page.pinsight-page .ps-chapter-problem .ps-problem-signals article::before,.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions article::before{content:'';position:absolute;left:0;top:8px;width:7px;height:7px;background:rgba(183,140,255,.62)}
+.project-page.pinsight-page .ps-chapter-problem .ps-problem-signals span,.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions span{color:rgba(183,140,255,.58);font-size:11px}
+.project-page.pinsight-page .ps-chapter-problem .ps-problem-signals strong{display:block;margin-top:8px;color:rgba(255,255,255,.58);font-size:16px;font-weight:480}
+.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions strong{display:block;margin-top:9px;color:#f3efff;font-size:30px}
+.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions p{margin:9px 0 0;color:rgba(255,255,255,.58);font-size:14px}
+.project-page.pinsight-page .ps-chapter-problem .ps-response-decisions em{display:block;margin-top:8px;color:rgba(183,140,255,.38);font-size:9px;font-style:normal;text-transform:uppercase}
+.project-page.pinsight-page .ps-chapter-problem .ps-convergence-label{position:absolute;left:50%;top:50%;color:rgba(255,255,255,.28);font-size:10px;letter-spacing:.08em;transform:translate(-50%,-50%) rotate(-90deg)}
+
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>header,.project-page.pinsight-page #pinsight-strategy .ps-reframe-composition{grid-template-columns:1fr}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-turn{height:60px;text-align:left}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-turn i{left:0}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframe-continuity,.project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12{grid-template-columns:1fr}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>blockquote{width:100%}
+  .project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12::before{display:none}
+  .project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12 article>i{display:none}
+  .project-page.pinsight-page #pinsight-strategy .ps-strategy-mapping>header{grid-template-columns:1fr}
+  .project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas{min-height:700px}
+}
+
+/* v13 final cascade: precision overrides intentionally last. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview,
+  .project-page.pinsight-page #pinsight-insight,
+  .project-page.pinsight-page #pinsight-strategy{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-base{stroke:rgba(255,255,255,.075);stroke-width:7}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-active{stroke:rgba(169,112,255,.84);stroke-width:2.15}
+  .project-page.pinsight-page #pinsight-overview .journey-points circle{fill:#090a0b;stroke:rgba(169,112,255,.9);stroke-width:2}
+  .project-page.pinsight-page #pinsight-overview .journey-points .is-key{fill:#a970ff;stroke:#d3c5ff;stroke-width:1.5}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-1{left:10%;top:336px;transform:translateX(-18px)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-2{left:32.5%;top:282px;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3{left:50%;top:0;width:260px;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-4{left:68.5%;top:290px;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5{right:10%;top:336px;transform:translateX(18px)}
+  .project-page.pinsight-page #pinsight-overview .journey-anchor{left:50%;top:157px;width:96px;height:96px}
+
+  .project-page.pinsight-page #pinsight-insight .research-head{min-height:128px;margin-bottom:32px}
+  .project-page.pinsight-page #pinsight-insight .research-head.is-input{grid-column:1/7}
+  .project-page.pinsight-page #pinsight-insight .research-head.is-load{grid-column:7/13}
+  .project-page.pinsight-page #pinsight-insight .research-canvas .input-1,
+  .project-page.pinsight-page #pinsight-insight .research-canvas .input-2{stroke:rgba(169,112,255,.82);stroke-width:1.75}
+  .project-page.pinsight-page #pinsight-insight .research-canvas .input-3,
+  .project-page.pinsight-page #pinsight-insight .research-canvas .input-4,
+  .project-page.pinsight-page #pinsight-insight .research-canvas .input-5{stroke:rgba(169,112,255,.54);stroke-width:1.35}
+  .project-page.pinsight-page #pinsight-insight .research-canvas .transfer{stroke:rgba(169,112,255,.54);stroke-width:1.5;stroke-dasharray:24 10 5 10}
+  .project-page.pinsight-page #pinsight-insight .research-canvas .arc-1{stroke:rgba(124,116,232,.52);stroke-width:1.5;stroke-dasharray:18 9}
+  .project-page.pinsight-page #pinsight-insight .research-canvas .arc-2{stroke:rgba(124,116,232,.36);stroke-width:1.25;stroke-dasharray:12 10}
+  .project-page.pinsight-page #pinsight-insight .research-canvas .arc-3{stroke:rgba(124,116,232,.25);stroke-width:1;stroke-dasharray:7 11}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-1{transform:translateX(32px);opacity:.38}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-2{transform:translateX(24px);opacity:.52}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-3{transform:translateX(16px);opacity:.66}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-4{transform:translateX(8px);opacity:.82}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layer.layer-5{transform:none;opacity:1}
+
+  .project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-old{opacity:.58}
+  .project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12::before{height:2px;background:linear-gradient(90deg,rgba(169,112,255,.46),rgba(169,112,255,.88),rgba(113,123,230,.52))}
+  .project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12 article>i{left:0}
+  .project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas .problem-leg{stroke:rgba(169,112,255,.54);stroke-width:1.5}
+  .project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas .response-trunk{stroke:rgba(169,112,255,.84);stroke-width:2}
+  .project-page.pinsight-page #pinsight-strategy .mapping-points circle{fill:#090a0b;stroke:#b78cff;stroke-width:2}
+  .project-page.pinsight-page .ps-chapter-problem .ps-convergence-label{opacity:.28}
+}
+
+/* v14 geometry corrections from visual QA. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-1{top:360px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-2{top:306px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-4{top:314px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5{top:360px}
+  .project-page.pinsight-page #pinsight-overview .journey-anchor{top:118px;width:72px;height:72px;background:#090a0b}
+  .project-page.pinsight-page #pinsight-overview .journey-anchor i:first-child,
+  .project-page.pinsight-page #pinsight-overview .journey-anchor span{display:none}
+  .project-page.pinsight-page #pinsight-overview .journey-anchor i:nth-child(2){width:12px;height:12px;background:#a970ff;border-color:#d3c5ff}
+  .project-page.pinsight-page #pinsight-overview .journey-anchor::after{bottom:-42px;height:42px}
+
+  .project-page.pinsight-page #pinsight-insight .research-canvas circle{fill:none}
+  .project-page.pinsight-page #pinsight-insight .research-canvas .arc-1{stroke:rgba(124,116,232,.48);stroke-width:1.5;stroke-dasharray:22 12}
+  .project-page.pinsight-page #pinsight-insight .research-canvas .arc-2{stroke:rgba(124,116,232,.30);stroke-width:1.25;stroke-dasharray:14 12}
+  .project-page.pinsight-page #pinsight-insight .research-canvas .arc-3{stroke:rgba(124,116,232,.18);stroke-width:1;stroke-dasharray:8 12}
+  .project-page.pinsight-page #pinsight-insight .research-focus{left:35.833%;top:46.944%}
+  .project-page.pinsight-page #pinsight-insight .research-student{left:73%;top:50%}
+}
+
+/* v15 — clarify the location anchor and regularize journey typography. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-1,
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-2,
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-4,
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5{top:360px;text-align:left}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-1{left:10%;transform:translateX(-18px)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-2{left:32.5%;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-4{left:68.5%;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5{right:10%;transform:translateX(18px);text-align:right}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article small{font-size:12px;line-height:1}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article strong{margin-top:16px;font-size:23px;line-height:1.25}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article em{margin-top:8px;line-height:1.3}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article p{margin-top:16px;line-height:1.75}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5 p{margin-left:auto}
+
+  .project-page.pinsight-page #pinsight-overview .journey-anchor{
+    left:50%;top:145px;width:18px;height:18px;
+    border:2px solid #b78cff;border-radius:50%;background:#090a0b;
+    transform:translateX(-50%);
+  }
+  .project-page.pinsight-page #pinsight-overview .journey-anchor i:first-child,
+  .project-page.pinsight-page #pinsight-overview .journey-anchor span,
+  .project-page.pinsight-page #pinsight-overview .journey-anchor::after{display:none}
+  .project-page.pinsight-page #pinsight-overview .journey-anchor i:nth-child(2){
+    left:50%;top:50%;width:6px;height:6px;border:0;border-radius:50%;
+    background:#d3c5ff;transform:translate(-50%,-50%);
+  }
+  .project-page.pinsight-page #pinsight-overview .journey-feedback{
+    left:10%;top:250px;padding:0 8px 3px 0;background:#090a0b;
+    color:rgba(201,184,255,.66);font-size:10px;
+  }
+}
+
+/* 02 Research Composition v16 — one continuous field: input → convergence → cognition. */
+.project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--ps-v1-gap);width:100%;
+}
+.project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16>.research-head{min-height:128px;margin:0 0 48px}
+.project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16>.is-input{grid-column:1/7}
+.project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16>.is-load{grid-column:7/13}
+.project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16>.research-head small{color:rgba(183,140,255,.72);font-size:11px;letter-spacing:.1em}
+.project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16>.research-head h3{max-width:17ch;margin:16px 0 0;font-size:clamp(28px,2.4vw,36px);line-height:1.18}
+.project-page.pinsight-page .ps-chapter-research .research-stage-v16{
+  position:relative;grid-column:1/13;display:grid;grid-template-columns:minmax(0,5fr) minmax(120px,1.4fr) minmax(0,5.6fr);align-items:center;min-height:720px;
+}
+.project-page.pinsight-page .ps-chapter-research .input-field-v16,
+.project-page.pinsight-page .ps-chapter-research .cognitive-field-v16{position:relative;height:650px}
+.project-page.pinsight-page .ps-chapter-research .source-field-v16{position:absolute;inset:0}
+.project-page.pinsight-page .ps-chapter-research .source-fragment{position:absolute;z-index:3;color:rgba(255,255,255,.70);font-size:16px;line-height:1}
+.project-page.pinsight-page .ps-chapter-research .source-fragment i{display:inline-block;width:6px;height:6px;margin-right:10px;border-radius:50%;background:#a970ff;vertical-align:2px}
+.project-page.pinsight-page .ps-chapter-research .source-fragment::after{content:'';position:absolute;height:1px;background:linear-gradient(90deg,rgba(169,112,255,.56),rgba(169,112,255,.08));transform-origin:left center}
+.project-page.pinsight-page .ps-chapter-research .source-fragment.source-1{left:2%;top:12%;font-size:20px}.project-page.pinsight-page .ps-chapter-research .source-fragment.source-1::after{left:28px;top:42px;width:230px;transform:rotate(24deg)}
+.project-page.pinsight-page .ps-chapter-research .source-fragment.source-2{left:4%;top:37%;font-size:18px}.project-page.pinsight-page .ps-chapter-research .source-fragment.source-2::after{left:30px;top:36px;width:210px;transform:rotate(10deg)}
+.project-page.pinsight-page .ps-chapter-research .source-fragment.source-3{left:8%;bottom:14%;font-size:17px}.project-page.pinsight-page .ps-chapter-research .source-fragment.source-3::after{left:26px;bottom:34px;width:220px;transform:rotate(-25deg)}
+.project-page.pinsight-page .ps-chapter-research .source-fragment.source-4{right:8%;bottom:4%;font-size:15px}.project-page.pinsight-page .ps-chapter-research .source-fragment.source-4::after{right:22px;bottom:32px;width:170px;transform:rotate(-70deg)}
+.project-page.pinsight-page .ps-chapter-research .source-fragment.source-5{right:3%;top:6%;font-size:16px}.project-page.pinsight-page .ps-chapter-research .source-fragment.source-5::after{right:20px;top:35px;width:160px;transform:rotate(72deg)}
+.project-page.pinsight-page .ps-chapter-research .critique-surface-v16{position:absolute;z-index:2;left:49%;top:52%;width:310px;height:250px;transform:translate(-50%,-50%)}
+.project-page.pinsight-page .ps-chapter-research .critique-surface-v16>i{position:absolute;inset:0;border:1px solid rgba(169,112,255,.22);background:rgba(73,55,110,.10);clip-path:polygon(10% 17%,92% 5%,100% 80%,4% 94%)}
+.project-page.pinsight-page .ps-chapter-research .critique-surface-v16>i:nth-child(1){transform:translate(-24px,22px);opacity:.38}
+.project-page.pinsight-page .ps-chapter-research .critique-surface-v16>i:nth-child(2){transform:translate(-12px,11px);opacity:.62}
+.project-page.pinsight-page .ps-chapter-research .critique-surface-v16>i:nth-child(3){border-color:rgba(169,112,255,.56);background:linear-gradient(135deg,rgba(169,112,255,.09),rgba(83,94,190,.025))}
+.project-page.pinsight-page .ps-chapter-research .critique-surface-v16>div{position:absolute;z-index:2;left:50%;top:49%;width:76%;transform:translate(-50%,-50%)}
+.project-page.pinsight-page .ps-chapter-research .critique-surface-v16 small{color:rgba(183,140,255,.60);font-size:10px;letter-spacing:.1em}
+.project-page.pinsight-page .ps-chapter-research .critique-surface-v16 strong{display:block;margin-top:12px;font-size:30px}
+.project-page.pinsight-page .ps-chapter-research .critique-surface-v16 span{display:block;max-width:18ch;margin-top:16px;color:rgba(255,255,255,.42);font-size:13px;line-height:1.6}
+.project-page.pinsight-page .ps-chapter-research .convergence-v16{position:relative;z-index:4;height:330px}
+.project-page.pinsight-page .ps-chapter-research .convergence-v16 i{position:absolute;left:-36%;right:-38%;height:62px;border-block:1px solid rgba(169,112,255,.30);background:linear-gradient(90deg,rgba(169,112,255,.02),rgba(169,112,255,.15),rgba(98,91,190,.08));clip-path:polygon(0 0,100% 38%,100% 62%,0 100%)}
+.project-page.pinsight-page .ps-chapter-research .convergence-v16 i:nth-child(1){top:70px;opacity:.45}
+.project-page.pinsight-page .ps-chapter-research .convergence-v16 i:nth-child(2){top:134px;height:70px;opacity:.76}
+.project-page.pinsight-page .ps-chapter-research .convergence-v16 i:nth-child(3){top:202px;opacity:.36}
+.project-page.pinsight-page .ps-chapter-research .convergence-v16 span{position:absolute;left:50%;top:50%;color:rgba(255,255,255,.35);font-size:10px;letter-spacing:.12em;white-space:nowrap;transform:translate(-50%,-50%)}
+.project-page.pinsight-page .ps-chapter-research .cognitive-field-v16{display:grid;place-items:center}
+.project-page.pinsight-page .ps-chapter-research .cognitive-mass-v16{position:relative;width:500px;height:600px;max-width:100%}
+.project-page.pinsight-page .ps-chapter-research .cognitive-mass-v16>i{position:absolute;left:50%;top:50%;border:1px solid rgba(124,116,232,.32);border-radius:48% 52% 45% 55%/52% 44% 56% 48%;background:rgba(68,61,130,.055);transform:translate(-50%,-50%) rotate(-7deg)}
+.project-page.pinsight-page .ps-chapter-research .cognitive-mass-v16 .layer-1{width:460px;height:540px;border-color:rgba(124,116,232,.46);background:rgba(77,68,145,.065)}
+.project-page.pinsight-page .ps-chapter-research .cognitive-mass-v16 .layer-2{width:360px;height:420px;transform:translate(-50%,-50%) rotate(5deg);background:rgba(117,87,181,.075)}
+.project-page.pinsight-page .ps-chapter-research .cognitive-mass-v16 .layer-3{width:270px;height:290px;border-color:rgba(169,112,255,.44);transform:translate(-50%,-50%) rotate(-2deg);background:rgba(169,112,255,.055)}
+.project-page.pinsight-page .ps-chapter-research .student-core-v16{position:absolute;z-index:3;left:50%;top:50%;display:grid;place-content:center;width:150px;height:150px;border:1px solid rgba(183,140,255,.68);border-radius:50%;background:#090a0b;text-align:center;transform:translate(-50%,-50%)}
+.project-page.pinsight-page .ps-chapter-research .student-core-v16 svg{width:20px;height:20px;margin:0 auto 9px;color:#a970ff}
+.project-page.pinsight-page .ps-chapter-research .student-core-v16 strong{font-size:25px}.project-page.pinsight-page .ps-chapter-research .student-core-v16 small{margin-top:8px;color:rgba(255,255,255,.38)}
+.project-page.pinsight-page .ps-chapter-research .task-fragment{position:absolute;z-index:4;padding:8px 12px;color:rgba(255,255,255,.74);font-size:16px;background:rgba(9,10,11,.72);white-space:nowrap}
+.project-page.pinsight-page .ps-chapter-research .task-fragment small{margin-right:8px;color:rgba(183,140,255,.62);font-size:9px}
+.project-page.pinsight-page .ps-chapter-research .task-1{left:18%;top:7%}.project-page.pinsight-page .ps-chapter-research .task-2{right:7%;top:20%}.project-page.pinsight-page .ps-chapter-research .task-3{right:5%;top:49%}.project-page.pinsight-page .ps-chapter-research .task-4{right:12%;bottom:10%}.project-page.pinsight-page .ps-chapter-research .task-5{left:20%;bottom:3%}.project-page.pinsight-page .ps-chapter-research .task-6{left:0;top:34%}
+.project-page.pinsight-page .ps-chapter-research .processing-label-v16{position:absolute;right:10%;bottom:23%;color:rgba(255,255,255,.28);font-size:11px;font-weight:400;letter-spacing:.08em}
+.project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16>.research-method-note{grid-column:7/13;margin:18px 0 0;color:rgba(255,255,255,.30);font-size:11px}
+.project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16+.ps-scene-summary{max-width:760px;margin:40px 0 0;padding-left:24px;border-left:2px solid rgba(169,112,255,.62);font-size:18px;line-height:1.7}
+@media(max-width:980px){
+  .project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16>.research-head{grid-column:1/13}
+  .project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16>.is-load{margin-top:48px}
+  .project-page.pinsight-page .ps-chapter-research .research-stage-v16{grid-template-columns:1fr;gap:40px}
+  .project-page.pinsight-page .ps-chapter-research .input-field-v16,.project-page.pinsight-page .ps-chapter-research .cognitive-field-v16{height:580px}
+  .project-page.pinsight-page .ps-chapter-research .convergence-v16{height:100px;transform:rotate(90deg)}
+  .project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16>.research-method-note{grid-column:1/13}
+}
+
+/* 01 Journey v17 — fixed P1–P5 geometry and integrated device layer. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-experience-overview>header{align-items:end}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-overview>header h3{text-align:center}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11{min-height:550px;margin-top:8px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-base{stroke:rgba(91,72,125,.28);stroke-width:1}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-active{stroke:rgba(169,112,255,.88);stroke-width:1.9}
+  .project-page.pinsight-page #pinsight-overview .journey-points circle{fill:#090a0b;stroke:rgba(183,140,255,.82);stroke-width:1.5}
+  .project-page.pinsight-page #pinsight-overview .journey-points .key-ring{fill:none;stroke:rgba(183,140,255,.42);stroke-width:1.25}
+  .project-page.pinsight-page #pinsight-overview .journey-points .is-key{fill:#c9b8ff;stroke:#a970ff;stroke-width:2}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article{top:350px;width:200px;text-align:left;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-1{left:10%;top:350px;transform:translateX(-50%);text-align:left}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-2{left:32.5%;top:350px;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3{left:50%;top:10px;width:300px;transform:translateX(-50%);text-align:center}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-4{left:68.5%;top:350px;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5{left:90%;right:auto;top:350px;transform:translateX(-50%);text-align:left}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article small{font-size:12px;line-height:1}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article strong{margin-top:16px;font-size:23px;line-height:1.25}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article em{margin-top:8px;line-height:1.3}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article p{max-width:200px;margin:16px 0 0;font-size:14px;line-height:1.75}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3 p{max-width:27ch;margin-inline:auto;text-wrap:balance}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3 strong{font-size:32px}
+  .project-page.pinsight-page #pinsight-overview .journey-feedback{left:18.33%;top:266px;padding:0;background:none;color:rgba(201,184,255,.72);font-size:10px;letter-spacing:.08em}
+  .project-page.pinsight-page #pinsight-overview .journey-feedback::before{content:'';display:inline-block;width:5px;height:5px;margin-right:8px;border-radius:50%;background:#a970ff;vertical-align:1px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices{display:grid;grid-template-columns:3fr 2fr;gap:32px;margin-top:24px;color:inherit}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices span{position:relative;display:grid;grid-template-columns:90px 1fr;gap:16px;padding-top:18px;border-top:1px solid rgba(255,255,255,.10)}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices span:first-child{border-top-color:rgba(169,112,255,.24)}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices small{color:rgba(183,140,255,.52);font-size:11px;letter-spacing:.08em}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices strong{color:rgba(255,255,255,.42);font-size:12px;font-weight:450;letter-spacing:.02em}
+}
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices span{display:grid;gap:6px;padding-top:14px;border-top:1px solid rgba(255,255,255,.10)}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices small{color:rgba(183,140,255,.52)}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices strong{color:rgba(255,255,255,.46);font-weight:450}
+}
+
+/* 01–03 visual rhythm v18: light → dense → spatial → quiet → convergent. */
+@media(min-width:981px){
+  /* 01 stays light and wide. */
+  .project-page.pinsight-page #pinsight-overview{padding-top:150px;padding-bottom:210px}
+  .project-page.pinsight-page #pinsight-overview>.ps-section-head{max-width:760px;margin-bottom:96px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-overview>header{margin-bottom:34px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices{margin-top:40px}
+
+  /* 02 opens as a denser, scene-like information field. */
+  .project-page.pinsight-page #pinsight-insight{padding-top:190px;padding-bottom:230px}
+  .project-page.pinsight-page #pinsight-insight>.ps-section-head{max-width:780px;margin-bottom:100px}
+  .project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16{position:relative;isolation:isolate}
+  .project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16::before{
+    content:'';position:absolute;z-index:-1;left:-9vw;right:-9vw;top:110px;height:820px;pointer-events:none;
+    background:radial-gradient(ellipse at 55% 52%,rgba(76,55,126,.13),rgba(26,22,38,.035) 46%,transparent 76%);
+  }
+  .project-page.pinsight-page .ps-chapter-research .research-stage-v16{min-height:760px}
+  .project-page.pinsight-page .ps-chapter-research .ps-research-composition-v16+.ps-scene-summary{margin-top:48px}
+
+  /* The scene cools down into a concentrated, spatial layer-peeling climax. */
+  .project-page.pinsight-page #pinsight-insight>.ps-figure-block{margin-top:170px}
+  .project-page.pinsight-page #pinsight-insight>.ps-figure-block>header{margin-bottom:88px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded{grid-template-columns:minmax(0,6.5fr) minmax(160px,2.1fr) minmax(280px,3.4fr);min-height:940px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layers{gap:32px;min-height:640px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-layer{min-height:88px;background:linear-gradient(90deg,rgba(169,112,255,.02),rgba(169,112,255,.075),rgba(87,104,214,.018))}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-alone{padding-top:230px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-peel{padding-top:210px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-loss-exploded>blockquote{margin-top:88px}
+
+  /* 03 deliberately clears the visual field and lets typography lead. */
+  .project-page.pinsight-page #pinsight-strategy{padding-top:270px;padding-bottom:220px}
+  .project-page.pinsight-page #pinsight-strategy>.ps-section-head{max-width:900px;margin-bottom:150px}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>header{margin-bottom:88px}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframe-composition{min-height:430px}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-old{opacity:.54}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframe-composition .is-new strong{font-size:clamp(54px,5.5vw,78px)}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframe-continuity{margin-top:112px}
+  .project-page.pinsight-page #pinsight-strategy .ps-reframing-v12>blockquote{margin-top:190px}
+  .project-page.pinsight-page #pinsight-strategy .ps-strategy-trace-v12{margin-top:180px}
+  .project-page.pinsight-page #pinsight-strategy .ps-strategy-mapping{margin-top:190px}
+
+  /* The final 5→3 mapping regains visual mass through open response zones. */
+  .project-page.pinsight-page .ps-chapter-problem .ps-convergence-canvas{min-height:660px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-response-decisions article{z-index:1}
+  .project-page.pinsight-page .ps-chapter-problem .ps-response-decisions article::after{
+    content:'';position:absolute;z-index:-1;left:-165%;right:-18px;top:50%;height:108px;
+    border-block:1px solid rgba(169,112,255,.14);
+    background:linear-gradient(90deg,transparent,rgba(169,112,255,.055) 55%,rgba(93,90,178,.075));
+    transform:translateY(-50%);pointer-events:none;
+  }
+  .project-page.pinsight-page .ps-chapter-problem .ps-response-decisions article:nth-child(2)::after{background:linear-gradient(90deg,transparent,rgba(169,112,255,.085) 58%,rgba(114,91,183,.09));border-color:rgba(169,112,255,.22)}
+  .project-page.pinsight-page .ps-chapter-problem .ps-response-decisions strong{font-size:32px}
+  .project-page.pinsight-page .ps-chapter-problem .ps-problem-signals strong{color:rgba(255,255,255,.52)}
+}
+
+/* v22 authoritative cascade — Product Design repair for 01 Journey only. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas{grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(7,105px);column-gap:24px;min-height:780px}
+  .project-page.pinsight-page #pinsight-overview .image-step-1{grid-column:1/4;grid-row:1/4}
+  .project-page.pinsight-page #pinsight-overview .image-step-2{grid-column:1/4;grid-row:5/8}
+  .project-page.pinsight-page #pinsight-overview .image-step-3{grid-column:4/10;grid-row:2/7;align-self:center;z-index:3}
+  .project-page.pinsight-page #pinsight-overview .image-step-4{grid-column:10/13;grid-row:1/4}
+  .project-page.pinsight-page #pinsight-overview .image-step-5{grid-column:10/13;grid-row:5/8}
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg{z-index:1}
+  .project-page.pinsight-page #pinsight-overview .ps-image-journey-canvas>svg path{stroke:rgba(169,112,255,.34);stroke-width:1.25}
+  .project-page.pinsight-page #pinsight-overview .image-step{z-index:2}
+  .project-page.pinsight-page #pinsight-overview .image-step-1 .image-step-media,.project-page.pinsight-page #pinsight-overview .image-step-4 .image-step-media{aspect-ratio:4/3}
+  .project-page.pinsight-page #pinsight-overview .image-step-2 .image-step-media,.project-page.pinsight-page #pinsight-overview .image-step-5 .image-step-media{aspect-ratio:16/10}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 .image-step-media{aspect-ratio:4/3}
+  .project-page.pinsight-page #pinsight-overview .ps-image-feedback{left:7.2%;top:47%;z-index:4}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption{grid-template-columns:24px 1fr;gap:3px 8px;margin-top:11px}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption strong{font-size:15px}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 figcaption{margin-top:15px}
+  .project-page.pinsight-page #pinsight-overview .image-step-3 figcaption strong{font-size:22px}
+  .project-page.pinsight-page #pinsight-overview .image-step figcaption p{margin-top:2px}
+}
+
+/* v19 final cascade: Experience Journey only */
+.project-page.pinsight-page #pinsight-overview .ps-experience-overview{--p1:10%;--p2:32.5%;--p3:50%;--p4:68.5%;--p5:90%}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases{display:grid;grid-template-columns:3fr 2fr;gap:32px;margin:48px 10% 0}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases>span{display:grid;gap:7px;padding-top:14px;border-top:1px solid rgba(255,255,255,.10)}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases>span:first-child{border-color:rgba(169,112,255,.28)}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases small{color:rgba(169,112,255,.55);font-size:10px;letter-spacing:.1em}
+.project-page.pinsight-page #pinsight-overview .ps-journey-phases strong{color:rgba(255,255,255,.48);font-size:12px;font-weight:500}
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11{min-height:500px;margin-top:22px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 svg{height:500px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-active{stroke-width:2;opacity:.86}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .journey-base{stroke-width:1;opacity:.22}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article{top:318px;width:190px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-1{left:var(--p1);top:318px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-2{left:var(--p2);top:300px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3{left:var(--p3);top:0;width:310px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-4{left:var(--p4);top:300px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-5{left:var(--p5);right:auto;top:318px;text-align:left}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article strong{margin-top:13px;font-size:21px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article em{margin-top:7px}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 article p{margin-top:13px;font-size:13px;line-height:1.7}
+  .project-page.pinsight-page #pinsight-overview .ps-journey-visual-v11 .step-3 strong{font-size:30px}
+  .project-page.pinsight-page #pinsight-overview .journey-feedback{left:18%;top:264px;transform:none}
+  .project-page.pinsight-page #pinsight-overview .journey-transition{position:absolute;left:59%;top:318px;color:rgba(169,112,255,.48);font-size:10px;letter-spacing:.08em;transform:translateX(-50%)}
+  .project-page.pinsight-page #pinsight-overview .journey-transition::before{content:'';display:inline-block;width:18px;height:1px;margin-right:8px;background:rgba(169,112,255,.28);vertical-align:3px}
+}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states{position:relative;height:132px;margin-top:42px;border-top:1px solid rgba(255,255,255,.08)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-identity{position:absolute;left:var(--p1);top:-25px;color:rgba(201,184,255,.58);font-size:10px;letter-spacing:.08em;transform:translateX(-50%)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-identity i{display:inline-block;width:5px;height:5px;margin-right:7px;border-radius:50%;background:#a970ff;vertical-align:1px}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states article{position:absolute;top:29px;width:180px;display:grid;gap:6px;text-align:left;transform:translateX(-50%)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states article::before{content:'';position:absolute;left:50%;top:-30px;width:1px;height:16px;background:rgba(169,112,255,.26)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-1{left:var(--p1)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-2{left:var(--p2)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-3{left:var(--p3)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-4{left:var(--p4)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-5{left:var(--p5)}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states small{color:rgba(169,112,255,.46);font-size:9px;letter-spacing:.08em}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states strong{color:rgba(255,255,255,.64);font-size:13px;font-weight:550}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states span{color:rgba(255,255,255,.34);font-size:11px;line-height:1.45}
+.project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-3 strong{color:rgba(213,197,255,.86)}
+.project-page.pinsight-page #pinsight-overview .ps-experience-devices{margin:22px 10% 0;grid-template-columns:3fr 2fr}
+.project-page.pinsight-page #pinsight-overview .ps-experience-devices span{padding-top:15px}
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-overview .ps-journey-phases{margin-inline:0;gap:18px}
+  .project-page.pinsight-page #pinsight-overview .ps-feedback-states{height:auto;margin-top:36px;padding-top:24px;display:grid;gap:18px}
+  .project-page.pinsight-page #pinsight-overview .ps-feedback-states .state-identity{position:static;transform:none}
+  .project-page.pinsight-page #pinsight-overview .ps-feedback-states article{position:relative;left:auto!important;top:auto;width:auto;padding-left:22px;transform:none}
+  .project-page.pinsight-page #pinsight-overview .ps-feedback-states article::before{left:0;top:2px;height:28px}
+  .project-page.pinsight-page #pinsight-overview .ps-experience-devices{margin-inline:0}
+}
+
+/* v24 authoritative cascade — keep this final. */
+@media(min-width:981px){
+  .project-page.pinsight-page .ps-section,
+  .project-page.pinsight-page .ps-section-major,
+  .project-page.pinsight-page .ps-section-large,
+  .project-page.pinsight-page .ps-section.ps-lifecycle-section{padding-block:190px}
+  .project-page.pinsight-page #pinsight-insight,
+  .project-page.pinsight-page #pinsight-strategy{padding-block:172px}
+  .project-page.pinsight-page .ps-section-head,
+  .project-page.pinsight-page .ps-section-head.is-statement{margin-bottom:120px}
+
+  .project-page.pinsight-page #pinsight-ui .ps-final-group,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web{
+    display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:32px;row-gap:42px;width:100%;margin:0
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group+.ps-final-group{margin-top:220px}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>header,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>header{
+    position:static;grid-column:1/13;grid-row:auto;display:grid;grid-template-columns:3fr 6fr 3fr;gap:32px;align-items:end;max-width:none;margin:0;padding:0 0 30px;border-bottom:1px solid rgba(255,255,255,.12)
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header span{grid-column:1}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header h3{grid-column:2;margin:0;font-size:46px;line-height:1.08}
+  .project-page.pinsight-page #pinsight-ui .ps-final-group>header p{grid-column:3;margin:0;text-align:right}
+  .project-page.pinsight-page #pinsight-ui .ps-final-primary,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence.is-primary,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>.ps-evidence.is-primary,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web>.ps-evidence:first-of-type{
+    grid-column:1/13;grid-row:auto;width:100%;margin:0
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-primary .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence.is-primary .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split.is-reverse>.ps-evidence.is-primary .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-web>.ps-evidence:first-of-type .ps-evidence-media{
+    width:100%;height:auto!important;aspect-ratio:16/9;border-radius:16px
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-states,
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary),
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes,
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{
+    grid-column:1/13!important;grid-row:auto;width:100%;max-width:none;margin:0
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-group.is-split>.ps-evidence:not(.is-primary) .ps-evidence-media{
+    height:auto!important;aspect-ratio:16/9;border-radius:16px
+  }
+  .project-page.pinsight-page #pinsight-ui .ps-final-notes{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+  .project-page.pinsight-page #pinsight-ui .ps-web-support .ps-evidence-media{height:auto!important;aspect-ratio:16/9;border-radius:16px}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption{display:grid;grid-template-columns:3fr 9fr;gap:32px;margin-top:20px}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption small{grid-column:1}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption strong,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption p{grid-column:2}
+}
+
+/* v26 — 06–10 use one full-width UI presentation system. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-spatial,
+  .project-page.pinsight-page #pinsight-lifecycle,
+  .project-page.pinsight-page #pinsight-review,
+  .project-page.pinsight-page #pinsight-continuity,
+  .project-page.pinsight-page #pinsight-ui{padding-block:148px}
+
+  .project-page.pinsight-page #pinsight-spatial>.ps-section-head,
+  .project-page.pinsight-page #pinsight-lifecycle>.ps-section-head,
+  .project-page.pinsight-page #pinsight-review>.ps-section-head,
+  .project-page.pinsight-page #pinsight-continuity>.ps-section-head,
+  .project-page.pinsight-page #pinsight-ui>.ps-section-head{margin-bottom:104px}
+
+  /* 06 — text first, interface second, full width. */
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection,
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2),
+  .project-page.pinsight-page #pinsight-spatial .ps-detail-section{
+    display:block!important;width:100%!important;margin-top:140px!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:first-of-type{margin-top:0!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-state-strip{
+    display:grid!important;grid-template-columns:4fr 8fr!important;width:100%!important;margin:0 0 52px!important;padding-top:24px!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-state-strip>div{justify-content:flex-end!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-primary-support-layout{display:block!important;width:100%!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-primary-support-layout>.ps-evidence,
+  .project-page.pinsight-page #pinsight-spatial .ps-detail-section>.ps-evidence{width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-primary-support-layout .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-spatial .ps-detail-section .ps-evidence-media{
+    width:100%!important;height:auto!important;aspect-ratio:16/9!important;border-radius:16px!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-state-closeups{
+    display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:32px!important;margin-top:34px!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-state-closeups>div{min-height:150px!important;padding:24px 0!important;border:0!important;border-top:1px solid rgba(255,255,255,.10)!important;background:none!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair,
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair.is-asymmetric{
+    display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important;width:100%!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair .ps-evidence{width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair .ps-evidence-media{height:auto!important;aspect-ratio:16/9!important;border-radius:16px!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-detail-section>div:first-child{width:720px;max-width:100%;margin:0 0 52px!important}
+
+  /* 07 — eight equal editorial rows instead of mixed tiles. */
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story{display:grid!important;grid-template-columns:1fr!important;gap:112px!important;width:100%!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n),
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article.is-wide,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article.is-pair{
+    grid-column:1!important;display:grid!important;grid-template-columns:3fr 9fr!important;gap:32px!important;align-items:start!important;width:100%!important;padding-top:28px!important;border-top:1px solid rgba(255,255,255,.10)!important
+  }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story .ps-life-copy{grid-column:1!important;order:0!important;padding-top:4px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story figure,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n) figure{
+    grid-column:2!important;width:100%!important;height:auto!important;aspect-ratio:16/9!important;margin:0!important;border-radius:16px!important
+  }
+
+  /* 08 — every product screen receives the same full-width stage. */
+  .project-page.pinsight-page #pinsight-review .ps-review-stage{display:grid!important;grid-template-columns:1fr!important;gap:112px!important;width:100%!important;margin-top:104px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage>.ps-evidence,
+  .project-page.pinsight-page #pinsight-review .ps-review-stage+.ps-evidence{
+    grid-column:1!important;width:100%!important;max-width:none!important;margin:0!important
+  }
+  .project-page.pinsight-page #pinsight-review .ps-review-stage+.ps-evidence{margin-top:112px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-review .ps-review-stage+.ps-evidence .ps-evidence-media{
+    width:100%!important;height:auto!important;aspect-ratio:16/9!important;border-radius:16px!important
+  }
+
+  /* 09 — remove the old 4/8 and reversed arrangements. */
+  .project-page.pinsight-page #pinsight-continuity .ps-web-experience{display:block!important;width:100%!important;margin-top:132px!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part,
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part.is-reverse{
+    display:block!important;width:100%!important;margin:0!important
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part+.ps-web-part{margin-top:156px!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header,
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part.is-reverse header{
+    position:static!important;display:grid!important;grid-template-columns:4fr 8fr!important;gap:32px!important;width:100%!important;margin:0 0 48px!important;padding:24px 0 0!important;border-top:1px solid rgba(255,255,255,.10)!important
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header small{grid-column:1!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header h3,
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header p{grid-column:2!important;max-width:680px!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part .ps-evidence{width:100%!important;max-width:none!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part .ps-evidence-media{width:100%!important;height:auto!important;aspect-ratio:16/9!important;border-radius:16px!important}
+
+  /* Shared image behavior: fill the stage consistently. */
+  .project-page.pinsight-page #pinsight-spatial .ps-evidence-media img,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story img,
+  .project-page.pinsight-page #pinsight-review .ps-evidence-media img,
+  .project-page.pinsight-page #pinsight-continuity .ps-evidence-media img,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence-media img{width:100%!important;height:100%!important;object-fit:cover!important}
+}
+
+/* v27 — detail pass: every product image uses one consistent full-width stage. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair,
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair.is-asymmetric{
+    grid-template-columns:1fr!important;gap:112px!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair .ps-evidence{grid-column:1!important}
+
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n),
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article.is-wide,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article.is-pair{
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;row-gap:34px!important
+  }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story .ps-life-copy{
+    grid-column:1/13!important;display:grid!important;grid-template-columns:3fr 9fr!important;gap:8px 32px!important
+  }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>span,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>small{grid-column:1!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>h3,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>p{grid-column:2!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>h3{grid-row:1/3!important;margin:0!important;align-self:end!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>p{margin:8px 0 0!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story figure,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n) figure{grid-column:1/13!important}
+
+  .project-page.pinsight-page #pinsight-ui .ps-web-support{grid-template-columns:1fr!important;gap:112px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-web-support>.ps-evidence{grid-column:1!important;width:100%!important}
+
+  .project-page.pinsight-page #pinsight-spatial .ps-evidence-media img,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story img,
+  .project-page.pinsight-page #pinsight-review .ps-evidence-media img,
+  .project-page.pinsight-page #pinsight-continuity .ps-evidence-media img,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence-media img{
+    object-fit:contain!important;background:#090a0b!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-evidence figcaption,
+  .project-page.pinsight-page #pinsight-review .ps-evidence figcaption,
+  .project-page.pinsight-page #pinsight-continuity .ps-evidence figcaption,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption{
+    display:grid!important;grid-template-columns:3fr 9fr!important;gap:8px 32px!important;align-items:start!important;margin-top:22px!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-evidence figcaption small,
+  .project-page.pinsight-page #pinsight-review .ps-evidence figcaption small,
+  .project-page.pinsight-page #pinsight-continuity .ps-evidence figcaption small,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption small{grid-column:1!important;grid-row:1/3!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-evidence figcaption strong,
+  .project-page.pinsight-page #pinsight-review .ps-evidence figcaption strong,
+  .project-page.pinsight-page #pinsight-continuity .ps-evidence figcaption strong,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption strong{grid-column:2!important;font-size:21px!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-evidence figcaption p,
+  .project-page.pinsight-page #pinsight-review .ps-evidence figcaption p,
+  .project-page.pinsight-page #pinsight-continuity .ps-evidence figcaption p,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption p{grid-column:2!important;max-width:720px!important;margin:0!important}
+}
+
+/* v28 final authority — grouped UI galleries. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair,
+  .project-page.pinsight-page #pinsight-spatial .ps-editorial-pair.is-asymmetric{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important}
+
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:104px 32px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article,
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n){grid-column:auto!important;display:block!important;padding-top:24px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story .ps-life-copy{display:block!important;margin-bottom:24px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>span{font-size:34px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy>h3{margin:16px 0 8px!important;font-size:25px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n) figure{width:100%!important;aspect-ratio:16/10!important}
+
+  .project-page.pinsight-page #pinsight-review .ps-review-stage{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage>.ps-evidence{grid-column:auto!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage+.ps-evidence{width:calc(50% - 16px)!important;margin:104px 0 0!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence-media,
+  .project-page.pinsight-page #pinsight-review .ps-review-stage+.ps-evidence .ps-evidence-media{aspect-ratio:16/10!important}
+
+  .project-page.pinsight-page #pinsight-continuity .ps-web-experience{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part,
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part.is-reverse{display:block!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header{display:block!important;min-height:190px!important;margin-bottom:28px!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part .ps-evidence-media{aspect-ratio:16/10!important}
+
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:144px 32px!important;width:100%!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery>.ps-final-group{display:block!important;width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery>.ps-final-group>header{display:block!important;min-height:210px!important;padding:24px 0 28px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery>.ps-final-group>header h3{margin:18px 0 14px!important;font-size:32px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery>.ps-final-group>header p{text-align:left!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery .ps-evidence{width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery .ps-evidence-media{width:100%!important;height:auto!important;aspect-ratio:16/10!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery .ps-final-states{margin-top:24px!important;gap:10px!important;flex-wrap:wrap!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery .ps-final-group.is-split>.ps-evidence:not(.is-primary),
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery .ps-final-notes,
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery .ps-web-support{margin-top:40px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery .ps-web-support{grid-template-columns:1fr!important;gap:40px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery .ps-evidence figcaption{display:block!important;margin-top:16px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery .ps-evidence figcaption strong{display:block!important;margin-top:8px!important;font-size:17px!important}
+}
+@media(max-width:980px){
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery{display:block}
+  .project-page.pinsight-page #pinsight-ui .ps-final-gallery>.ps-final-group+.ps-final-group{margin-top:96px!important}
+}
+
+/* v29 eof authority */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-review .ps-review-stage{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:32px!important;margin-top:104px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage>.ps-evidence{grid-column:auto!important;width:100%!important;max-width:none!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence-media{width:100%!important;height:auto!important;aspect-ratio:4/3!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage .ps-evidence figcaption{display:block!important;margin-top:18px!important}
+
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:96px 32px!important;width:100%!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid>.ps-evidence{width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid .ps-evidence-media{width:100%!important;height:auto!important;aspect-ratio:16/10!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid .ps-evidence-media img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid figcaption{display:block!important;margin-top:18px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid figcaption small{display:block!important;margin-bottom:9px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid figcaption strong{display:block!important;font-size:18px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:32px!important;width:100%!important;margin-top:120px!important;padding-top:28px!important;border-top:1px solid rgba(255,255,255,.10)!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes small{display:block;color:#a970ff;font-size:10px}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes strong{display:block;margin-top:14px;color:rgba(255,255,255,.70);font-size:13px;line-height:1.55}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes p{margin-top:10px;color:rgba(255,255,255,.42);font-size:11px;line-height:1.65}
+}
+
+/* v30 — repair the 06.2 spatial interaction composition. */
+@media(min-width:981px){
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2){display:block!important;width:100%!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-state-strip{
+    display:grid!important;grid-template-columns:4fr 8fr!important;gap:32px!important;align-items:start!important;width:100%!important;margin:0 0 56px!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-state-strip header{grid-column:1!important;max-width:330px!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-state-strip>div{
+    grid-column:2!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:14px!important;margin:0!important;overflow:visible!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-state-strip article{
+    flex:1 1 0!important;min-width:0!important;padding:18px 0!important;border:0!important;border-top:1px solid rgba(100,217,223,.20)!important;background:none!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-state-strip svg{
+    flex:0 0 18px!important;width:18px!important;margin:0!important;transform:none!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-editorial-pair,
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-editorial-pair.is-asymmetric{
+    display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important;width:100%!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-editorial-pair>.ps-evidence{
+    grid-column:auto!important;width:100%!important;max-width:none!important;margin:0!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-editorial-pair .ps-evidence-media{
+    width:100%!important;height:auto!important;aspect-ratio:4/3!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-editorial-pair figcaption{
+    display:block!important;margin-top:18px!important
+  }
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-editorial-pair figcaption small{display:block!important;margin-bottom:9px!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-editorial-pair figcaption strong{display:block!important;font-size:19px!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:nth-of-type(2) .ps-editorial-pair figcaption p{margin-top:10px!important}
+}

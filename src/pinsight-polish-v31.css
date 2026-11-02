@@ -1,0 +1,60 @@
+/* PinSight final layout polish. Imported last to keep the presentation stable. */
+@media (min-width:981px){
+  .project-page.pinsight-page #pinsight-spatial,
+  .project-page.pinsight-page #pinsight-lifecycle,
+  .project-page.pinsight-page #pinsight-review,
+  .project-page.pinsight-page #pinsight-continuity,
+  .project-page.pinsight-page #pinsight-ui{padding-block:136px!important}
+
+  .project-page.pinsight-page #pinsight-spatial>.ps-section-head,
+  .project-page.pinsight-page #pinsight-lifecycle>.ps-section-head,
+  .project-page.pinsight-page #pinsight-review>.ps-section-head,
+  .project-page.pinsight-page #pinsight-continuity>.ps-section-head,
+  .project-page.pinsight-page #pinsight-ui>.ps-section-head{margin-bottom:88px!important}
+
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection{margin-top:120px!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-subsection:first-of-type{margin-top:0!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-state-strip{margin-bottom:44px!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-state-strip header h3{margin-top:12px!important;font-size:34px!important}
+  .project-page.pinsight-page #pinsight-spatial .ps-state-strip article strong{font-size:13px!important;line-height:1.45!important}
+
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story{gap:88px 32px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article{padding-top:20px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy{min-height:132px!important;margin-bottom:18px!important}
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy p{max-width:42ch!important}
+
+  .project-page.pinsight-page #pinsight-review .ps-transformation-model{margin-top:0!important;margin-bottom:92px!important}
+  .project-page.pinsight-page #pinsight-review .ps-review-stage{margin-top:0!important}
+
+  .project-page.pinsight-page #pinsight-continuity .ps-continuity-object{margin-top:0!important;margin-bottom:112px!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-experience{
+    display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important;margin-top:0!important
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part,
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part.is-reverse{display:flex!important;flex-direction:column!important;margin:0!important;min-width:0!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header,
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part.is-reverse header{
+    order:0!important;display:block!important;min-height:176px!important;margin:0 0 26px!important;padding:22px 0 0!important;border-top:1px solid rgba(255,255,255,.1)!important
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header h3{max-width:13ch!important;margin:16px 0 14px!important;font-size:32px!important;line-height:1.16!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header p{max-width:48ch!important;margin:0!important;line-height:1.7!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part>.ps-evidence{order:1!important;width:100%!important;margin:0!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part .ps-evidence-media{width:100%!important;height:auto!important;aspect-ratio:16/10!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part figcaption{display:block!important;margin-top:16px!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part figcaption small{display:block!important;margin-bottom:8px!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part figcaption strong{display:block!important;font-size:18px!important}
+
+  .project-page.pinsight-page #pinsight-ui .ps-language-section{margin-bottom:112px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid{gap:80px 32px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-gallery-grid .ps-evidence-media{aspect-ratio:16/10!important}
+  .project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes{margin-top:96px!important}
+}
+
+@media (max-width:980px){
+  .project-page.pinsight-page #pinsight-spatial,
+  .project-page.pinsight-page #pinsight-lifecycle,
+  .project-page.pinsight-page #pinsight-review,
+  .project-page.pinsight-page #pinsight-continuity,
+  .project-page.pinsight-page #pinsight-ui{padding-block:92px!important}
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part header{min-height:0!important;margin-bottom:24px!important}
+}

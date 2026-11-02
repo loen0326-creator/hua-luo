@@ -1,0 +1,17 @@
+.circular-gallery {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.circular-gallery canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.circular-gallery:active { cursor: grabbing; }
+.circular-gallery:not(:active) { cursor: pointer; }
+.circular-gallery:focus-visible { outline: 1px solid #c8ff36; outline-offset: -2px; }

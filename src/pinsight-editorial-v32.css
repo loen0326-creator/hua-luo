@@ -1,0 +1,229 @@
+/* PinSight editorial pass: content-complete, image-led, deliberately varied. */
+#case-pinsight {
+  --ps-text-column: min(720px, 100%);
+  --ps-visual-canvas: min(1760px, calc(100vw - 96px));
+}
+
+#case-pinsight .ps-shell { overflow: visible; }
+#case-pinsight .ps-section { position: relative; }
+#case-pinsight .ps-section > :is(.ps-system-architecture,.ps-core-journey,.ps-lifecycle-story,.ps-review-stage,.ps-web-experience,.ps-ui-editorial,.ps-xr-state-sequence) {
+  width: var(--ps-visual-canvas);
+  max-width: var(--ps-visual-canvas);
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Stop every section from presenting as the same oversized editorial statement. */
+#case-pinsight #pinsight-spatial .ps-section-head h2,
+#case-pinsight #pinsight-review .ps-section-head h2,
+#case-pinsight #pinsight-continuity .ps-section-head h2,
+#case-pinsight #pinsight-ui .ps-section-head h2 {
+  font-size: clamp(40px, 4.2vw, 68px);
+  line-height: 1.04;
+  max-width: 920px;
+}
+#case-pinsight :is(#pinsight-spatial,#pinsight-review,#pinsight-continuity,#pinsight-ui) .ps-section-head {
+  min-height: 0;
+  padding-block: 80px 72px;
+}
+#case-pinsight .ps-section-head .ps-section-rail strong { display: none; }
+
+/* Feedback Object becomes the system's visual centre rather than a decoration. */
+#case-pinsight #pinsight-system .ps-system-architecture {
+  min-height: 760px;
+  grid-template-columns: minmax(250px,1fr) minmax(460px,1.5fr) minmax(280px,1fr);
+  gap: 64px;
+  align-items: center;
+}
+#case-pinsight #pinsight-system .ps-feedback-object:not(.is-compact) {
+  min-height: 560px;
+  padding: 64px 56px;
+  border-color: rgba(169,112,255,.54);
+  background: linear-gradient(145deg,rgba(169,112,255,.09),rgba(9,10,11,0) 62%);
+}
+#case-pinsight #pinsight-system .ps-feedback-object:not(.is-compact) h3 { font-size: clamp(42px,4vw,66px); }
+#case-pinsight #pinsight-system .ps-feedback-object:not(.is-compact) > div { gap: 0; }
+#case-pinsight #pinsight-system .ps-feedback-object:not(.is-compact) > div span { padding: 18px 0; }
+
+/* XR evidence reads as one continuous interaction chapter. */
+#case-pinsight .ps-xr-state-sequence {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1fr;
+  gap: 28px;
+  align-items: end;
+  margin-top: 112px;
+}
+#case-pinsight .ps-xr-state-sequence .ps-evidence:nth-child(2) { margin-bottom: 72px; }
+#case-pinsight .ps-xr-state-sequence .ps-evidence-media { aspect-ratio: 4/3; }
+
+/* Lifecycle: a scrolling sequence, never a 2x4 gallery. */
+#case-pinsight .ps-lifecycle-story {
+  display: grid;
+  grid-template-columns: repeat(12,minmax(0,1fr));
+  gap: 96px 24px;
+  align-items: start;
+}
+#case-pinsight .ps-lifecycle-story article { display: grid; gap: 26px; min-width: 0; }
+#case-pinsight .ps-lifecycle-story article:nth-child(1) { grid-column: 1 / 10; }
+#case-pinsight .ps-lifecycle-story article:nth-child(2) { grid-column: 8 / 13; margin-top: -120px; }
+#case-pinsight .ps-lifecycle-story article:nth-child(3) { grid-column: 1 / 7; }
+#case-pinsight .ps-lifecycle-story article:nth-child(4) { grid-column: 5 / 13; margin-top: 90px; }
+#case-pinsight .ps-lifecycle-story article:nth-child(5) { grid-column: 1 / 6; }
+#case-pinsight .ps-lifecycle-story article:nth-child(6) { grid-column: 6 / 13; margin-top: -40px; }
+#case-pinsight .ps-lifecycle-story article:nth-child(7) { grid-column: 2 / 8; }
+#case-pinsight .ps-lifecycle-story article:nth-child(8) { grid-column: 4 / 13; }
+#case-pinsight .ps-lifecycle-story article figure { order: -1; margin: 0; }
+#case-pinsight .ps-lifecycle-story article figure img { width: 100%; height: auto; display: block; object-fit: contain; }
+#case-pinsight .ps-life-copy { max-width: 520px; }
+#case-pinsight .ps-life-copy > small { display: none; }
+#case-pinsight .ps-life-copy h3 { font-size: clamp(25px,2vw,34px); }
+
+/* Review: strong image pair plus a wide conclusion, not isolated blocks. */
+#case-pinsight .ps-review-stage {
+  display: grid;
+  grid-template-columns: 1.35fr .85fr;
+  gap: 56px 32px;
+  align-items: start;
+}
+#case-pinsight .ps-review-stage > :nth-child(2) { margin-top: 120px; }
+#case-pinsight .ps-review-stage > :nth-child(3) { grid-column: 1 / -1; width: 82%; margin-left: auto; }
+
+/* Web system keeps all real screens but stages them as two narratives. */
+#case-pinsight .ps-web-experience { display: grid; gap: 160px; }
+#case-pinsight .ps-web-part { display: grid; grid-template-columns: .32fr .68fr; gap: 56px; align-items: start; }
+#case-pinsight .ps-web-part > header { position: sticky; top: 120px; }
+#case-pinsight .ps-web-part > .ps-evidence { grid-column: 2; }
+#case-pinsight .ps-web-part.is-reverse { grid-template-columns: .68fr .32fr; }
+#case-pinsight .ps-web-part.is-reverse > header { grid-column: 2; }
+#case-pinsight .ps-web-part.is-reverse > .ps-evidence { grid-column: 1; grid-row: 1 / span 2; }
+#case-pinsight .ps-web-support { grid-column: 2; display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
+#case-pinsight .ps-web-part.is-reverse .ps-web-support { grid-column: 1; }
+
+/* Final UI: complete but strongly hierarchical. */
+#case-pinsight .ps-ui-gallery-grid { display: none !important; }
+#case-pinsight .ps-ui-editorial { display: grid; grid-template-columns: 1fr; gap: 120px; align-items: start; }
+#case-pinsight .ps-ui-editorial .ui-pair {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 28px;
+  align-items: start;
+  width: 100%;
+}
+#case-pinsight .ps-ui-editorial .ui-pair:nth-child(even) { grid-template-columns: .94fr 1.06fr; }
+#case-pinsight .ps-ui-editorial .ui-pair:nth-child(odd) { grid-template-columns: 1.06fr .94fr; }
+#case-pinsight .ps-ui-editorial .ui-pair .ps-evidence-media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  overflow: hidden;
+}
+#case-pinsight .ps-ui-editorial .ui-pair .ps-evidence-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#case-pinsight .ps-ui-editorial .pair-spatial,
+#case-pinsight .ps-ui-editorial .pair-web { margin-left: -48px; width: calc(100% + 48px); }
+#case-pinsight .ps-ui-editorial .pair-detail,
+#case-pinsight .ps-ui-editorial .pair-action { margin-left: 48px; width: calc(100% - 48px); }
+#case-pinsight .ps-ui-editorial .ps-evidence-media { background: transparent; }
+#case-pinsight .ps-ui-editorial figcaption small { font-size: 11px; }
+#case-pinsight .ps-ui-flow-notes { margin-top: 104px; }
+
+/* v31 contained defensive !important rules. This pass intentionally replaces them. */
+@media (min-width: 1100px) {
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story {
+    display: grid !important;
+    grid-template-columns: repeat(12,minmax(0,1fr)) !important;
+    gap: 112px 24px !important;
+  }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n) {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(1) { grid-column: 1 / 10 !important; }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(2) { grid-column: 8 / 13 !important; margin-top: -150px !important; }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(3) { grid-column: 1 / 7 !important; }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(4) { grid-column: 5 / 13 !important; margin-top: 100px !important; }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(5) { grid-column: 1 / 6 !important; }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(6) { grid-column: 6 / 13 !important; margin-top: -50px !important; }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(7) { grid-column: 2 / 8 !important; }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(8) { grid-column: 4 / 13 !important; }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n) figure {
+    order: -1 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n) figure img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+  .project-page.pinsight-page #pinsight-lifecycle .ps-life-copy {
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-experience {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 180px !important;
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part,
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part.is-reverse {
+    display: grid !important;
+    gap: 56px !important;
+    margin: 0 !important;
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part { grid-template-columns: .32fr .68fr !important; }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part.is-reverse { grid-template-columns: .68fr .32fr !important; }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part > header {
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding-top: 24px !important;
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part > .ps-evidence {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part .ps-evidence-media {
+    height: auto !important;
+    aspect-ratio: auto !important;
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-part .ps-evidence-media img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+  .project-page.pinsight-page #pinsight-continuity .ps-web-support {
+    display: grid !important;
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #case-pinsight { --ps-visual-canvas: calc(100vw - 32px); }
+  #case-pinsight .ps-section > :is(.ps-system-architecture,.ps-core-journey,.ps-lifecycle-story,.ps-review-stage,.ps-web-experience,.ps-ui-editorial,.ps-xr-state-sequence) { transform:none; margin-left:0; }
+  #case-pinsight .ps-xr-state-sequence,
+  #case-pinsight .ps-review-stage,
+  #case-pinsight .ps-web-part,
+  #case-pinsight .ps-web-part.is-reverse,
+  #case-pinsight .ps-ui-editorial .ui-pair { grid-template-columns:1fr; }
+  #case-pinsight .ps-lifecycle-story article,
+  #case-pinsight .ps-lifecycle-story article:nth-child(n),
+  #case-pinsight .ps-ui-editorial > *,
+  #case-pinsight .ps-ui-editorial .ui-sequence,
+  #case-pinsight .ps-ui-editorial .ui-web-sequence { grid-column:1 / -1; width:100%; margin:0; }
+  #case-pinsight .ps-ui-editorial .ui-pair:nth-child(n) { width:100%; margin-left:0; }
+  #case-pinsight .ps-web-part > header,
+  #case-pinsight .ps-web-part > .ps-evidence,
+  #case-pinsight .ps-web-part.is-reverse > header,
+  #case-pinsight .ps-web-part.is-reverse > .ps-evidence,
+  #case-pinsight .ps-web-support,
+  #case-pinsight .ps-web-part.is-reverse .ps-web-support { grid-column:1; position:static; }
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <radialGradient id="g" cx="68%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#a7cf9a"/>
+      <stop offset=".25" stop-color="#385847"/>
+      <stop offset="1" stop-color="#0c1110"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <g fill="none" stroke="#d9ffd1" opacity=".3">
+    <circle cx="810" cy="360" r="210"/><circle cx="810" cy="360" r="280"/><circle cx="810" cy="360" r="350"/>
+  </g>
+  <rect x="90" y="110" width="330" height="210" rx="18" fill="#dfffe3" opacity=".08" stroke="#dfffe3" stroke-opacity=".3"/>
+  <text x="125" y="165" fill="#dfffe3" font-family="Arial" font-size="20" letter-spacing="4">LIVE ENERGY FLOW</text>
+  <text x="125" y="260" fill="white" font-family="Arial" font-size="78">84.6%</text>
+</svg>

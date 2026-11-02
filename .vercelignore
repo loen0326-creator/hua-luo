@@ -1,0 +1,24 @@
+# Local development and QA artifacts
+.agents/
+.codex/
+.impeccable/
+.pnpm-store/
+.deployment-backups/
+artifacts/
+tmp/
+scripts/
+dist/
+
+# Local-only helpers and generated reviews
+*.command
+*.py
+*.md
+*.before-*
+qa-*.png
+PinSight-full-page-*.png
+pinsight-full-page-*.png
+masterworks-*.png
+design-qa-*.png
+standalone.js
+standalone.css
+.DS_Store

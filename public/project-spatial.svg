@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs><radialGradient id="p"><stop stop-color="#9f52c7"/><stop offset=".35" stop-color="#2c173d"/><stop offset="1" stop-color="#090810"/></radialGradient></defs>
+  <rect width="1200" height="800" fill="url(#p)"/>
+  <g fill="none" stroke="#ebb1ff" transform="translate(600 390)" opacity=".75">
+    <ellipse rx="230" ry="300" stroke-width="4"/>
+    <ellipse rx="190" ry="258" transform="rotate(9)"/>
+    <ellipse rx="150" ry="220" transform="rotate(-12)"/>
+  </g>
+  <text x="600" y="380" text-anchor="middle" fill="white" font-family="Arial" font-size="46">ENTER THE UNSEEN</text>
+</svg>

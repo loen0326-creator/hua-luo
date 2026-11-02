@@ -1,0 +1,712 @@
+/* v41 — Macro layout pass: chapter rhythm, wide evidence, and deliberate density. */
+@media (min-width: 1100px) {
+  .project-page.pinsight-page {
+    --ps-text-column: 760px;
+    --ps-standard: 1120px;
+    --ps-wide: min(1320px, calc(100vw - 72px));
+    --ps-full: min(1380px, calc(100vw - 32px));
+  }
+
+  /* Three spacing tiers: related / subsection / chapter. */
+  #case-pinsight .ps-section,
+  #case-pinsight .ps-section-major,
+  #case-pinsight .ps-section-large,
+  #case-pinsight .ps-section.ps-lifecycle-section {
+    box-sizing: border-box;
+    padding-block: 96px !important;
+  }
+  #case-pinsight :is(#pinsight-insight, #pinsight-strategy) {
+    padding-block: 54px !important;
+  }
+  #case-pinsight #pinsight-overview { padding-block: 104px 58px !important; }
+  #case-pinsight #pinsight-system { padding-block: 132px 118px !important; }
+  #case-pinsight #pinsight-journey { padding-block: 72px 44px !important; }
+  #case-pinsight #pinsight-spatial { padding-block: 64px 120px !important; }
+  #case-pinsight #pinsight-lifecycle { padding-block: 118px !important; }
+  #case-pinsight #pinsight-review { padding-block: 72px 112px !important; }
+  #case-pinsight #pinsight-continuity { padding-block: 118px !important; }
+  #case-pinsight #pinsight-ui { padding-block: 126px 112px !important; }
+  #case-pinsight #pinsight-reflection { padding-block: 92px 76px !important; }
+
+  /* The research chapter reads as one continuous, dense argument. */
+  #case-pinsight :is(#pinsight-insight, #pinsight-strategy) { border-top: 0 !important; }
+  #case-pinsight :is(#pinsight-overview, #pinsight-insight, #pinsight-strategy) > .ps-section-head {
+    width: var(--ps-standard) !important;
+    margin: 0 auto 54px !important;
+  }
+  #case-pinsight :is(#pinsight-insight, #pinsight-strategy) > .ps-section-head h2 {
+    max-width: 820px !important;
+    font-size: clamp(34px, 3.2vw, 46px) !important;
+    line-height: 1.12 !important;
+  }
+  #case-pinsight #pinsight-overview > .ps-section-head h2 {
+    max-width: 900px !important;
+    font-size: clamp(48px, 4.4vw, 64px) !important;
+  }
+  #case-pinsight :is(.ps-experience-overview, .ps-research-composition-v16, .ps-figure-block, .ps-reframing-v12, .ps-strategy-trace-v12) {
+    width: var(--ps-wide) !important;
+    max-width: none !important;
+    margin-left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  #case-pinsight #pinsight-insight .ps-figure-block { margin-top: 72px !important; }
+  #case-pinsight #pinsight-strategy .ps-strategy-trace-v12 { margin-top: 52px !important; }
+  #case-pinsight #pinsight-strategy .ps-strategy-mapping { margin-top: 72px !important; }
+
+  /* Chapter headings sit in a text column; evidence is allowed to escape it. */
+  #case-pinsight :is(#pinsight-system, #pinsight-spatial, #pinsight-lifecycle, #pinsight-review, #pinsight-continuity, #pinsight-ui, #pinsight-reflection) > .ps-section-head {
+    width: var(--ps-standard) !important;
+    max-width: none !important;
+    margin: 0 auto 62px !important;
+  }
+  #case-pinsight :is(#pinsight-spatial, #pinsight-review, #pinsight-continuity) > .ps-section-head h2 {
+    max-width: 800px !important;
+    font-size: clamp(38px, 3.5vw, 52px) !important;
+  }
+
+  /* Feedback Object: first major visual climax. */
+  #case-pinsight #pinsight-system > .ps-system-architecture {
+    width: var(--ps-full) !important;
+    max-width: none !important;
+    min-height: 820px !important;
+    margin: 0 50% !important;
+    transform: translateX(-50%) !important;
+    padding: 34px 44px 24px !important;
+  }
+  #case-pinsight #pinsight-system .ps-feedback-object {
+    z-index: 2;
+    transform: scale(1.34);
+  }
+  #case-pinsight #pinsight-system .ps-feedback-object > small { font-size: 13px !important; }
+  #case-pinsight #pinsight-system .ps-feedback-object > h3 {
+    font-size: clamp(54px, 5.2vw, 76px) !important;
+    letter-spacing: -.045em !important;
+  }
+  #case-pinsight #pinsight-system .ps-feedback-object > p { font-size: 20px !important; }
+  #case-pinsight #pinsight-system :is(.ps-system-people, .ps-system-devices) article {
+    opacity: .72;
+  }
+  #case-pinsight #pinsight-system :is(.ps-system-people, .ps-system-devices) article:nth-of-type(2) {
+    opacity: 1;
+  }
+  #case-pinsight #pinsight-system .ps-boundary-note { margin-top: 36px !important; }
+
+  /* Journey and XR are one chapter: overview first, then an uninterrupted state sequence. */
+  #case-pinsight #pinsight-journey > .ps-section-head,
+  #case-pinsight #pinsight-journey > .ps-core-journey {
+    width: var(--ps-wide) !important;
+    max-width: none !important;
+    margin-left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  #case-pinsight #pinsight-spatial > .ps-section-head { margin-bottom: 52px !important; }
+  #case-pinsight #pinsight-spatial .ps-subsection {
+    width: var(--ps-wide) !important;
+    max-width: none !important;
+    margin: 72px 50% 0 !important;
+    transform: translateX(-50%) !important;
+  }
+  #case-pinsight #pinsight-spatial .ps-subsection:first-of-type { margin-top: 0 !important; }
+  #case-pinsight #pinsight-spatial .ps-xr-state-sequence {
+    width: var(--ps-wide) !important;
+    margin: 76px 50% 0 !important;
+    transform: translateX(-50%) !important;
+    gap: 28px !important;
+  }
+  #case-pinsight #pinsight-spatial .ps-evidence-media { border-radius: 0 !important; }
+
+  /* Lifecycle becomes a fast sequence with varied frames, not eight isolated sections. */
+  #case-pinsight #pinsight-lifecycle > .ps-lifecycle-story {
+    width: var(--ps-wide) !important;
+    max-width: none !important;
+    margin: 0 50% !important;
+    transform: translateX(-50%) !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    gap: 54px 28px !important;
+  }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n) {
+    margin-top: 0 !important;
+    gap: 16px !important;
+    padding: 0 !important;
+  }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(1) { grid-column: 1 / 9 !important; }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(2) { grid-column: 9 / 13 !important; margin-top: 126px !important; }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(3) { grid-column: 1 / 6 !important; }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(4) { grid-column: 6 / 13 !important; }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(5) { grid-column: 1 / 5 !important; }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(6) { grid-column: 5 / 10 !important; margin-top: 72px !important; }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(7) { grid-column: 10 / 13 !important; margin-top: 150px !important; }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(8) { grid-column: 3 / 13 !important; }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story figure { height: auto !important; }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story img { height: auto !important; object-fit: contain !important; }
+
+  /* Review and Web: desktop imagery keeps its natural horizontal authority. */
+  #case-pinsight #pinsight-review > :is(.ps-transformation-model, .ps-review-stage),
+  #case-pinsight #pinsight-continuity > :is(.ps-continuity-object, .ps-web-experience) {
+    width: var(--ps-wide) !important;
+    max-width: none !important;
+    margin-left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  #case-pinsight #pinsight-review .ps-review-stage { margin-top: 58px !important; gap: 44px 28px !important; }
+  #case-pinsight #pinsight-review .ps-review-stage > .ps-evidence:nth-child(2) { margin-top: 56px !important; }
+  #case-pinsight #pinsight-review .ps-review-stage > .ps-evidence:nth-child(3) { margin-top: 108px !important; }
+  #case-pinsight #pinsight-continuity .ps-web-experience { margin-top: 72px !important; gap: 112px !important; }
+  #case-pinsight #pinsight-continuity .ps-web-part,
+  #case-pinsight #pinsight-continuity .ps-web-part.is-reverse {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    column-gap: 34px !important;
+    align-items: start !important;
+  }
+  #case-pinsight #pinsight-continuity .ps-web-part > header,
+  #case-pinsight #pinsight-continuity .ps-web-part.is-reverse > header {
+    position: sticky !important;
+    top: 128px !important;
+    grid-column: 1 / 4 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+  }
+  #case-pinsight #pinsight-continuity .ps-web-part > .ps-evidence.is-primary,
+  #case-pinsight #pinsight-continuity .ps-web-part.is-reverse > .ps-evidence.is-primary {
+    grid-column: 4 / 13 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  #case-pinsight #pinsight-continuity .ps-web-part > .ps-web-support,
+  #case-pinsight #pinsight-continuity .ps-web-part.is-reverse > .ps-web-support {
+    grid-column: 4 / 13 !important;
+    grid-row: 2 !important;
+  }
+  #case-pinsight #pinsight-continuity .ps-web-part .ps-evidence-media { height: auto !important; aspect-ratio: 16 / 9 !important; }
+  #case-pinsight #pinsight-continuity .ps-web-support { gap: 28px !important; margin-top: 34px !important; }
+
+  /* Final UI is a dense editorial atlas with four distinct scales. */
+  #case-pinsight #pinsight-ui .ps-language-section {
+    width: var(--ps-wide) !important;
+    margin: 0 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  #case-pinsight #pinsight-ui .ps-ui-editorial {
+    width: var(--ps-full) !important;
+    margin-top: 78px !important;
+  }
+  #case-pinsight #pinsight-ui .ui-system-group + .ui-system-group {
+    margin-top: 156px !important;
+    padding-top: 48px !important;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+  }
+  #case-pinsight #pinsight-ui .ui-system-heading { grid-column: 2 / 8 !important; margin-bottom: 42px !important; }
+  #case-pinsight #pinsight-ui .ui-system-hero { margin-bottom: 48px !important; }
+  #case-pinsight #pinsight-ui .ui-system-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    gap: 58px 28px !important;
+  }
+  #case-pinsight #pinsight-ui .ui-system-grid > .ps-evidence:nth-child(4n + 1) { grid-column: 1 / 8 !important; }
+  #case-pinsight #pinsight-ui .ui-system-grid > .ps-evidence:nth-child(4n + 2) { grid-column: 8 / 13 !important; margin-top: 68px !important; }
+  #case-pinsight #pinsight-ui .ui-system-grid > .ps-evidence:nth-child(4n + 3) { grid-column: 1 / 5 !important; }
+  #case-pinsight #pinsight-ui .ui-system-grid > .ps-evidence:nth-child(4n + 4) { grid-column: 5 / 13 !important; }
+  #case-pinsight #pinsight-ui .ui-system-grid-pen > .ps-evidence:first-child { grid-column: 1 / 9 !important; }
+  #case-pinsight #pinsight-ui .ui-system-grid-pen > .ps-evidence:last-child { grid-column: 9 / 13 !important; margin-top: 92px !important; }
+
+  /* Supporting states compact into sequences; only selected screens retain primary scale. */
+  #case-pinsight #pinsight-ui .ui-system-xr .ui-system-grid > .ps-evidence:nth-child(1) { grid-column: 1 / 8 !important; }
+  #case-pinsight #pinsight-ui .ui-system-xr .ui-system-grid > .ps-evidence:nth-child(2) { grid-column: 8 / 13 !important; margin-top: 72px !important; }
+  #case-pinsight #pinsight-ui .ui-system-xr .ui-system-grid > .ps-evidence:nth-child(3) { grid-column: 1 / 5 !important; }
+  #case-pinsight #pinsight-ui .ui-system-xr .ui-system-grid > .ps-evidence:nth-child(4) { grid-column: 5 / 9 !important; margin-top: 36px !important; }
+  #case-pinsight #pinsight-ui .ui-system-xr .ui-system-grid > .ps-evidence:nth-child(5) { grid-column: 9 / 13 !important; margin-top: 72px !important; }
+  #case-pinsight #pinsight-ui .ui-system-xr .ui-system-grid > .ps-evidence:nth-child(6) { grid-column: 1 / 7 !important; }
+  #case-pinsight #pinsight-ui .ui-system-xr .ui-system-grid > .ps-evidence:nth-child(7) { grid-column: 7 / 13 !important; margin-top: 56px !important; }
+  #case-pinsight #pinsight-ui .ui-system-xr .ui-system-grid > .ps-evidence:nth-child(8) { grid-column: 4 / 10 !important; }
+  #case-pinsight #pinsight-ui .ui-system-web .ui-system-grid > .ps-evidence:nth-child(1) { grid-column: 1 / 7 !important; }
+  #case-pinsight #pinsight-ui .ui-system-web .ui-system-grid > .ps-evidence:nth-child(2) { grid-column: 7 / 13 !important; margin-top: 64px !important; }
+  #case-pinsight #pinsight-ui .ui-system-web .ui-system-grid > .ps-evidence:nth-child(3) { grid-column: 1 / 5 !important; }
+  #case-pinsight #pinsight-ui .ui-system-web .ui-system-grid > .ps-evidence:nth-child(4) { grid-column: 5 / 9 !important; margin-top: 38px !important; }
+  #case-pinsight #pinsight-ui .ui-system-web .ui-system-grid > .ps-evidence:nth-child(5) { grid-column: 9 / 13 !important; margin-top: 76px !important; }
+  #case-pinsight #pinsight-ui .ui-system-web .ui-system-grid > .ps-evidence:nth-child(6) { grid-column: 3 / 11 !important; }
+  #case-pinsight #pinsight-ui .ui-system-grid .ps-evidence-media {
+    height: auto !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    background: #090a0b !important;
+  }
+  #case-pinsight #pinsight-ui .ui-system-grid .ps-evidence-media img {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+  #case-pinsight #pinsight-ui .ps-ui-flow-notes { margin-top: 72px !important; }
+
+  /* Reflection is a brief landing, not another manifesto. */
+  #case-pinsight #pinsight-reflection > .ps-section-head h2 {
+    max-width: 760px !important;
+    font-size: clamp(34px, 3.1vw, 46px) !important;
+  }
+  #case-pinsight #pinsight-reflection .ps-reflection-grid { margin-top: 42px !important; }
+  #case-pinsight #pinsight-reflection blockquote { margin-top: 54px !important; }
+
+  /* Visible chapter numbering follows the eight-part editorial structure. */
+  #case-pinsight .ps-section > .ps-section-head .ps-section-rail > span { font-size: 0 !important; }
+  #case-pinsight .ps-section > .ps-section-head .ps-section-rail > span::after { font-size: 11px; }
+  #case-pinsight #pinsight-overview > .ps-section-head .ps-section-rail > span::after { content: "02 /"; }
+  #case-pinsight #pinsight-insight > .ps-section-head .ps-section-rail > span::after { content: "02.1 /"; }
+  #case-pinsight #pinsight-strategy > .ps-section-head .ps-section-rail > span::after { content: "02.2 /"; }
+  #case-pinsight #pinsight-system > .ps-section-head .ps-section-rail > span::after { content: "03 /"; }
+  #case-pinsight #pinsight-journey > .ps-section-head .ps-section-rail > span::after { content: "04 /"; }
+  #case-pinsight #pinsight-spatial > .ps-section-head .ps-section-rail > span::after { content: "04.1 /"; }
+  #case-pinsight #pinsight-lifecycle > .ps-section-head .ps-section-rail > span::after { content: "05 /"; }
+  #case-pinsight #pinsight-review > .ps-section-head .ps-section-rail > span::after { content: "05.1 /"; }
+  #case-pinsight #pinsight-continuity > .ps-section-head .ps-section-rail > span::after { content: "06 /"; }
+  #case-pinsight #pinsight-ui > .ps-section-head .ps-section-rail > span::after { content: "07 /"; }
+  #case-pinsight #pinsight-reflection > .ps-section-head .ps-section-rail > span::after { content: "08 /"; }
+}
+
+/* v43 — confirmed reference mapping: nine chapters, one job per image. */
+#case-pinsight :is(.ps-chapter-research,.ps-chapter-problem,.ps-chapter-system,.ps-chapter-xr,.ps-chapter-lifecycle,.ps-chapter-web,.ps-chapter-final) {
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+#case-pinsight .ps-sequence-copy > span,
+#case-pinsight .ps-problem-statement > small,
+#case-pinsight .ps-reflection-lead > small {
+  color: #b66cff;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+#case-pinsight .ps-sequence-copy h3 { margin: 8px 0 10px; font-size: clamp(28px,3vw,44px); }
+#case-pinsight .ps-sequence-copy p { max-width: 360px; color: rgba(244,242,249,.62); line-height: 1.7; }
+#case-pinsight .ps-xr-support,
+#case-pinsight .ps-web-supporting,
+#case-pinsight .ps-final-primary { display: grid; gap: 28px; }
+#case-pinsight .ps-life-visual img { display:block; width:100%; height:auto; }
+#case-pinsight .ps-life-visual span { display:block; margin-top:12px; color:#b66cff; font-size:11px; letter-spacing:.08em; }
+
+/* v45 — content restoration: evidence first, with explicit visual jobs. */
+#case-pinsight .ps-research-board {
+  width:var(--ps-wide);
+  margin:0 auto 64px;
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);
+  gap:34px;
+  align-items:stretch;
+}
+#case-pinsight .ps-research-board-scene {
+  min-height:480px;
+  position:relative;
+  padding:32px;
+  overflow:hidden;
+  background:#0d0b13;
+  border-top:1px solid rgba(182,108,255,.6);
+}
+#case-pinsight .ps-research-board-scene>span,
+#case-pinsight .ps-research-board-scene>small { position:absolute; left:32px; color:rgba(244,242,249,.58); }
+#case-pinsight .ps-research-board-scene>span { top:28px; font-size:13px; }
+#case-pinsight .ps-research-board-scene>small { bottom:26px; font-size:11px; letter-spacing:.06em; }
+#case-pinsight .ps-observation-orbit { position:absolute; inset:84px 48px 70px; }
+#case-pinsight .ps-observation-orbit:before,
+#case-pinsight .ps-observation-orbit:after { content:""; position:absolute; inset:12% 18%; border:1px solid rgba(182,108,255,.28); border-radius:50%; transform:rotate(-8deg); }
+#case-pinsight .ps-observation-orbit:after { inset:26% 6%; transform:rotate(16deg); }
+#case-pinsight .ps-observation-orbit b { position:absolute; left:50%; top:50%; z-index:2; transform:translate(-50%,-50%); font-size:clamp(34px,4vw,60px); font-weight:600; }
+#case-pinsight .ps-observation-orbit i { position:absolute; z-index:2; color:#d7b9ff; font-style:normal; font-size:13px; }
+#case-pinsight .ps-observation-orbit i:nth-of-type(1){left:6%;top:16%}
+#case-pinsight .ps-observation-orbit i:nth-of-type(2){right:4%;top:24%}
+#case-pinsight .ps-observation-orbit i:nth-of-type(3){left:12%;bottom:18%}
+#case-pinsight .ps-observation-orbit i:nth-of-type(4){right:9%;bottom:11%}
+#case-pinsight .ps-research-board-notes { display:grid; grid-template-rows:repeat(3,1fr); }
+#case-pinsight .ps-research-board-notes article { display:grid; grid-template-columns:44px 1fr; align-content:center; column-gap:12px; padding:24px 8px; border-top:1px solid rgba(255,255,255,.12); }
+#case-pinsight .ps-research-board-notes span { grid-row:1/3; color:#b66cff; font-size:11px; }
+#case-pinsight .ps-research-board-notes strong { font-size:18px; }
+#case-pinsight .ps-research-board-notes p { margin:7px 0 0; color:rgba(244,242,249,.62); line-height:1.65; }
+#case-pinsight .ps-research-board>blockquote { grid-column:1/-1; margin:0; padding:20px 0 0 25%; border-top:1px solid rgba(255,255,255,.1); font-size:clamp(22px,2.5vw,34px); line-height:1.35; }
+
+#case-pinsight .ps-lifecycle-transform { width:var(--ps-wide); margin:72px auto 0; display:grid; grid-template-columns:7fr 5fr; gap:38px; align-items:start; }
+#case-pinsight .ps-lifecycle-transform>.ps-transformation-model { width:100%!important; margin:0!important; transform:none!important; }
+#case-pinsight .ps-lifecycle-transform>.ps-feedback-detail-object { width:100%!important; margin:0!important; transform:none!important; }
+#case-pinsight .ps-final-detail-feature { width:var(--ps-wide); margin:78px auto 0; display:grid; grid-template-columns:7fr 5fr; gap:28px; align-items:start; }
+#case-pinsight .ps-final-detail-feature>:nth-child(2) { margin-top:74px; }
+#case-pinsight .ps-final-detail-feature .ps-evidence-media,
+#case-pinsight .ps-final-detail-feature img { width:100%; height:auto; }
+
+@media (min-width:1100px) {
+  #case-pinsight .ps-index { margin-top: 44px !important; padding-block: 24px !important; }
+  #case-pinsight .ps-index-grid { grid-template-columns: repeat(8,minmax(0,1fr)) !important; }
+
+  #case-pinsight :is(.ps-chapter-research,.ps-chapter-system,.ps-chapter-xr,.ps-chapter-lifecycle,.ps-chapter-web,.ps-chapter-final) {
+    padding-block: 104px !important;
+  }
+  #case-pinsight .ps-chapter-problem { padding-block: 76px !important; }
+  #case-pinsight :is(.ps-chapter-research,.ps-chapter-system,.ps-chapter-xr,.ps-chapter-lifecycle,.ps-chapter-web,.ps-chapter-final) > .ps-section-head {
+    width: var(--ps-standard) !important;
+    margin: 0 auto 58px !important;
+  }
+  #case-pinsight :is(.ps-chapter-research,.ps-chapter-xr,.ps-chapter-web,.ps-chapter-final) > .ps-section-head h2 {
+    max-width: 820px !important;
+    font-size: clamp(38px,3.6vw,54px) !important;
+    line-height: 1.08 !important;
+  }
+
+  /* One dense research chapter; supporting analysis no longer pretends to be a chapter. */
+  #case-pinsight .ps-chapter-research > :is(.ps-experience-overview,.ps-research-evidence,.ps-reframing-v12) {
+    width: var(--ps-wide) !important;
+    max-width: none !important;
+    margin-left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  #case-pinsight .ps-chapter-research>.ps-research-board { width:var(--ps-wide)!important; }
+  #case-pinsight .ps-research-evidence {
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+    align-items:start;
+    margin-top: 56px;
+  }
+  #case-pinsight .ps-research-evidence > * { width:100% !important; margin:0 !important; transform:none !important; }
+  #case-pinsight .ps-research-evidence .ps-research-composition-v16 { min-height: 680px !important; }
+  #case-pinsight .ps-research-evidence .ps-loss-exploded { min-height: 680px !important; }
+  #case-pinsight .ps-chapter-research > .ps-reframing-v12 { margin-top: 56px !important; }
+
+  /* A deliberate quiet hinge rather than another giant section. */
+  #case-pinsight .ps-chapter-problem { width:var(--ps-wide) !important; margin-inline:auto !important; display:block; }
+  #case-pinsight .ps-problem-statement h2 { max-width:760px; margin:16px 0 0; font-size:clamp(36px,3.4vw,50px); line-height:1.12; letter-spacing:-.035em; }
+  #case-pinsight .ps-problem-visual { margin-top:52px; }
+  #case-pinsight .ps-problem-visual .ps-loss-exploded { width:100% !important; min-height:700px !important; margin:0 !important; transform:none !important; }
+  #case-pinsight .ps-problem-response { margin-top:56px; }
+  #case-pinsight .ps-problem-response .ps-convergence-v12 { width:100% !important; margin:0 !important; transform:none !important; }
+  #case-pinsight .ps-problem-actions { display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:14px; align-items:center; }
+  #case-pinsight .ps-problem-actions article { min-width:0; padding-top:16px; border-top:1px solid rgba(182,108,255,.55); }
+  #case-pinsight .ps-problem-actions span { display:block; color:#b66cff; font-size:10px; }
+  #case-pinsight .ps-problem-actions strong { display:block; margin-top:8px; font-size:15px; }
+  #case-pinsight .ps-problem-actions p { margin-top:5px; color:rgba(244,242,249,.5); font-size:11px; }
+  #case-pinsight .ps-problem-actions svg { width:15px; color:#b66cff; }
+
+  /* First visual climax. */
+  #case-pinsight .ps-chapter-system > .ps-system-architecture {
+    width: var(--ps-full) !important;
+    min-height: 800px !important;
+    margin: 0 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  #case-pinsight .ps-system-continuity { width:var(--ps-wide); margin:64px auto 0; }
+  #case-pinsight .ps-system-continuity .ps-continuity-object { width:100% !important; margin:0 !important; transform:none !important; }
+
+  /* XR reads as one chronological composition, not a gallery. */
+  #case-pinsight .ps-xr-hero,
+  #case-pinsight .ps-xr-narrative,
+  #case-pinsight .ps-xr-support {
+    width:var(--ps-wide);
+    margin-inline:auto;
+  }
+  #case-pinsight .ps-xr-hero .ps-evidence { width:100%; }
+  #case-pinsight .ps-xr-hero .ps-evidence-media { width:100%; }
+  #case-pinsight .ps-xr-hero .ps-evidence-media img { width:100%; height:auto; }
+  #case-pinsight .ps-xr-narrative { margin-top:74px; display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:74px 28px; }
+  #case-pinsight .ps-xr-narrative article { display:grid; gap:24px; align-items:start; }
+  #case-pinsight .ps-xr-narrative .is-locate { grid-column:1/9; grid-template-columns:3fr 5fr; }
+  #case-pinsight .ps-xr-narrative .is-anchor { grid-column:7/13; grid-template-columns:2fr 4fr; }
+  #case-pinsight .ps-xr-narrative .is-pin { grid-column:1/11; grid-template-columns:3fr 7fr; }
+  #case-pinsight .ps-xr-narrative .is-detail { grid-column:4/13; grid-template-columns:3fr 6fr; }
+  #case-pinsight .ps-xr-narrative .ps-evidence-media img { width:100%; height:auto; }
+  #case-pinsight .ps-xr-support { grid-template-columns:5fr 4fr 3fr; align-items:start; margin-top:78px; }
+  #case-pinsight .ps-xr-support > :nth-child(2) { margin-top:56px; }
+  #case-pinsight .ps-xr-support > :nth-child(3) { margin-top:112px; }
+
+  /* Lifecycle is a single object-state bridge. */
+  #case-pinsight .ps-chapter-lifecycle > .ps-core-journey { width:var(--ps-wide) !important; margin:0 auto 64px !important; transform:none !important; }
+  #case-pinsight .ps-lifecycle-system { width:var(--ps-full); margin-inline:auto; display:grid; grid-template-columns:3fr 2fr 3fr 4fr; gap:24px; align-items:center; }
+  #case-pinsight .ps-lifecycle-system > .ps-feedback-object { transform:none !important; min-width:0; }
+  #case-pinsight .ps-lifecycle-system > *,
+  #case-pinsight .ps-web-primary > *,
+  #case-pinsight .ps-web-supporting > *,
+  #case-pinsight .ps-final-primary > * { min-width:0; width:100% !important; }
+  #case-pinsight :is(.ps-lifecycle-system,.ps-web-primary,.ps-web-supporting,.ps-final-primary,.ps-final-support) .ps-evidence-media { width:100% !important; overflow:hidden !important; }
+  #case-pinsight :is(.ps-lifecycle-system,.ps-web-primary,.ps-web-supporting,.ps-final-primary,.ps-final-support) img { position:static !important; display:block !important; width:100% !important; max-width:100% !important; height:auto !important; object-fit:contain !important; }
+  #case-pinsight .ps-life-steps { display:grid; grid-template-columns:repeat(11,minmax(0,1fr)); gap:8px; align-items:center; }
+  #case-pinsight .ps-life-steps article { grid-column:span 1; text-align:center; }
+  #case-pinsight .ps-life-steps article span { color:#b66cff; font-size:10px; }
+  #case-pinsight .ps-life-steps article strong { display:block; margin-top:8px; font-size:12px; line-height:1.25; }
+  #case-pinsight .ps-life-steps svg { width:14px; color:rgba(182,108,255,.75); }
+
+  /* Desktop screens keep their native width and receive explicit rank. */
+  #case-pinsight .ps-web-hero,
+  #case-pinsight .ps-web-primary,
+  #case-pinsight .ps-web-supporting,
+  #case-pinsight .ps-final-hero,
+  #case-pinsight .ps-final-primary,
+  #case-pinsight .ps-final-language { width:var(--ps-wide); margin-inline:auto; }
+  #case-pinsight :is(.ps-web-hero,.ps-final-hero) .ps-evidence-media img { width:100%; height:auto; }
+  #case-pinsight .ps-web-primary { grid-template-columns:7fr 5fr; align-items:start; margin-top:62px; }
+  #case-pinsight .ps-web-primary > :nth-child(2) { margin-top:86px; }
+  #case-pinsight .ps-web-supporting { grid-template-columns:5fr 4fr 3fr; align-items:start; margin-top:72px; }
+  #case-pinsight .ps-web-supporting > :nth-child(2) { margin-top:48px; }
+  #case-pinsight .ps-web-supporting > :nth-child(3) { margin-top:94px; }
+  #case-pinsight .ps-ai-note { width:var(--ps-text-column); margin:72px auto 0; padding-left:20px; border-left:1px solid #b66cff; color:rgba(244,242,249,.66); line-height:1.7; }
+
+  #case-pinsight .ps-final-primary { grid-column:1 / -1 !important; grid-template-columns:5fr 4fr 3fr; align-items:start; margin-top:66px; }
+  #case-pinsight .ps-final-primary .ps-evidence-media { height:auto !important; aspect-ratio:auto !important; }
+  #case-pinsight .ps-final-primary > :nth-child(2) { margin-top:72px; }
+  #case-pinsight .ps-final-primary > :nth-child(3) { margin-top:132px; }
+  #case-pinsight .ps-final-support { width:var(--ps-wide); margin:78px auto 0; display:grid; grid-template-columns:4fr 3fr 3fr 2fr; gap:24px; align-items:start; }
+  #case-pinsight .ps-final-support > :nth-child(2) { margin-top:38px; }
+  #case-pinsight .ps-final-support > :nth-child(3) { margin-top:76px; }
+  #case-pinsight .ps-final-support > :nth-child(4) { margin-top:114px; }
+  #case-pinsight .ps-final-language { margin-top:92px; display:grid; grid-template-columns:4fr 8fr; gap:54px; align-items:start; }
+  #case-pinsight .ps-final-language .ps-spatial-language { width:100% !important; grid-template-columns:repeat(3,1fr) !important; }
+
+  #case-pinsight .ps-reflection { padding-block:82px 64px !important; display:grid; grid-template-columns:7fr 5fr; gap:70px; align-items:start; }
+  #case-pinsight .ps-reflection-lead h2 { margin:16px 0 0; max-width:760px; font-size:clamp(34px,3vw,46px); line-height:1.12; letter-spacing:-.035em; }
+  #case-pinsight .ps-reflection .ps-reflection-grid { margin:0 !important; display:block !important; }
+  #case-pinsight .ps-reflection .ps-reflection-grid article { padding:18px 0 24px !important; border-top:1px solid rgba(255,255,255,.1); }
+  #case-pinsight .ps-reflection .ps-reflection-grid h3 { margin:8px 0 6px; font-size:18px; }
+}
+
+@media (max-width:1099px) {
+  #case-pinsight .ps-research-evidence,
+  #case-pinsight .ps-chapter-problem,
+  #case-pinsight .ps-xr-narrative,
+  #case-pinsight .ps-lifecycle-flow,
+  #case-pinsight .ps-final-language { display:block; }
+  #case-pinsight .ps-research-evidence > *,
+  #case-pinsight .ps-xr-narrative > *,
+  #case-pinsight .ps-lifecycle-flow > *,
+  #case-pinsight .ps-final-language > * { margin-top:42px; }
+  #case-pinsight .ps-problem-actions { margin-top:36px; }
+  #case-pinsight .ps-xr-support,
+  #case-pinsight .ps-web-primary,
+  #case-pinsight .ps-web-supporting,
+  #case-pinsight .ps-final-primary { grid-template-columns:1fr; margin-top:42px; }
+  #case-pinsight .ps-final-support { display:grid; grid-template-columns:1fr; margin-top:42px; }
+  #case-pinsight .ps-life-steps { display:flex; overflow-x:auto; gap:22px; padding-block:28px; }
+  #case-pinsight .ps-life-steps article { min-width:120px; }
+  #case-pinsight .ps-research-board,
+  #case-pinsight .ps-lifecycle-transform,
+  #case-pinsight .ps-final-detail-feature { width:100%; grid-template-columns:1fr; }
+  #case-pinsight .ps-research-board>blockquote { padding-left:0; }
+  #case-pinsight .ps-final-detail-feature>:nth-child(2) { margin-top:18px; }
+}
+
+/* v47.1 — defeat legacy per-chapter header widths and offsets. */
+@media (min-width:1100px) {
+  #case-pinsight .ps-shell>.ps-section>:is(.ps-section-head,.ps-problem-statement,.ps-reflection-lead),
+  #case-pinsight :is(.ps-chapter-research,.ps-chapter-system,.ps-chapter-xr,.ps-chapter-lifecycle,.ps-chapter-web,.ps-chapter-final)>.ps-section-head {
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0 0 var(--ps-space-subsection)!important;
+    transform:none!important;
+  }
+  #case-pinsight .ps-section-head .ps-section-rail,
+  #case-pinsight .ps-section-head .ps-section-intro,
+  #case-pinsight .ps-problem-statement>small,
+  #case-pinsight .ps-problem-statement>h2,
+  #case-pinsight .ps-reflection-lead>small,
+  #case-pinsight .ps-reflection-lead>h2 {
+    width:100%!important;
+    max-width:none!important;
+    margin-left:0!important;
+    grid-column:auto!important;
+  }
+  #case-pinsight .ps-section-head .ps-section-rail { margin-bottom:18px!important; }
+  #case-pinsight .ps-section-head .ps-section-intro h2,
+  #case-pinsight .ps-problem-statement>h2,
+  #case-pinsight .ps-reflection-lead>h2 { max-width:900px!important; }
+  #case-pinsight .ps-section-head .ps-section-intro>p { max-width:720px!important; }
+  #case-pinsight .ps-problem-statement>small,
+  #case-pinsight .ps-reflection-lead>small { display:block; margin-bottom:18px!important; }
+}
+
+/* v47 — single master grid and alignment cleanup. */
+#case-pinsight {
+  --ps-master: min(1320px, calc(100vw - 120px));
+  --ps-text: calc((var(--ps-master) - 11 * 32px) / 12 * 5 + 4 * 32px);
+  --ps-standard: calc((var(--ps-master) - 11 * 32px) / 12 * 8 + 7 * 32px);
+  --ps-wide: calc((var(--ps-master) - 11 * 32px) / 12 * 10 + 9 * 32px);
+  --ps-full: var(--ps-master);
+  --ps-gutter: 32px;
+  --ps-space-group: 28px;
+  --ps-space-subsection: 60px;
+  --ps-space-chapter: 104px;
+}
+#case-pinsight .ps-page-head,
+#case-pinsight .ps-shell { width:var(--ps-master)!important; max-width:none!important; margin-inline:auto!important; }
+#case-pinsight .ps-shell>section { width:100%!important; margin-inline:0!important; }
+#case-pinsight .ps-shell>.ps-section { padding-block:var(--ps-space-chapter)!important; }
+#case-pinsight .ps-shell>.ps-section>:is(.ps-section-head,.ps-problem-statement,.ps-reflection-lead) {
+  width:100%!important;
+  margin:0 0 var(--ps-space-subsection)!important;
+  transform:none!important;
+}
+#case-pinsight .ps-section-head { grid-template-columns:repeat(12,minmax(0,1fr))!important; gap:var(--ps-gutter)!important; }
+#case-pinsight .ps-section-head .ps-section-rail { grid-column:1/3!important; }
+#case-pinsight .ps-section-head .ps-section-intro { grid-column:3/10!important; }
+#case-pinsight .ps-section-head .ps-section-intro h2,
+#case-pinsight .ps-problem-statement h2,
+#case-pinsight .ps-reflection-lead h2 { font-size:clamp(38px,3.6vw,54px)!important; line-height:1.08!important; }
+
+#case-pinsight .ps-blueprint-research,
+#case-pinsight .ps-problem-visual,
+#case-pinsight .ps-system-architecture,
+#case-pinsight .ps-xr-hero,
+#case-pinsight .ps-xr-narrative,
+#case-pinsight .ps-blueprint-lifecycle,
+#case-pinsight .ps-web-hero,
+#case-pinsight .ps-web-primary-four,
+#case-pinsight .ps-web-state-strip,
+#case-pinsight .ps-final-board {
+  width:var(--ps-full)!important;
+  margin-inline:0!important;
+  transform:none!important;
+}
+
+#case-pinsight .ps-blueprint-research { grid-template-columns:repeat(12,minmax(0,1fr))!important; gap:var(--ps-gutter)!important; }
+#case-pinsight .ps-blueprint-research-copy { grid-column:1/5!important; }
+#case-pinsight .ps-blueprint-research-visual { grid-column:5/13!important; min-width:0; }
+#case-pinsight .ps-blueprint-research-visual .ps-research-composition-v16 { width:100%!important; margin:0!important; transform:none!important; }
+#case-pinsight .ps-blueprint-research-visual .research-stage-v16 { min-height:600px!important; }
+#case-pinsight .ps-blueprint-research-visual :is(.input-field-v16,.cognitive-field-v16) { height:560px!important; }
+#case-pinsight .ps-blueprint-findings { gap:var(--ps-gutter)!important; margin-top:var(--ps-space-group)!important; }
+
+#case-pinsight .ps-problem-statement { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:var(--ps-gutter); }
+#case-pinsight .ps-problem-statement>small { grid-column:1/3; }
+#case-pinsight .ps-problem-statement>h2 { grid-column:3/10; margin:0!important; }
+#case-pinsight .ps-problem-visual .ps-loss-exploded { width:100%!important; min-height:850px!important; margin:0!important; transform:none!important; }
+
+#case-pinsight .ps-chapter-system>.ps-system-architecture { width:100%!important; min-height:780px!important; }
+
+#case-pinsight .ps-xr-hero { margin-bottom:var(--ps-space-subsection)!important; }
+#case-pinsight .ps-xr-narrative { display:grid!important; grid-template-columns:repeat(12,minmax(0,1fr))!important; gap:var(--ps-space-subsection) var(--ps-gutter)!important; }
+#case-pinsight .ps-xr-narrative>article { grid-column:span 6!important; display:block!important; margin:0!important; }
+#case-pinsight .ps-xr-narrative .ps-sequence-copy { min-height:142px; }
+#case-pinsight .ps-xr-narrative .ps-evidence-media { aspect-ratio:16/10!important; }
+#case-pinsight .ps-xr-narrative figcaption { min-height:78px; }
+
+#case-pinsight .ps-blueprint-lifecycle { gap:14px!important; }
+#case-pinsight .ps-blueprint-lifecycle>article { display:grid; grid-template-rows:46px 172px; }
+#case-pinsight .ps-blueprint-lifecycle img,
+#case-pinsight .ps-blueprint-lifecycle .ps-feedback-object { width:100%!important; height:172px!important; aspect-ratio:auto!important; object-fit:cover!important; }
+
+#case-pinsight .ps-web-hero { margin-bottom:var(--ps-space-subsection)!important; }
+#case-pinsight .ps-web-primary-four { gap:var(--ps-space-subsection) var(--ps-gutter)!important; margin-top:0!important; }
+#case-pinsight .ps-web-primary-four .ps-evidence-media { aspect-ratio:16/9!important; }
+#case-pinsight .ps-web-primary-four .ps-evidence-media img { width:100%!important; height:100%!important; object-fit:cover!important; }
+#case-pinsight .ps-web-primary-four figcaption { min-height:78px; }
+#case-pinsight .ps-web-state-strip { margin-top:var(--ps-space-subsection)!important; }
+#case-pinsight .ps-web-state-strip .ps-evidence { display:block!important; }
+#case-pinsight .ps-web-state-strip .ps-evidence-media { width:var(--ps-standard)!important; aspect-ratio:16/9!important; }
+#case-pinsight .ps-web-state-strip figcaption { width:var(--ps-standard); margin-top:14px!important; }
+
+#case-pinsight .ps-final-board>header { margin:0 0 var(--ps-space-group); padding-top:18px; border-top:1px solid rgba(255,255,255,.12); }
+#case-pinsight .ps-final-board>header:not(:first-child) { margin-top:var(--ps-space-subsection); }
+#case-pinsight .ps-final-board>header small { color:#b66cff; font-size:11px; letter-spacing:.1em; }
+#case-pinsight .ps-final-equal-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--ps-space-subsection) var(--ps-gutter); }
+#case-pinsight .ps-final-equal-grid .ps-evidence { width:100%!important; margin:0!important; }
+#case-pinsight .ps-final-equal-grid .ps-evidence-media { width:100%!important; aspect-ratio:16/10!important; overflow:hidden!important; }
+#case-pinsight .ps-final-equal-grid .ps-evidence-media img { display:block!important; width:100%!important; height:100%!important; object-fit:cover!important; }
+#case-pinsight .ps-final-equal-grid figcaption { min-height:78px; margin-top:14px!important; }
+
+#case-pinsight .ps-reflection { display:block!important; }
+#case-pinsight .ps-reflection-lead { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:var(--ps-gutter); }
+#case-pinsight .ps-reflection-lead>small { grid-column:1/3; }
+#case-pinsight .ps-reflection-lead>h2 { grid-column:3/11; margin:0!important; }
+#case-pinsight .ps-reflection .ps-reflection-grid { display:grid!important; grid-template-columns:repeat(3,1fr)!important; gap:var(--ps-gutter)!important; width:100%!important; margin:0!important; }
+#case-pinsight .ps-reflection .ps-reflection-grid article { min-height:210px!important; padding:22px 0!important; }
+
+@media (max-width:1099px) {
+  #case-pinsight { --ps-master:calc(100vw - 48px); }
+  #case-pinsight .ps-section-head,
+  #case-pinsight .ps-problem-statement,
+  #case-pinsight .ps-reflection-lead { display:block!important; }
+  #case-pinsight .ps-blueprint-research { display:block!important; }
+  #case-pinsight .ps-blueprint-research-visual { margin-top:42px; }
+  #case-pinsight .ps-final-equal-grid,
+  #case-pinsight .ps-reflection .ps-reflection-grid { grid-template-columns:1fr!important; }
+}
+
+/* v46 — user-approved fixed blueprint. No editorial offsets inside chapters. */
+#case-pinsight .ps-blueprint-research,
+#case-pinsight .ps-blueprint-problem-flow,
+#case-pinsight .ps-blueprint-lifecycle,
+#case-pinsight .ps-web-hero,
+#case-pinsight .ps-web-primary-four,
+#case-pinsight .ps-web-state-strip,
+#case-pinsight .ps-final-hero,
+#case-pinsight .ps-final-primary-two,
+#case-pinsight .ps-final-support-three,
+#case-pinsight .ps-final-wide-web,
+#case-pinsight .ps-final-details { width:var(--ps-wide); margin-inline:auto; }
+
+#case-pinsight .ps-blueprint-research { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:32px; align-items:start; }
+#case-pinsight .ps-blueprint-research-copy { grid-column:1/5; padding-top:8px; }
+#case-pinsight .ps-blueprint-research-copy>small { color:#b66cff; font-size:11px; letter-spacing:.1em; }
+#case-pinsight .ps-blueprint-research-copy h3 { margin:18px 0 34px; font-size:clamp(28px,2.6vw,38px); line-height:1.16; }
+#case-pinsight .ps-blueprint-research-copy p { display:grid; grid-template-columns:34px 1fr; gap:10px; margin:0; padding:18px 0; border-top:1px solid rgba(255,255,255,.11); color:rgba(244,242,249,.68); line-height:1.6; }
+#case-pinsight .ps-blueprint-research-copy p span { color:#b66cff; font-size:10px; }
+#case-pinsight .ps-blueprint-research-visual { grid-column:5/13; }
+#case-pinsight .ps-blueprint-research-visual>.ps-experience-overview { width:100%!important; margin:0!important; transform:none!important; }
+#case-pinsight .ps-blueprint-findings { grid-column:1/13; display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:24px; }
+#case-pinsight .ps-blueprint-findings article { min-height:120px; padding:20px 0; border-top:1px solid rgba(182,108,255,.48); }
+#case-pinsight .ps-blueprint-findings span { color:#b66cff; font-size:10px; }
+#case-pinsight .ps-blueprint-findings strong { display:block; margin-top:10px; font-size:20px; }
+#case-pinsight .ps-blueprint-findings p { margin:8px 0 0; color:rgba(244,242,249,.58); line-height:1.55; }
+
+#case-pinsight .ps-blueprint-problem-flow { display:grid; grid-template-columns:1fr 22px 1fr 22px 1fr 22px 1fr 22px 1fr; gap:12px; align-items:center; margin-top:54px; }
+#case-pinsight .ps-blueprint-problem-flow article { min-height:190px; padding:24px 16px; border-top:1px solid rgba(182,108,255,.55); }
+#case-pinsight .ps-blueprint-problem-flow span { color:#b66cff; font-size:10px; }
+#case-pinsight .ps-blueprint-problem-flow strong { display:block; margin-top:28px; font-size:20px; }
+#case-pinsight .ps-blueprint-problem-flow p { margin:10px 0 0; color:rgba(244,242,249,.55); font-size:13px; line-height:1.5; }
+#case-pinsight .ps-blueprint-problem-flow svg { width:18px; color:#b66cff; }
+
+#case-pinsight .ps-blueprint-lifecycle { display:grid; grid-template-columns:1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr; gap:14px; align-items:center; }
+#case-pinsight .ps-blueprint-lifecycle>article { min-width:0; }
+#case-pinsight .ps-blueprint-lifecycle>article>div:first-child { display:flex; justify-content:space-between; gap:10px; padding:0 0 12px; }
+#case-pinsight .ps-blueprint-lifecycle>article>div:first-child span { color:#b66cff; font-size:10px; }
+#case-pinsight .ps-blueprint-lifecycle>article>div:first-child strong { font-size:14px; }
+#case-pinsight .ps-blueprint-lifecycle img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; }
+#case-pinsight .ps-blueprint-lifecycle .ps-feedback-object { min-height:0; aspect-ratio:4/3; display:flex; flex-direction:column; justify-content:center; padding:18px; }
+#case-pinsight .ps-blueprint-lifecycle>svg { width:18px; color:#b66cff; }
+
+#case-pinsight .ps-web-primary-four { display:grid!important; grid-template-columns:repeat(2,1fr)!important; gap:56px 32px!important; margin-top:58px!important; }
+#case-pinsight .ps-web-primary-four>* { margin:0!important; }
+#case-pinsight .ps-web-state-strip { margin-top:58px; }
+#case-pinsight .ps-web-state-strip .ps-evidence { display:grid; grid-template-columns:8fr 4fr; gap:32px; align-items:end; }
+#case-pinsight .ps-web-state-strip figcaption { margin:0; }
+
+#case-pinsight .ps-chapter-final :is(.ps-final-hero,.ps-final-primary-two,.ps-final-support-three,.ps-final-wide-web,.ps-final-details) { display:grid; gap:32px; align-items:start; }
+#case-pinsight .ps-final-primary-two { grid-template-columns:repeat(2,1fr)!important; margin-top:64px!important; }
+#case-pinsight .ps-final-primary-two>* { margin:0!important; }
+#case-pinsight .ps-final-support-three { grid-template-columns:repeat(3,1fr)!important; margin-top:64px!important; }
+#case-pinsight .ps-final-support-three>* { margin:0!important; }
+#case-pinsight .ps-final-wide-web { grid-template-columns:1fr; margin-top:78px; }
+#case-pinsight .ps-final-details { grid-template-columns:repeat(4,1fr); margin-top:64px; }
+#case-pinsight .ps-chapter-final :is(.ps-final-hero,.ps-final-primary-two,.ps-final-support-three,.ps-final-wide-web,.ps-final-details) .ps-evidence { width:100%!important; margin:0!important; }
+#case-pinsight .ps-chapter-final :is(.ps-final-primary-two,.ps-final-support-three,.ps-final-details) .ps-evidence-media { aspect-ratio:16/10; overflow:hidden; }
+#case-pinsight .ps-chapter-final :is(.ps-final-primary-two,.ps-final-support-three,.ps-final-details) .ps-evidence-media img { width:100%!important; height:100%!important; object-fit:cover!important; }
+#case-pinsight .ps-chapter-final .ps-final-wide-web .ps-evidence-media img { width:100%; height:auto; }
+#case-pinsight .ps-chapter-final :is(.ps-final-primary-two,.ps-final-support-three,.ps-final-details) figcaption { min-height:72px; margin-top:14px; }
+
+@media (min-width:1100px) {
+  #case-pinsight .ps-chapter-research { padding-bottom:92px!important; }
+  #case-pinsight .ps-chapter-problem { padding-block:82px!important; }
+  #case-pinsight .ps-chapter-system>.ps-system-architecture { width:var(--ps-wide)!important; min-height:760px!important; }
+  #case-pinsight .ps-xr-narrative { gap:52px 32px!important; }
+  #case-pinsight .ps-xr-narrative :is(.is-locate,.is-anchor,.is-pin,.is-detail) { grid-column:auto!important; grid-template-columns:1fr!important; margin:0!important; }
+  #case-pinsight .ps-xr-narrative .is-locate { grid-column:1/7!important; }
+  #case-pinsight .ps-xr-narrative .is-anchor { grid-column:7/13!important; }
+  #case-pinsight .ps-xr-narrative .is-pin { grid-column:1/7!important; }
+  #case-pinsight .ps-xr-narrative .is-detail { grid-column:7/13!important; }
+  #case-pinsight .ps-xr-narrative .ps-evidence-media { aspect-ratio:16/10; overflow:hidden; }
+  #case-pinsight .ps-xr-narrative .ps-evidence-media img { width:100%; height:100%; object-fit:cover; }
+}
+
+@media (max-width:1099px) {
+  #case-pinsight :is(.ps-blueprint-research,.ps-blueprint-problem-flow,.ps-blueprint-lifecycle,.ps-web-primary-four,.ps-final-primary-two,.ps-final-support-three,.ps-final-details) { width:100%; display:grid!important; grid-template-columns:1fr!important; }
+  #case-pinsight .ps-blueprint-research-copy,
+  #case-pinsight .ps-blueprint-research-visual,
+  #case-pinsight .ps-blueprint-findings { grid-column:1; }
+  #case-pinsight .ps-blueprint-findings { grid-template-columns:1fr!important; }
+  #case-pinsight .ps-blueprint-problem-flow>svg,
+  #case-pinsight .ps-blueprint-lifecycle>svg { transform:rotate(90deg); justify-self:center; }
+  #case-pinsight .ps-web-state-strip { width:100%; }
+  #case-pinsight .ps-web-state-strip .ps-evidence { grid-template-columns:1fr; }
+}

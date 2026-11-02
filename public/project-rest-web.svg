@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17191d"/><stop offset="1" stop-color="#3f303c"/></linearGradient><radialGradient id="gl"><stop stop-color="#f0c6c3"/><stop offset="1" stop-color="#7d6472"/></radialGradient></defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g transform="translate(1020 470) rotate(-16)"><ellipse rx="260" ry="210" fill="url(#gl)"/><ellipse rx="160" ry="125" fill="#17191d"/><circle cx="-160" cy="110" r="78" fill="#ded6d3"/><circle cx="160" cy="-110" r="78" fill="#ded6d3"/></g>
+  <g fill="none" stroke="#f3d8d4" opacity=".18"><circle cx="1020" cy="470" r="370"/><circle cx="1020" cy="470" r="450"/></g>
+  <g fill="#fff"><text x="100" y="150" font-family="Arial,sans-serif" font-size="28" letter-spacing="7">健康体验 · 产品设计</text><text x="100" y="760" font-family="Arial,sans-serif" font-size="92" font-weight="700">睡眠辅助体验</text><text x="100" y="825" font-family="Arial,sans-serif" font-size="32" opacity=".7">低干扰、易理解的睡前产品语言</text></g>
+  <circle cx="100" cy="100" r="9" fill="#c8ff36"/>
+</svg>

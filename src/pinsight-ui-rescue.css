@@ -1,0 +1,186 @@
+#case-pinsight .pinsight-ui-integrated {
+  width: min(calc(100% - 128px), 1280px);
+  margin-inline: auto;
+  color: #f4f1f7;
+}
+
+#case-pinsight .pui-section {
+  margin-block: 160px;
+}
+
+#case-pinsight .pui-header {
+  max-width: 760px;
+  margin-bottom: 72px;
+}
+
+#case-pinsight .pui-marker,
+#case-pinsight .pui-kicker {
+  margin: 0 0 20px;
+  color: #b991ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#case-pinsight .pui-header h2 {
+  margin: 0;
+  max-width: 720px;
+  font-size: clamp(38px, 4vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -.04em;
+}
+
+#case-pinsight .pui-header > p:last-child {
+  margin: 24px 0 0;
+  max-width: 700px;
+  color: #aaa4b2;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+#case-pinsight .pui-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px;
+  align-items: center;
+}
+
+#case-pinsight .pui-copy { grid-column: span 4; }
+#case-pinsight .pui-visual-8 { grid-column: span 8; }
+#case-pinsight .pui-visual-7 { grid-column: span 7; }
+#case-pinsight .pui-visual-5 { grid-column: span 5; }
+#case-pinsight .pui-full { grid-column: 1 / -1; }
+
+#case-pinsight .pui-copy h3,
+#case-pinsight .pui-uniform h3 {
+  margin: 0 0 18px;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.12;
+}
+
+#case-pinsight .pui-copy p,
+#case-pinsight .pui-uniform > p {
+  margin: 0;
+  color: #aaa4b2;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+#case-pinsight .pui-figure {
+  margin: 0;
+}
+
+#case-pinsight .pui-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(196, 163, 255, .18);
+  border-radius: 22px;
+  background: #111018;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
+}
+
+#case-pinsight .pui-figure figcaption {
+  margin-top: 16px;
+  color: #817b88;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+#case-pinsight .pui-stack {
+  display: grid;
+  gap: 104px;
+}
+
+#case-pinsight .pui-lifecycle {
+  display: grid;
+  gap: 104px;
+}
+
+#case-pinsight .pui-life-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+#case-pinsight .pui-life-item > span,
+#case-pinsight .pui-uniform > span {
+  display: block;
+  margin-bottom: 16px;
+  color: #b991ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+#case-pinsight .pui-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin-bottom: 104px;
+  border: 1px solid rgba(196, 163, 255, .18);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#case-pinsight .pui-flow div {
+  min-height: 144px;
+  padding: 28px 24px;
+  background: rgba(164, 116, 210, .07);
+}
+
+#case-pinsight .pui-flow span {
+  color: #b991ff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#case-pinsight .pui-flow strong {
+  display: block;
+  margin-top: 22px;
+  font-size: 18px;
+}
+
+#case-pinsight .pui-continuity {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 22px;
+  align-items: center;
+  margin-bottom: 104px;
+}
+
+#case-pinsight .pui-continuity div {
+  padding: 30px;
+  border: 1px solid rgba(196, 163, 255, .18);
+  border-radius: 18px;
+  background: rgba(164, 116, 210, .06);
+}
+
+#case-pinsight .pui-continuity b {
+  color: #c7a8ff;
+}
+
+#case-pinsight .pui-uniform {
+  display: grid;
+  gap: 20px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+#case-pinsight .pui-uniform + .pui-uniform { margin-top: 120px; }
+
+@media (max-width: 900px) {
+  #case-pinsight .pinsight-ui-integrated { width: min(calc(100% - 48px), 1280px); }
+  #case-pinsight .pui-section { margin-block: 112px; }
+  #case-pinsight .pui-header { margin-bottom: 48px; }
+  #case-pinsight .pui-copy,
+  #case-pinsight .pui-visual-8,
+  #case-pinsight .pui-visual-7,
+  #case-pinsight .pui-visual-5 { grid-column: 1 / -1; }
+  #case-pinsight .pui-life-row { grid-template-columns: 1fr; }
+  #case-pinsight .pui-flow { grid-template-columns: 1fr; }
+  #case-pinsight .pui-continuity { grid-template-columns: 1fr; }
+  #case-pinsight .pui-continuity > span { transform: rotate(90deg); justify-self: center; }
+}
+

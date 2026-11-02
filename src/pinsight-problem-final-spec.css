@@ -1,0 +1,437 @@
+/* PinSight 02 — reference-locked context decay flow. */
+#case-pinsight #pinsight-problem {
+  --problem-accent:#c58cf2;
+  --problem-line:rgba(226,216,234,.11);
+  --problem-muted:rgba(244,242,250,.74);
+}
+
+@media (min-width:1100px) {
+  #case-pinsight #pinsight-problem {
+    box-sizing:border-box;
+    width:min(1200px,calc(100vw - 96px))!important;
+    max-width:1200px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding:112px 0 116px!important;
+    transform:none!important;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-statement {
+    width:720px!important;
+    max-width:62%!important;
+    min-height:0!important;
+    height:auto!important;
+    margin:0 0 68px!important;
+    padding:0!important;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-statement small {
+    display:block;
+    margin:0 0 20px;
+    color:var(--problem-accent);
+    font-size:13px;
+    font-weight:620;
+    letter-spacing:.04em;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-statement h2 {
+    max-width:700px;
+    margin:0;
+    color:#f4f2fa;
+    font-size:clamp(48px,4vw,60px)!important;
+    font-weight:680;
+    line-height:1.12!important;
+    letter-spacing:-.045em;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-statement p {
+    max-width:690px;
+    margin:24px 0 0!important;
+    color:rgba(244,242,250,.72);
+    font-size:17px!important;
+    line-height:1.75!important;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-visual {
+    width:100%!important;
+    margin:0!important;
+    transform:none!important;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-flow-final {
+    display:grid!important;
+    grid-template-columns:minmax(0,47fr) 30px minmax(0,30fr) 30px minmax(0,24fr);
+    align-items:start;
+    width:100%;
+    margin:0;
+    padding:30px 0 0;
+    border-top:1px solid var(--problem-line);
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage {
+    display:grid;
+    grid-template-rows:42px 462px auto;
+    min-width:0;
+    margin:0;
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage header {
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    min-width:0;
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage header span {
+    color:var(--problem-accent);
+    font-size:17px;
+    font-weight:650;
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage header strong {
+    color:#f4f2fa;
+    font-size:19px;
+    font-weight:650;
+    line-height:1.25;
+    white-space:nowrap;
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage-media,
+  #case-pinsight #pinsight-problem .problem-record-panel {
+    box-sizing:border-box;
+    height:462px;
+    overflow:hidden;
+    border:1px solid rgba(197,140,242,.22);
+    background:#0c0d11;
+  }
+
+  #case-pinsight #pinsight-problem .is-live .problem-stage-media {
+    border-color:rgba(197,140,242,.48);
+  }
+
+  #case-pinsight #pinsight-problem .is-decay .problem-stage-media {
+    border-color:rgba(197,140,242,.3);
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage-media {
+    position:relative;
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage-media > img {
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  #case-pinsight #pinsight-problem .is-live .problem-stage-media > img {
+    object-position:47% center;
+    filter:saturate(.76) contrast(1.01) brightness(.94);
+  }
+
+  #case-pinsight #pinsight-problem .problem-live-cues span {
+    position:absolute;
+    z-index:2;
+    padding:6px 8px;
+    border:1px solid rgba(204,155,247,.34);
+    color:rgba(244,242,250,.68);
+    background:rgba(8,9,13,.32);
+    font-size:10px;
+    line-height:1.3;
+  }
+
+  #case-pinsight #pinsight-problem .problem-live-cues b { color:#fff; font-size:11px; font-weight:620; }
+  #case-pinsight #pinsight-problem .cue-speaker { left:11%; top:8%; }
+  #case-pinsight #pinsight-problem .cue-location { left:62%; top:24%; }
+  #case-pinsight #pinsight-problem .cue-object { left:12%; bottom:8%; }
+  #case-pinsight #pinsight-problem .cue-context { right:4%; bottom:7%; }
+
+  #case-pinsight #pinsight-problem .problem-live-cues span::after {
+    content:'';
+    position:absolute;
+    width:34px;
+    border-top:1px solid rgba(203,152,245,.42);
+    transform-origin:left center;
+  }
+  #case-pinsight #pinsight-problem .cue-speaker::after { left:100%; top:55%; transform:rotate(18deg); }
+  #case-pinsight #pinsight-problem .cue-location::after { right:100%; top:60%; transform:rotate(152deg); transform-origin:right center; }
+  #case-pinsight #pinsight-problem .cue-object::after { left:100%; top:38%; transform:rotate(-22deg); }
+  #case-pinsight #pinsight-problem .cue-context::after { right:100%; top:42%; transform:rotate(156deg); transform-origin:right center; }
+
+  #case-pinsight #pinsight-problem .problem-live-cues span::before {
+    content:'';
+    position:absolute;
+    width:4px;
+    height:4px;
+    border:1px solid rgba(218,181,249,.82);
+    border-radius:50%;
+  }
+  #case-pinsight #pinsight-problem .cue-speaker::before,
+  #case-pinsight #pinsight-problem .cue-object::before { right:-39px; top:calc(55% - 2px); }
+  #case-pinsight #pinsight-problem .cue-location::before,
+  #case-pinsight #pinsight-problem .cue-context::before { left:-39px; top:calc(52% - 2px); }
+
+  #case-pinsight #pinsight-problem .is-decay .problem-stage-media > img {
+    object-position:47% center;
+    filter:saturate(.28) contrast(.93) brightness(.48);
+    opacity:.84;
+  }
+
+  #case-pinsight #pinsight-problem .problem-decay-shade {
+    position:absolute;
+    inset:0;
+    background:rgba(6,7,10,.18);
+    pointer-events:none;
+  }
+
+  #case-pinsight #pinsight-problem .problem-decay-anchor {
+    position:absolute;
+    left:22%;
+    top:42%;
+    width:30%;
+    height:12%;
+    border:1px solid rgba(202,147,245,.7);
+    background:rgba(170,101,225,.08);
+  }
+
+  #case-pinsight #pinsight-problem .problem-decay-anchor i {
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:7px;
+    height:7px;
+    border:1px solid #d9b2fb;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+  }
+
+  #case-pinsight #pinsight-problem .problem-decay-ghosts i {
+    position:absolute;
+    width:auto;
+    height:auto;
+    border:0;
+    color:rgba(224,208,238,.22);
+    font-size:9px;
+    font-style:normal;
+    line-height:1;
+  }
+
+  #case-pinsight #pinsight-problem .problem-decay-ghosts i::before {
+    content:attr(data-loss);
+    position:absolute;
+    position:relative;
+    left:auto;
+    top:auto;
+    letter-spacing:.04em;
+  }
+
+  #case-pinsight #pinsight-problem .problem-decay-ghosts i::after {
+    content:'';
+    position:absolute;
+    left:calc(100% + 6px);
+    top:50%;
+    width:3px;
+    height:3px;
+    border:1px solid rgba(205,154,245,.34);
+    border-radius:50%;
+    transform:translateY(-50%);
+  }
+
+  #case-pinsight #pinsight-problem .problem-decay-ghosts i:nth-child(1) { left:12%; top:20%; }
+  #case-pinsight #pinsight-problem .problem-decay-ghosts i:nth-child(2) { right:13%; top:37%; }
+  #case-pinsight #pinsight-problem .problem-decay-ghosts i:nth-child(3) { right:12%; bottom:20%; opacity:.7; }
+
+  #case-pinsight #pinsight-problem .problem-decay-breaks i {
+    position:absolute;
+    height:0;
+    border-top:1px dashed rgba(205,154,245,.25);
+    transform-origin:left center;
+  }
+  #case-pinsight #pinsight-problem .problem-decay-breaks i::after {
+    content:'';
+    position:absolute;
+    right:42%;
+    top:-2px;
+    width:14px;
+    border-top:3px solid #0a0b0e;
+  }
+  #case-pinsight #pinsight-problem .problem-decay-breaks i:nth-child(1) { left:22%; top:27%; width:29%; transform:rotate(20deg); }
+  #case-pinsight #pinsight-problem .problem-decay-breaks i:nth-child(2) { left:45%; top:48%; width:31%; transform:rotate(-12deg); }
+  #case-pinsight #pinsight-problem .problem-decay-breaks i:nth-child(3) { left:57%; top:66%; width:25%; transform:rotate(22deg); }
+
+  #case-pinsight #pinsight-problem .problem-flow-arrow {
+    align-self:start;
+    justify-self:center;
+    width:22px;
+    height:22px;
+    margin-top:262px;
+    color:var(--problem-accent);
+    stroke-width:1.3;
+    opacity:.62;
+  }
+
+  #case-pinsight #pinsight-problem .problem-record-panel {
+    display:flex;
+    flex-direction:column;
+    padding:32px 28px 26px;
+    border-color:rgba(197,140,242,.27);
+    background:#0d0e13;
+  }
+
+  #case-pinsight #pinsight-problem .problem-record-panel > small {
+    color:rgba(244,242,250,.48);
+    font-size:11px;
+  }
+
+  #case-pinsight #pinsight-problem .problem-record-panel blockquote {
+    margin:34px 0 28px;
+    color:#f4f2fa;
+    font-size:23px;
+    font-weight:630;
+    line-height:1.48;
+    letter-spacing:-.025em;
+  }
+
+  #case-pinsight #pinsight-problem .problem-record-questions {
+    display:grid;
+    gap:8px;
+    color:rgba(244,242,250,.72);
+    font-size:13px;
+    line-height:1.4;
+  }
+
+  #case-pinsight #pinsight-problem .problem-record-missing {
+    display:grid;
+    gap:9px;
+    margin-top:auto;
+    padding-top:18px;
+    border-top:1px solid rgba(244,242,250,.14);
+  }
+
+  #case-pinsight #pinsight-problem .problem-record-missing > small {
+    margin-bottom:4px;
+    color:rgba(244,242,250,.56);
+    font-size:11px;
+  }
+
+  #case-pinsight #pinsight-problem .problem-record-missing span {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:rgba(244,242,250,.48);
+    font-size:11px;
+    line-height:1.35;
+  }
+
+  #case-pinsight #pinsight-problem .problem-record-missing svg {
+    flex:0 0 14px;
+    width:14px;
+    height:14px;
+    color:rgba(197,140,242,.52);
+    stroke-width:1.35;
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage figcaption {
+    padding:22px 18px 0 0;
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage.is-decay figcaption,
+  #case-pinsight #pinsight-problem .problem-stage.is-record figcaption {
+    min-height:108px;
+    padding-left:20px;
+    border-left:1px solid rgba(226,216,234,.13);
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage figcaption strong {
+    display:block;
+    color:#f4f2fa;
+    font-size:17px;
+    font-weight:640;
+    line-height:1.4;
+  }
+
+  #case-pinsight #pinsight-problem .problem-stage figcaption strong::first-letter { color:var(--problem-accent); }
+
+  #case-pinsight #pinsight-problem .problem-stage figcaption p {
+    margin:10px 0 0;
+    padding:0 12px 0 0;
+    color:var(--problem-muted);
+    font-size:16px;
+    line-height:1.76;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-takeaway {
+    width:100%!important;
+    margin:52px 0 0!important;
+    padding:42px 0 0!important;
+    border-top:1px solid var(--problem-line)!important;
+    background:transparent!important;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-takeaway::before {
+    content:'';
+    display:block;
+    width:42px;
+    margin:-43px 0 42px;
+    border-top:2px solid var(--problem-accent);
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-insight-label {
+    display:block;
+    margin:0 0 20px;
+    color:var(--problem-accent);
+    font-size:12px;
+    font-weight:650;
+    letter-spacing:.06em;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-takeaway p {
+    max-width:980px;
+    margin:0!important;
+    color:#f4f2fa;
+    font-size:39px!important;
+    font-weight:650;
+    line-height:1.35!important;
+    letter-spacing:-.035em;
+  }
+
+  #case-pinsight #pinsight-problem .ps-problem-takeaway p span { color:var(--problem-accent); }
+  #case-pinsight #pinsight-problem .ps-problem-takeaway small {
+    display:block;
+    max-width:880px;
+    margin-top:14px;
+    color:rgba(244,242,250,.66);
+    font-size:16px;
+    line-height:1.7;
+  }
+}
+
+@media (max-width:1099px) {
+  #case-pinsight #pinsight-problem .ps-problem-flow-final {
+    display:grid;
+    gap:42px;
+    margin:0;
+  }
+  #case-pinsight #pinsight-problem .problem-stage { display:grid; gap:16px; min-width:0; }
+  #case-pinsight #pinsight-problem .problem-stage header { display:flex; gap:10px; align-items:baseline; }
+  #case-pinsight #pinsight-problem .problem-stage header span { color:var(--problem-accent); }
+  #case-pinsight #pinsight-problem .problem-stage-media,
+  #case-pinsight #pinsight-problem .problem-record-panel { min-height:340px; overflow:hidden; border:1px solid rgba(197,140,242,.28); }
+  #case-pinsight #pinsight-problem .problem-stage-media { position:relative; }
+  #case-pinsight #pinsight-problem .problem-stage-media img { width:100%; height:100%; min-height:340px; object-fit:cover; filter:saturate(.72) brightness(.82); }
+  #case-pinsight #pinsight-problem .is-decay .problem-stage-media img { filter:saturate(.25) brightness(.36); }
+  #case-pinsight #pinsight-problem .problem-live-cues,
+  #case-pinsight #pinsight-problem .problem-decay-ghosts { display:none; }
+  #case-pinsight #pinsight-problem .problem-decay-shade { position:absolute; inset:0; background:rgba(5,6,9,.25); }
+  #case-pinsight #pinsight-problem .problem-decay-anchor { position:absolute; left:22%; top:42%; width:30%; height:12%; border:1px solid rgba(197,140,242,.72); }
+  #case-pinsight #pinsight-problem .problem-record-panel { box-sizing:border-box; display:flex; flex-direction:column; padding:28px; }
+  #case-pinsight #pinsight-problem .problem-record-panel blockquote { margin:28px 0; color:#f4f2fa; font-size:24px; line-height:1.45; }
+  #case-pinsight #pinsight-problem .problem-record-questions,
+  #case-pinsight #pinsight-problem .problem-record-missing { display:grid; gap:10px; }
+  #case-pinsight #pinsight-problem .problem-record-missing { margin-top:auto; padding-top:18px; border-top:1px solid rgba(244,242,250,.14); }
+  #case-pinsight #pinsight-problem .problem-record-missing span { display:flex; gap:8px; align-items:center; }
+  #case-pinsight #pinsight-problem .problem-record-missing svg { width:15px; }
+  #case-pinsight #pinsight-problem .problem-flow-arrow { justify-self:center; color:var(--problem-accent); transform:rotate(90deg); }
+  #case-pinsight #pinsight-problem .problem-stage figcaption strong { display:block; margin-bottom:8px; }
+  #case-pinsight #pinsight-problem .problem-stage figcaption p { margin:0; line-height:1.65; }
+}

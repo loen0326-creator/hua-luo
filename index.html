@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090a0b" />
+    <meta name="description" content="罗华 — UI/UX 与交互设计师个人作品集" />
+    <title>LUO HUA — Interaction Designer</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if (window.location.protocol === 'file:') {
+        document.write('<link rel="stylesheet" href="./standalone.css">')
+        document.write('<script src="./standalone.js"><\/script>')
+      }
+    </script>
+    <script type="module">
+      if (window.location.protocol !== 'file:') {
+        import('/src/main.jsx?v=portfolio-20261102-hero-projects-v1')
+      }
+    </script>
+  </body>
+</html>

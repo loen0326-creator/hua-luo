@@ -1,0 +1,84 @@
+#case-pinsight .ps-legacy-hidden { display: none !important; }
+#case-pinsight .ps-final-experience {
+  --ps-purple: #b889ff;
+  --ps-cyan: #81d9f2;
+  --ps-text: #f5f2f8;
+  --ps-muted: #aaa3b1;
+  width: min(calc(100% - 128px), 1280px);
+  margin-inline: auto;
+  color: var(--ps-text);
+}
+#case-pinsight .ps-final-section { margin-block: 160px; }
+#case-pinsight .ps-final-header { max-width: 880px; margin-bottom: 72px; }
+#case-pinsight .ps-final-marker,
+#case-pinsight .ps-final-submarker { color: var(--ps-purple); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+#case-pinsight .ps-final-marker span { margin-right: 14px; }
+#case-pinsight .ps-final-header h2 { max-width: 940px; margin: 18px 0 18px; font-size: clamp(38px, 4.2vw, 64px); line-height: 1.05; letter-spacing: -.045em; }
+#case-pinsight .ps-final-header > p:last-child { max-width: 720px; color: var(--ps-muted); font-size: 18px; line-height: 1.75; }
+#case-pinsight .ps-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: center; }
+#case-pinsight .ps-final-submodule { margin-top: 112px; }
+#case-pinsight .ps-layout-text-ui .ps-final-copy { grid-column: 1 / span 4; }
+#case-pinsight .ps-layout-text-ui .ps-final-figure { grid-column: 5 / span 8; }
+#case-pinsight .ps-layout-ui-text .ps-final-figure { grid-column: 1 / span 8; }
+#case-pinsight .ps-layout-ui-text .ps-final-copy { grid-column: 9 / span 4; }
+#case-pinsight .ps-final-copy h3,
+#case-pinsight .ps-copy-inline h3 { margin: 14px 0 20px; font-size: 30px; line-height: 1.2; }
+#case-pinsight .ps-final-copy > p:not(.ps-final-submarker),
+#case-pinsight .ps-final-copy li { color: var(--ps-muted); line-height: 1.75; }
+#case-pinsight .ps-final-copy ul { padding-left: 18px; margin-top: 24px; }
+#case-pinsight .ps-final-figure { margin: 0; min-width: 0; }
+#case-pinsight .ps-final-figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(184,137,255,.22); border-radius: 22px; background: #0b0910; }
+#case-pinsight .ps-final-figure figcaption { margin-top: 16px; color: var(--ps-muted); font-size: 13px; line-height: 1.6; }
+#case-pinsight .ps-feedback-detail { margin-top: 120px; }
+#case-pinsight .ps-copy-inline { margin-bottom: 40px; }
+#case-pinsight .ps-annotation-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 24px; }
+#case-pinsight .ps-annotation-row span { padding-top: 14px; border-top: 1px solid rgba(184,137,255,.3); color: #c9c2cf; font-size: 12px; }
+#case-pinsight .ps-lifecycle { display: grid; gap: 112px; }
+#case-pinsight .ps-life-step { min-width: 0; }
+#case-pinsight .ps-life-step > b { display: inline-grid; place-items: center; width: 40px; height: 40px; border: 1px solid rgba(184,137,255,.55); border-radius: 50%; color: var(--ps-purple); }
+#case-pinsight .ps-life-step > h3 { margin: 18px 0 28px; font-size: 26px; }
+#case-pinsight .ps-life-pair { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 32px; }
+#case-pinsight .ps-life-large .ps-final-figure { width: min(100%, 1120px); }
+#case-pinsight .ps-transform-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr; align-items: center; gap: 16px; margin-bottom: 112px; }
+#case-pinsight .ps-transform-flow span { padding: 22px 12px; border-block: 1px solid rgba(184,137,255,.25); text-align: center; font-size: 14px; }
+#case-pinsight .ps-transform-flow i { color: var(--ps-purple); font-style: normal; }
+#case-pinsight .ps-review-grid { align-items: start; }
+#case-pinsight .ps-review-grid .ps-span-7 { grid-column: 1 / span 7; }
+#case-pinsight .ps-review-grid .ps-span-5 { grid-column: 8 / span 5; }
+#case-pinsight .ps-web-hero { margin-top: 112px; }
+#case-pinsight .ps-continuity { display: grid; grid-template-columns: 1fr auto 1.15fr auto 1fr; gap: 22px; align-items: center; margin-bottom: 112px; }
+#case-pinsight .ps-continuity div { min-height: 150px; display: flex; flex-direction: column; justify-content: center; padding: 26px; border: 1px solid rgba(184,137,255,.25); border-radius: 20px; }
+#case-pinsight .ps-continuity small { color: var(--ps-purple); letter-spacing: .12em; }
+#case-pinsight .ps-continuity strong { margin: 12px 0; font-size: 24px; }
+#case-pinsight .ps-continuity span { color: var(--ps-muted); font-size: 13px; }
+#case-pinsight .ps-continuity i { color: var(--ps-purple); font-style: normal; }
+#case-pinsight .ps-continuity .is-object { background: rgba(184,137,255,.07); }
+#case-pinsight .ps-web-stack { display: grid; gap: 112px; }
+#case-pinsight .ps-final-groups { display: grid; gap: 120px; }
+#case-pinsight .ps-final-group > p { color: var(--ps-purple); font-size: 12px; letter-spacing: .14em; }
+#case-pinsight .ps-final-group > h3 { margin: 14px 0 10px; font-size: 34px; }
+#case-pinsight .ps-final-group > span { display: block; margin-bottom: 40px; color: var(--ps-muted); font-size: 16px; }
+
+@media (max-width: 900px) {
+  #case-pinsight .ps-final-experience { width: min(calc(100% - 40px), 1280px); }
+  #case-pinsight .ps-final-section { margin-block: 104px; }
+  #case-pinsight .ps-final-header { margin-bottom: 48px; }
+  #case-pinsight .ps-grid,
+  #case-pinsight .ps-life-pair { display: grid; grid-template-columns: 1fr; }
+  #case-pinsight .ps-layout-text-ui .ps-final-copy,
+  #case-pinsight .ps-layout-text-ui .ps-final-figure,
+  #case-pinsight .ps-layout-ui-text .ps-final-copy,
+  #case-pinsight .ps-layout-ui-text .ps-final-figure,
+  #case-pinsight .ps-review-grid .ps-span-7,
+  #case-pinsight .ps-review-grid .ps-span-5 { grid-column: 1; }
+  #case-pinsight .ps-layout-ui-text .ps-final-copy { order: -1; }
+  #case-pinsight .ps-final-submodule,
+  #case-pinsight .ps-feedback-detail,
+  #case-pinsight .ps-web-hero { margin-top: 80px; }
+  #case-pinsight .ps-annotation-row { grid-template-columns: repeat(2, 1fr); }
+  #case-pinsight .ps-transform-flow { grid-template-columns: 1fr; text-align: left; }
+  #case-pinsight .ps-transform-flow i { transform: rotate(90deg); justify-self: center; }
+  #case-pinsight .ps-continuity { grid-template-columns: 1fr; }
+  #case-pinsight .ps-continuity > i { transform: rotate(90deg); justify-self: center; }
+}
+

@@ -1,0 +1,360 @@
+/* PinSight v37 — human-edited hierarchy and image-led visual rhythm */
+@media (min-width: 1025px){
+  #case-pinsight{
+    --ps-editorial-canvas:min(1440px,calc(100vw - 64px));
+    --ps-reading:720px;
+  }
+
+  #case-pinsight .ps-section{padding-block:clamp(118px,9vw,164px)}
+  #case-pinsight .ps-section.ps-section-compact{padding-block:92px 116px}
+  #case-pinsight .ps-section-head{
+    width:100%;
+    max-width:1200px;
+    margin:0 0 78px!important;
+    grid-template-columns:160px minmax(0,1fr)!important;
+    column-gap:40px!important;
+  }
+  #case-pinsight .ps-section-head .ps-section-rail{grid-column:1!important;padding-top:7px}
+  #case-pinsight .ps-section-head .ps-section-intro,
+  #case-pinsight .ps-section-head.is-statement .ps-section-intro{grid-column:2!important;max-width:var(--ps-reading)!important}
+  #case-pinsight .ps-section-head h2,
+  #case-pinsight .ps-section-head.is-statement h2{
+    max-width:18ch!important;
+    font-size:clamp(38px,3.2vw,50px)!important;
+    line-height:1.08!important;
+    letter-spacing:-.04em!important;
+  }
+  #case-pinsight .ps-section-head.level-narrative h2{
+    max-width:15ch!important;
+    font-size:clamp(54px,4.7vw,68px)!important;
+    line-height:1.03!important;
+  }
+  #case-pinsight .ps-section-head.level-compact{margin-bottom:52px!important}
+  #case-pinsight .ps-section-head.level-compact h2{font-size:34px!important;max-width:22ch!important}
+  #case-pinsight .ps-section-head .ps-section-intro>p{max-width:680px;margin-top:22px;font-size:16px;line-height:1.7}
+  #case-pinsight .ps-section-head .ps-section-rail strong{display:none}
+
+  #case-pinsight #pinsight-system>.ps-system-architecture,
+  #case-pinsight #pinsight-lifecycle>.ps-lifecycle-story,
+  #case-pinsight #pinsight-review>.ps-review-stage,
+  #case-pinsight #pinsight-continuity>.ps-web-experience,
+  #case-pinsight #pinsight-ui>.ps-ui-editorial{
+    width:var(--ps-editorial-canvas)!important;
+    max-width:none!important;
+    margin-left:50%!important;
+    transform:translateX(-50%)!important;
+  }
+
+  #case-pinsight #pinsight-system>.ps-system-architecture{
+    height:760px!important;
+    grid-template-columns:1fr 1.55fr 1fr!important;
+    gap:70px!important;
+    padding-inline:72px!important;
+  }
+  #case-pinsight #pinsight-system .ps-feedback-object{padding:42px!important}
+  #case-pinsight #pinsight-system .ps-feedback-object h3{font-size:42px!important}
+
+  #case-pinsight #pinsight-spatial>.ps-section-head{margin-bottom:68px!important}
+  #case-pinsight #pinsight-spatial .ps-subsection{margin-top:118px}
+  #case-pinsight #pinsight-spatial .ps-subsection:first-of-type{margin-top:0}
+  #case-pinsight #pinsight-spatial .ps-state-strip{
+    border-top:0!important;
+    padding-top:0!important;
+    grid-template-columns:3fr 7fr!important;
+  }
+  #case-pinsight #pinsight-spatial .ps-state-strip article{
+    border:0!important;
+    border-top:1px solid rgba(173,105,255,.28)!important;
+    background:transparent!important;
+    padding:18px 0!important;
+  }
+
+  #case-pinsight #pinsight-lifecycle>.ps-section-head{margin-bottom:64px!important}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story{
+    display:grid!important;
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    gap:110px 34px!important;
+  }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article,
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n){
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:20px!important;
+    width:auto!important;
+    margin:0!important;
+    padding-top:18px!important;
+    border-top:1px solid rgba(255,255,255,.12)!important;
+  }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(1){grid-column:1/9!important}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(2){grid-column:9/13!important;align-self:end}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(3){grid-column:2/7!important}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(4){grid-column:7/13!important;margin-top:96px!important}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(5){grid-column:1/6!important}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(6){grid-column:6/13!important;margin-top:-32px!important}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(7){grid-column:2/7!important}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(8){grid-column:5/13!important}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story .ps-life-copy{order:2!important;margin:0!important}
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story figure,
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story article:nth-child(n) figure{
+    order:1!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:16/10!important;
+    margin:0!important;
+    overflow:hidden;
+  }
+  #case-pinsight #pinsight-lifecycle .ps-lifecycle-story img{width:100%;height:100%!important;object-fit:cover}
+  #case-pinsight #pinsight-lifecycle .ps-life-copy>span{font-size:34px}
+  #case-pinsight #pinsight-lifecycle .ps-life-copy h3{font-size:23px;margin:13px 0 6px}
+
+  #case-pinsight #pinsight-review>.ps-section-head{margin-bottom:64px!important}
+  #case-pinsight #pinsight-review .ps-transformation-model{margin-top:0}
+  #case-pinsight #pinsight-review .ps-review-stage{
+    display:grid!important;
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    gap:84px 34px!important;
+    margin-top:104px!important;
+  }
+  #case-pinsight #pinsight-review .ps-review-stage>.ps-evidence{width:100%!important;margin:0!important}
+  #case-pinsight #pinsight-review .ps-review-stage>.ps-evidence:nth-child(1){grid-column:1/13!important}
+  #case-pinsight #pinsight-review .ps-review-stage>.ps-evidence:nth-child(2){grid-column:1/7!important}
+  #case-pinsight #pinsight-review .ps-review-stage>.ps-evidence:nth-child(3){grid-column:8/13!important;margin-top:100px!important}
+  #case-pinsight #pinsight-review .ps-review-stage .ps-evidence-media{height:auto!important;aspect-ratio:16/9!important}
+
+  #case-pinsight #pinsight-continuity>.ps-section-head{margin-bottom:62px!important}
+  #case-pinsight #pinsight-continuity .ps-continuity-object{margin-top:0}
+  #case-pinsight #pinsight-continuity .ps-web-experience{
+    display:grid!important;
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    gap:160px 34px!important;
+    margin-top:124px!important;
+  }
+  #case-pinsight #pinsight-continuity .ps-web-part{grid-column:1/13!important;grid-template-columns:3fr 9fr!important;gap:54px!important}
+  #case-pinsight #pinsight-continuity .ps-web-part.is-reverse{grid-template-columns:9fr 3fr!important}
+  #case-pinsight #pinsight-continuity .ps-web-part .ps-evidence-media{height:auto!important;aspect-ratio:16/9!important}
+
+  #case-pinsight #pinsight-ui>.ps-section-head{margin-bottom:72px!important}
+  #case-pinsight #pinsight-ui .ps-language-section{margin-bottom:112px!important}
+  #case-pinsight #pinsight-ui .ps-spatial-language article{border:0;border-top:1px solid rgba(255,255,255,.12);padding:18px 0;min-height:96px}
+  #case-pinsight #pinsight-ui .ps-ui-editorial{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:128px 34px!important}
+  #case-pinsight #pinsight-ui .ps-ui-editorial>div{min-width:0}
+  #case-pinsight #pinsight-ui .ui-hero-xr{grid-column:1/13}
+  #case-pinsight #pinsight-ui .ui-hero-xr .ps-evidence-media{aspect-ratio:16/8.8!important}
+  #case-pinsight #pinsight-ui .ui-sequence-xr{grid-column:1/13;display:grid;grid-template-columns:.92fr 1.2fr .88fr;gap:34px;align-items:start}
+  #case-pinsight #pinsight-ui .ui-sequence-xr>.ps-evidence:nth-child(2){margin-top:78px}
+  #case-pinsight #pinsight-ui .ui-detail-band{grid-column:2/12;display:grid;grid-template-columns:repeat(4,1fr);gap:26px;align-items:start}
+  #case-pinsight #pinsight-ui .ui-detail-band>.ps-evidence:nth-child(even){margin-top:68px}
+  #case-pinsight #pinsight-ui .ui-hero-web{grid-column:1/13;display:grid;grid-template-columns:8fr 4fr;gap:34px;align-items:end}
+  #case-pinsight #pinsight-ui .ui-hero-web>.ps-evidence:last-child{margin-bottom:50px}
+  #case-pinsight #pinsight-ui .ui-web-atlas{grid-column:1/13;display:grid;grid-template-columns:repeat(12,1fr);gap:92px 34px;align-items:start}
+  #case-pinsight #pinsight-ui .ui-web-atlas>.ps-evidence:nth-child(1){grid-column:1/6}
+  #case-pinsight #pinsight-ui .ui-web-atlas>.ps-evidence:nth-child(2){grid-column:6/13;margin-top:70px}
+  #case-pinsight #pinsight-ui .ui-web-atlas>.ps-evidence:nth-child(3){grid-column:2/6}
+  #case-pinsight #pinsight-ui .ui-web-atlas>.ps-evidence:nth-child(4){grid-column:6/13}
+  #case-pinsight #pinsight-ui .ps-ui-editorial .ps-evidence-media{height:auto!important;aspect-ratio:16/10!important;background:transparent!important}
+  #case-pinsight #pinsight-ui .ps-ui-editorial .ps-evidence-media img{width:100%;height:100%;object-fit:cover}
+  #case-pinsight #pinsight-ui .ps-ui-editorial figcaption{margin-top:16px}
+  #case-pinsight #pinsight-ui .ps-ui-editorial figcaption small{font-size:10px;opacity:.62}
+  #case-pinsight #pinsight-ui .ps-ui-flow-notes{margin-top:118px}
+}
+
+/* v38 — complete UI evidence, shown at source ratio rather than cropped into tiles */
+.project-page.pinsight-page #pinsight-spatial .ps-evidence-media,
+.project-page.pinsight-page #pinsight-lifecycle figure,
+.project-page.pinsight-page #pinsight-review .ps-evidence-media,
+.project-page.pinsight-page #pinsight-continuity .ps-evidence-media,
+.project-page.pinsight-page #pinsight-ui .ps-evidence-media{
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+  background:transparent!important;
+}
+.project-page.pinsight-page #pinsight-spatial .ps-evidence-media img,
+.project-page.pinsight-page #pinsight-lifecycle figure img,
+.project-page.pinsight-page #pinsight-review .ps-evidence-media img,
+.project-page.pinsight-page #pinsight-continuity .ps-evidence-media img,
+.project-page.pinsight-page #pinsight-ui .ps-evidence-media img{
+  position:static!important;
+  width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  display:block!important;
+}
+
+.project-page.pinsight-page #pinsight-ui .ps-ui-editorial{
+  width:min(1440px,calc(100vw - 64px))!important;
+  max-width:none!important;
+  margin:clamp(104px,10vw,160px) 50% 0!important;
+  transform:translateX(-50%)!important;
+  display:block!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-group{
+  grid-column:1/-1!important;
+  width:100%!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  display:grid!important;
+  grid-template-columns:repeat(12,minmax(0,1fr))!important;
+  column-gap:32px!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-group+.ui-system-group{
+  margin-top:clamp(144px,13vw,208px)!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-heading{
+  grid-column:2/9!important;
+  margin:0 0 56px!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-heading small{
+  display:block;
+  margin-bottom:16px;
+  color:#a873ff;
+  font-size:12px;
+  letter-spacing:.08em;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-heading h3{
+  max-width:760px;
+  margin:0;
+  font-size:clamp(30px,3vw,46px);
+  line-height:1.16;
+  letter-spacing:-.035em;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-heading p{
+  max-width:700px;
+  margin:20px 0 0;
+  color:rgba(239,237,244,.62);
+  font-size:15px;
+  line-height:1.75;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-hero{
+  grid-column:1/-1!important;
+  margin:0 0 80px!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-hero .ps-evidence-media{
+  border-radius:18px!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid{
+  grid-column:1/-1!important;
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:72px 32px!important;
+  align-items:start!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid .ps-evidence,
+.project-page.pinsight-page #pinsight-ui .ui-system-grid .ps-evidence:nth-child(n){
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  transform:none!important;
+  grid-column:auto!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid .ps-evidence-media{
+  border-radius:14px!important;
+}
+.project-page.pinsight-page #pinsight-ui .ps-evidence figcaption{
+  display:grid!important;
+  grid-template-columns:136px minmax(0,1fr)!important;
+  gap:12px 20px!important;
+  margin-top:18px!important;
+}
+.project-page.pinsight-page #pinsight-ui .ps-evidence figcaption small{
+  grid-column:1!important;
+  margin:3px 0 0!important;
+  color:#a873ff!important;
+  font-size:11px!important;
+  line-height:1.4!important;
+}
+.project-page.pinsight-page #pinsight-ui .ps-evidence figcaption strong{
+  grid-column:2!important;
+  font-size:18px!important;
+  line-height:1.4!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-pen .ui-system-heading{
+  grid-column:2/8!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid-pen{
+  grid-column:2/12!important;
+}
+.project-page.pinsight-page #pinsight-ui .ps-ui-flow-notes{
+  width:min(1200px,calc(100vw - 96px))!important;
+  margin:112px auto 0!important;
+}
+
+@media (max-width:900px){
+  .project-page.pinsight-page #pinsight-ui .ps-ui-editorial{width:calc(100vw - 32px)!important}
+  .project-page.pinsight-page #pinsight-ui .ui-system-group{display:block!important}
+  .project-page.pinsight-page #pinsight-ui .ui-system-heading{margin-bottom:36px!important}
+  .project-page.pinsight-page #pinsight-ui .ui-system-hero{margin-bottom:52px!important}
+  .project-page.pinsight-page #pinsight-ui .ui-system-grid{grid-template-columns:1fr!important;gap:52px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption{grid-template-columns:1fr!important;gap:8px!important}
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption small,
+  .project-page.pinsight-page #pinsight-ui .ps-evidence figcaption strong{grid-column:1!important}
+}
+
+@media (max-width:1024px){
+  #case-pinsight .ui-sequence-xr,
+  #case-pinsight .ui-detail-band,
+  #case-pinsight .ui-hero-web,
+  #case-pinsight .ui-web-atlas{display:grid;grid-template-columns:1fr!important;gap:56px}
+  #case-pinsight .ui-sequence-xr>*,
+  #case-pinsight .ui-detail-band>*,
+  #case-pinsight .ui-hero-web>*,
+  #case-pinsight .ui-web-atlas>*{grid-column:1!important;margin:0!important}
+}
+
+/* v39 — clean, paired Final UI evidence with stable rows */
+.project-page.pinsight-page #pinsight-ui .ui-system-heading{
+  grid-column:1/9!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid{
+  gap:88px 40px!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid .ps-evidence-media{
+  position:relative!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:16/10!important;
+  overflow:hidden!important;
+  border-radius:0!important;
+  background:#090a0b!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid .ps-evidence-media img{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid .ps-evidence figcaption{
+  min-height:58px;
+  margin-top:20px!important;
+  align-content:start;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid .ps-evidence figcaption strong{
+  margin:0!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid img[src$="xr-review-clean.png"]{
+  object-position:center 46%!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid img[src$="web-dashboard-clean.png"]{
+  object-position:center 43%!important;
+}
+.project-page.pinsight-page #pinsight-ui .ui-system-grid-pen{
+  grid-column:1/-1!important;
+}
+
+@media (max-width:900px){
+  .project-page.pinsight-page #pinsight-ui .ui-system-grid .ps-evidence-media{
+    aspect-ratio:auto!important;
+    overflow:visible!important;
+  }
+  .project-page.pinsight-page #pinsight-ui .ui-system-grid .ps-evidence-media img{
+    position:static!important;
+    width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+  }
+}

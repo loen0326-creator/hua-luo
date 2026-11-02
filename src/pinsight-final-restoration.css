@@ -1,0 +1,47 @@
+/* Scoped to the restored final-design chapters and unnumbered demo. */
+#case-pinsight .ps-xr-group { margin:0 0 96px; }
+#case-pinsight .ps-xr-group h3 { font-size:clamp(22px,2.4vw,32px); line-height:1.4; color:#f4f2fa; margin:0 0 32px; }
+#case-pinsight .ps-xr-frames { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px 28px; }
+#case-pinsight .ps-xr-frames.is-single { grid-template-columns:1fr; max-width:900px; margin-inline:auto; }
+#case-pinsight .ps-xr-group > .ps-xr-frames > .ps-xr-original:last-child:nth-child(odd) { grid-column:1 / -1; width:min(900px,100%); justify-self:center; }
+#case-pinsight .ps-xr-original { margin:0; min-width:0; }
+#case-pinsight .ps-xr-original a { display:block; }
+#case-pinsight .ps-xr-original img { display:block; width:100%; height:auto; object-fit:contain; border-radius:0; }
+#case-pinsight .ps-xr-original figcaption { margin-top:14px; color:#c7c3ce; font-size:14px; line-height:1.6; }
+#case-pinsight .ps-xr-states { margin-top:32px; }
+#case-pinsight .ps-xr-states summary { width:fit-content; max-width:100%; padding:12px 0; color:#e1d4ed; font-size:16px; line-height:1.6; cursor:pointer; }
+#case-pinsight .ps-xr-states summary:hover { color:#fff; text-decoration:underline; }
+#case-pinsight .ps-xr-states summary:active { color:#c99bf1; }
+#case-pinsight .ps-xr-states summary:focus-visible, #case-pinsight .ps-xr-original a:focus-visible { outline:2px solid #c99bf1; outline-offset:5px; }
+#case-pinsight .ps-xr-states[open] > .ps-xr-frames { margin-top:24px; }
+@media(max-width:700px) {
+  #case-pinsight .ps-xr-group { margin-bottom:64px; }
+  #case-pinsight .ps-xr-frames { grid-template-columns:1fr; gap:32px; }
+  #case-pinsight .ps-xr-group h3 { margin-bottom:24px; }
+}
+#case-pinsight .ps-restored-showcase { width:100%; margin:0 auto; }
+#case-pinsight .ps-restored-showcase.is-web { max-width:1080px; }
+#case-pinsight .ps-restored-showcase figure { margin:0; min-width:0; }
+#case-pinsight .ps-restored-image-stage { display:flex; align-items:flex-start; justify-content:center; width:100%; aspect-ratio:5 / 4; }
+#case-pinsight .ps-restored-image-stage img { display:block; width:100%; height:100%; object-fit:contain; object-position:center top; border:0; border-radius:0; box-shadow:none; }
+#case-pinsight .ps-restored-image.is-primary .ps-restored-image-stage { aspect-ratio:auto; }
+#case-pinsight .ps-restored-image.is-primary img { height:auto; }
+#case-pinsight .ps-restored-image figcaption { margin:18px 0 0; text-align:center; font-size:14px; font-weight:500; line-height:1.6; color:#c7c3ce; }
+#case-pinsight .ps-restored-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:64px 32px; margin-top:88px; }
+#case-pinsight .is-web .ps-restored-image-stage { aspect-ratio:1.404 / 1; }
+#case-pinsight .is-web .ps-restored-grid { margin-top:72px; gap:56px 28px; }
+#case-pinsight .is-web .ps-restored-grid > figure:last-child { grid-column:1 / -1; width:min(760px,100%); justify-self:center; }
+#case-pinsight .ps-restored-demo { border-top:1px solid rgba(244,242,250,.12); }
+#case-pinsight .ps-restored-demo > header { margin-bottom:52px; }
+#case-pinsight .ps-restored-demo > header small { color:#c99bf1; font-size:12px; letter-spacing:.06em; }
+#case-pinsight .ps-restored-demo > header h2 { color:#f4f2fa; font-size:clamp(28px,3vw,44px); line-height:1.2; margin:22px 0 18px; }
+#case-pinsight .ps-restored-demo > header p { color:#b7b3c0; font-size:16px; line-height:1.7; margin:0; }
+#case-pinsight .ps-restored-demo > video { display:block; width:100%; height:auto; aspect-ratio:1280 / 716; object-fit:contain; background:#000; }
+#case-pinsight .ps-restored-demo > video:focus-visible { outline:2px solid #c99bf1; outline-offset:6px; }
+@media(max-width:700px) {
+  #case-pinsight .ps-restored-grid, #case-pinsight .is-web .ps-restored-grid { grid-template-columns:1fr; gap:40px; margin-top:48px; }
+  #case-pinsight .ps-restored-image-stage, #case-pinsight .is-web .ps-restored-image-stage { aspect-ratio:auto; }
+  #case-pinsight .ps-restored-image-stage img { height:auto; }
+  #case-pinsight .ps-restored-image figcaption { margin-top:12px; font-size:13px; }
+  #case-pinsight .ps-restored-demo > header { margin-bottom:28px; }
+}
