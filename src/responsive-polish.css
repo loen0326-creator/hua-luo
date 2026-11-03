@@ -1,10 +1,17 @@
 /* Final compact-viewport safeguards.
    Desktop/tablet composition is intentionally untouched. */
 @media (max-width: 767px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   html,
   body,
   #root,
   main {
+    width: 100%;
     max-width: 100%;
     overflow-x: clip;
   }
@@ -13,30 +20,126 @@
      sacrificing the content width to a third desktop-only column. */
   .nav,
   .nav.scrolled {
-    position: fixed;
-    left: 12px;
-    right: 12px;
+    position: fixed !important;
+    top: 12px !important;
+    left: 12px !important;
+    right: auto !important;
     grid-template-columns: auto minmax(0, 1fr);
     column-gap: 14px;
-    width: auto;
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px);
+    height: 60px !important;
     padding-inline: 8px;
-    transform: none;
-    animation: none;
+    transform: none !important;
+    animation: none !important;
   }
 
   .nav nav {
+    display: flex;
+    width: 100%;
     min-width: 0;
     justify-self: end;
+    justify-content: flex-end;
     gap: clamp(12px, 4vw, 18px);
+    overflow: hidden;
+  }
+
+  .nav nav a {
+    display: inline-flex !important;
+    min-width: 0;
+    min-height: 44px;
+    align-items: center;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 10px;
+  }
+
+  /* The logo already returns home. Removing that duplicate label and the
+     lower-priority resume link leaves the three browsing destinations fully
+     legible on a phone instead of compressing all five into one line. */
+  .nav nav a:nth-child(1),
+  .nav nav a:nth-child(5) {
+    display: none !important;
   }
 
   .contact-chip {
-    display: none;
+    display: none !important;
   }
 
   .brand {
     width: 82px;
+    height: 34px;
     flex: none;
+  }
+
+  /* All long-form pages use their existing editorial composition, but every
+     content shell is allowed to shrink before its text or media is clipped. */
+  .shell,
+  .project-page,
+  .focuspin-case,
+  .rest-easy-case,
+  .mars-case-page,
+  .masterworks-case,
+  .project-index-page {
+    min-width: 0;
+    max-width: 100vw;
+  }
+
+  main p,
+  main li,
+  main figcaption,
+  .project-index-title p,
+  .capabilities p,
+  .focuspin-case p,
+  .rest-easy-case p {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .project-index-title,
+  .project-index-title > *,
+  .capabilities,
+  .capabilities > *,
+  .focuspin-case .fp-wrap,
+  .focuspin-case .fp-wrap > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .project-index-title p {
+    width: 100%;
+  }
+
+  .focuspin-case .fp-wrap {
+    width: calc(100vw - 40px) !important;
+    margin-inline: auto;
+  }
+
+  .focuspin-case h1 {
+    max-width: 100%;
+    font-size: clamp(52px, 17vw, 68px);
+    overflow-wrap: normal;
+  }
+
+  .focuspin-case img,
+  .focuspin-case video,
+  .rest-easy-case img,
+  .rest-easy-case video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .rest-easy-case {
+    --rest-layout-gutter: 20px;
+  }
+
+  .rest-easy-case .shell,
+  .rest-easy-case .rest-case-content {
+    width: calc(100vw - 40px) !important;
+    max-width: calc(100vw - 40px) !important;
+    margin-inline: auto !important;
   }
 
   /* Long display words must remain fully visible in WeChat-sized viewports. */
@@ -106,6 +209,14 @@
 }
 
 @media (max-width: 430px) {
+  .nav nav {
+    gap: clamp(10px, 3.2vw, 14px);
+  }
+
+  .nav nav a {
+    font-size: 9px;
+  }
+
   .hero-identity h1 {
     font-size: clamp(44px, 12.25vw, 53px);
   }

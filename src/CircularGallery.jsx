@@ -5,6 +5,68 @@ import './CircularGallery.css'
 
 const lerp = (a, b, t) => a + (b - a) * t
 
+const loadImage = src => new Promise((resolve, reject) => {
+  const image = new Image()
+  image.onload = () => resolve(image)
+  image.onerror = reject
+  image.src = src
+})
+
+function drawCover(ctx, image, x, y, width, height) {
+  const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight)
+  const drawWidth = image.naturalWidth * scale
+  const drawHeight = image.naturalHeight * scale
+  ctx.drawImage(image, x + (width - drawWidth) / 2, y + (height - drawHeight) / 2, drawWidth, drawHeight)
+}
+
+function roundedImage(ctx, image, x, y, width, height, radius = 18) {
+  ctx.save()
+  ctx.beginPath()
+  ctx.roundRect(x, y, width, height, radius)
+  ctx.clip()
+  ctx.drawImage(image, x, y, width, height)
+  ctx.restore()
+}
+
+async function renderCardImage(item) {
+  if (!item.composition && !item.imageScale) return loadImage(item.image)
+
+  const canvas = document.createElement('canvas')
+  canvas.width = 1200
+  canvas.height = 800
+  const ctx = canvas.getContext('2d')
+  const background = await loadImage(item.image)
+
+  ctx.fillStyle = '#06090b'
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+  if (item.imageScale) {
+    const width = canvas.width * item.imageScale
+    const height = canvas.height * item.imageScale
+    drawCover(ctx, background, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height)
+    return canvas
+  }
+
+  drawCover(ctx, background, 0, 0, canvas.width, canvas.height)
+  const shade = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
+  shade.addColorStop(0, 'rgba(2,5,8,.36)')
+  shade.addColorStop(.5, 'rgba(2,5,8,.12)')
+  shade.addColorStop(1, 'rgba(2,5,8,.42)')
+  ctx.fillStyle = shade
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+  const devices = await Promise.all(item.composition.devices.map(loadImage))
+  ctx.shadowColor = 'rgba(0,0,0,.62)'
+  ctx.shadowBlur = 34
+  ctx.shadowOffsetY = 24
+  roundedImage(ctx, devices[0], 344, 186, 224, 454)
+  roundedImage(ctx, devices[1], 508, 74, 286, 580)
+  roundedImage(ctx, devices[2], 744, 186, 224, 454)
+  ctx.shadowColor = 'transparent'
+
+  return canvas
+}
+
 function textTexture(gl, text, color, font) {
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
@@ -24,7 +86,7 @@ function textTexture(gl, text, color, font) {
 }
 
 class GalleryCard {
-  constructor({ gl, geometry, scene, image, text, index, count, viewport, screen, bend, textColor, borderRadius, font }) {
+  constructor({ gl, geometry, scene, item, text, index, count, viewport, screen, bend, textColor, borderRadius, font }) {
     this.gl = gl
     this.index = index
     this.count = count
@@ -34,12 +96,10 @@ class GalleryCard {
     this.extra = 0
 
     const texture = new Texture(gl)
-    const img = new Image()
-    img.src = image
-    img.onload = () => {
-      texture.image = img
-      this.program.uniforms.uImageSizes.value = [img.naturalWidth, img.naturalHeight]
-    }
+    renderCardImage(item).then(image => {
+      texture.image = image
+      this.program.uniforms.uImageSizes.value = [image.naturalWidth || image.width, image.naturalHeight || image.height]
+    }).catch(() => {})
 
     this.program = new Program(gl, {
       depthTest: false,
@@ -184,7 +244,7 @@ class GalleryApp {
     const source = options.items
     this.cards = source.map((item, index) => new GalleryCard({
       gl: this.gl, geometry: this.geometry, scene: this.scene,
-      image: item.image, text: item.text, index, count: source.length,
+      item, text: item.text, index, count: source.length,
       viewport: this.viewport, screen: this.screen, ...options
     }))
     this.bind()

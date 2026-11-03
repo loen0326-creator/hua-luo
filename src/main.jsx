@@ -27,17 +27,26 @@ const asset = name => `${window.location.protocol === 'file:' ? './public/' : '/
 const galleryItems = [
   {
     text: 'PinSight',
-    image: asset('assets/pinsight/hero.webp'),
+    image: asset('assets/pinsight/hero-clean.jpg'),
     href: '#case-pinsight',
   },
   {
     text: 'FocusPin',
-    image: asset('projects/focuspin/focuspin-product-hero.webp'),
+    image: asset('projects/focuspin/focuspin-return-context.webp'),
+    imageScale: .86,
     href: '#case-bank',
   },
   {
     text: 'MasterWorks',
     image: asset('projects/masterworks/masterworks-exhibition-stage-v3.png'),
+    composition: {
+      type: 'masterworks-cover',
+      devices: [
+        asset('projects/masterworks/final-ui/home-beeple.webp'),
+        asset('projects/masterworks/final-ui/personalise.webp'),
+        asset('projects/masterworks/final-ui/cart.webp'),
+      ],
+    },
     href: '#case-spatial',
   },
   {
@@ -114,53 +123,6 @@ const projects = [
     detailKicker: '移动体验 · 个性化 · 购买旅程',
     detailCopy: '将艺术作品浏览、个性化纪念品创建与购买完成连接成一条移动体验。',
     art: null,
-  },
-  {
-    no: '04',
-    year: '2025',
-    title: 'AI Design Partner',
-    subtitle: 'AI 辅助设计流程与概念工具',
-    previewTitle: 'AI 设计伙伴',
-    previewMeta: '人工智能辅助设计 / 概念 / 动效',
-    tags: ['人工智能工具', '界面设计', '动态表达'],
-    className: 'energy',
-    image: asset('project-energy.svg'),
-    href: '#case-ai',
-    detailTitle: 'AI Design Partner',
-    detailKicker: '人工智能辅助设计 · 概念探索',
-    detailCopy: '围绕 AI 辅助设计流程，探索从需求理解、概念发散、内容整理到界面表达的协作方式，让设计过程更高效且更可控。',
-    art: (
-      <div className="energy-art" aria-hidden="true">
-        <span className="orb orb-a" />
-        <span className="orb orb-b" />
-        <div className="glass-panel">
-          <small>AI DESIGN FLOW</small>
-          <strong>04</strong>
-          <div className="sparkline" />
-        </div>
-      </div>
-    ),
-  },
-  {
-    no: '05',
-    year: '2025',
-    title: 'Visual Syntax',
-    subtitle: '视觉系统与界面语言探索',
-    previewTitle: '视觉系统语言',
-    previewMeta: '视觉系统 / 识别语言 / 动态表达',
-    tags: ['视觉识别', '网格系统', '动态表达'],
-    className: 'spatial',
-    image: asset('project-spatial.svg'),
-    href: '#case-visual',
-    detailTitle: 'Visual Syntax',
-    detailKicker: '视觉系统 · 识别语言',
-    detailCopy: '将视觉秩序、网格系统、动效节奏和界面语义结合，探索更统一、更可扩展的数字产品视觉表达。',
-    art: (
-      <div className="spatial-art" aria-hidden="true">
-        <div className="portal" />
-        <span>VISUAL<br />SYNTAX</span>
-      </div>
-    ),
   },
 ]
 
@@ -486,7 +448,11 @@ const projectPool = [...projects, ...archiveProjects]
 const allProjects = [
   ...featuredProjectHrefs.map(href => projectPool.find(project => project.href === href)).filter(Boolean),
   ...projectPool.filter(project => !featuredProjectHrefs.includes(project.href)),
-]
+].map((project, index) => ({
+  ...project,
+  no: String(index + 1).padStart(2, '0'),
+  year: '',
+}))
 
 const structuredProjectChapters = {
   '#case-projectora': [
@@ -1270,9 +1236,16 @@ function App() {
               aria-label={`查看 ${project.title} 项目详情`}
             >
               <img src={project.href === '#case-interaction-mars' ? asset('projects/interaction-mars/interaction-mars-cover.png') : project.href === '#case-rest-easy' ? asset('projects/rest-easy/rest-easy-hero-sleep-product.png') : project.image} alt="" aria-hidden="true" />
+              {project.className === 'masterworks' && (
+                <div className="project-index-masterworks-devices" aria-hidden="true">
+                  <img src={asset('projects/masterworks/final-ui/home-beeple.webp')} alt="" />
+                  <img src={asset('projects/masterworks/final-ui/personalise.webp')} alt="" />
+                  <img src={asset('projects/masterworks/final-ui/cart.webp')} alt="" />
+                </div>
+              )}
               <div className="project-index-shade" />
               <div className="project-index-copy">
-                <span>{project.no}{!['#case-interaction-mars', '#case-rest-easy', '#case-focuspin'].includes(project.href) && <> / {project.year}</>}</span>
+                <span>{project.no}</span>
                 <h3>{project.title}</h3>
                 <p>{project.previewMeta}</p>
                 <div className="project-index-chiprow">
