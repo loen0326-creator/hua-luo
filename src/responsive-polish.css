@@ -1,0 +1,117 @@
+/* Final compact-viewport safeguards.
+   Desktop/tablet composition is intentionally untouched. */
+@media (max-width: 767px) {
+  html,
+  body,
+  #root,
+  main {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  /* The compact header keeps the primary navigation visible without
+     sacrificing the content width to a third desktop-only column. */
+  .nav,
+  .nav.scrolled {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 14px;
+    width: auto;
+    padding-inline: 8px;
+    transform: none;
+    animation: none;
+  }
+
+  .nav nav {
+    min-width: 0;
+    justify-self: end;
+    gap: clamp(12px, 4vw, 18px);
+  }
+
+  .contact-chip {
+    display: none;
+  }
+
+  .brand {
+    width: 82px;
+    flex: none;
+  }
+
+  /* Long display words must remain fully visible in WeChat-sized viewports. */
+  .hero-identity {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 8px;
+  }
+
+  .hero-identity h1 {
+    position: relative;
+    max-width: 100%;
+    font-size: clamp(46px, 12.5vw, 58px);
+    line-height: .84;
+    letter-spacing: -.086em;
+    transform: none;
+  }
+
+  .hero-identity h1 em {
+    display: block;
+    width: 100%;
+    margin: 9px 0 0;
+    padding-right: 3px;
+    font-size: .29em;
+    line-height: 1;
+    text-align: right;
+  }
+
+  /* PinSight has several late cascade layers. Reassert the actual safe-area
+     width after those layers so copy and evidence never run off-screen. */
+  #case-pinsight {
+    --ps-master: calc(100vw - 40px);
+  }
+
+  #case-pinsight .ps-page-head,
+  #case-pinsight .ps-shell {
+    box-sizing: border-box;
+    width: calc(100vw - 40px) !important;
+    max-width: calc(100vw - 40px) !important;
+    margin-inline: auto !important;
+  }
+
+  #case-pinsight .ps-shell > *,
+  #case-pinsight .ps-hero,
+  #case-pinsight .ps-hero-copy,
+  #case-pinsight .ps-hero-copy > p,
+  #case-pinsight .ps-hero-copy h2,
+  #case-pinsight .ps-evidence,
+  #case-pinsight figure,
+  #case-pinsight img,
+  #case-pinsight video {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #case-pinsight .ps-hero-copy h2 span {
+    white-space: normal;
+  }
+
+  #case-pinsight .ps-hero-copy > p {
+    width: min(100%, calc(100vw - 80px));
+    max-width: calc(100vw - 80px) !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-identity h1 {
+    font-size: clamp(44px, 12.25vw, 53px);
+  }
+
+  .hero-identity > .eyebrow {
+    font-size: 9px;
+    letter-spacing: .11em;
+  }
+}

@@ -20,6 +20,7 @@ import '@fontsource/playfair-display/500-italic.css'
 import './styles.css?v=hero-real-projects-20261102-v1'
 import './rest-final-refinement.css?v=rest-final-unified-20260821'
 import './hero-split.css?v=circular-v1'
+import './responsive-polish.css?v=mobile-safe-20261103'
 
 const asset = name => `${window.location.protocol === 'file:' ? './public/' : '/'}${name}`
 
